@@ -1,0 +1,10 @@
+{
+  "type" : "rl_belterbones",
+  "baseType" : "bones",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant", "shady"]
+    }
+  }
+}

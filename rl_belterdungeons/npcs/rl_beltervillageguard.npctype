@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltervillageguard",
+  "baseType" : "villageguard",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_guard"]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_space_hotel",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "space_hotel1" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true,
+    "extraDungeonIds" : [{
+      // +1 : exterior of the base
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "space_hotel1",
+      "rules" : [],
+      "def" : [ "tmx", "space_hotel1.json" ]
+    }
+  ]
+}

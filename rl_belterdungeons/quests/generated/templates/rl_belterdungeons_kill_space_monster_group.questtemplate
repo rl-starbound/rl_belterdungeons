@@ -1,0 +1,256 @@
+{
+  "id" : "rl_belterdungeons_kill_space_monster_group.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    },
+    "monster" : {
+      "type" : "monsterType",
+      "example" : {
+        "name" : "Trifangle",
+        "typeName" : "trifangle"
+      }
+    },
+    "spawnPoint" : {
+      "type" : "location"
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards", "extraRewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/generated/kill.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver",
+      "objective" : "monster"
+    },
+    "generatedText" : {
+      "fluff" : [
+        ["genericPluralizedMonsterTerm", [
+          "monsters"
+        ]],
+        ["upset", [
+          "upset",
+          "angry",
+          "dismayed",
+          "distressed",
+          "troubled"
+        ]],
+        ["group", [
+          "flight",
+          "group",
+          "horde"
+        ]],
+        ["wild", [
+          "dangerous",
+          "marauding",
+          "rogue",
+          "uncontrolled"
+        ]],
+        ["ambushed", [
+          "ambushed",
+          "snuck up on",
+          "attacked",
+          "chased",
+          "pursued",
+          "harassed"
+        ]],
+        ["exploring", [
+          "exploring",
+          "flying",
+          "surveying",
+          "traveling"
+        ]],
+        ["ate", [
+          "destroyed",
+          "ruined",
+          "wrecked"
+        ]],
+        ["belonging1", [
+          "my ship",
+          "my cargo",
+          "the last of my worldly possessions",
+          "the manuscript for my unfinished novel",
+          "the only extant copy of <belonging2>",
+          "<belonging2>",
+          "a priceless family heirloom"
+        ]],
+        ["belonging2", [
+          "my unfinished dissertation",
+          "my memoirs",
+          "my homemade album",
+          "my personal poetry collection"
+        ]],
+        ["revenge1", [
+          "avenge me",
+          "destroy them",
+          "put a stop to them",
+          "wipe them out"
+        ]],
+        ["revenge2", [
+          "sort them out",
+          "get rid of them",
+          "destroy them all",
+          "wipe them out",
+          "forcefully neutralize them"
+        ]],
+        ["revengefloran", [
+          "hunt them down",
+          "kill them all",
+          "blassst them"
+        ]],
+        ["rumours", [
+          "hearing rumours about",
+          "finding out about",
+          "all the talk about",
+          "narrowly avoiding",
+          "narrowly escaping"
+        ]],
+        ["loitering", [
+          "which are attacking innocent belters",
+          "which are causing distress",
+          "which are keeping people up at night",
+          "which are making an uproar",
+          "which are raiding merchant convoys",
+          "which are terrorizing local travelers"
+        ]],
+        ["loiteringfloran", [
+          "attacking people",
+          "ssscaring people",
+          "making lotsss of trouble",
+          "sssmashing shipsss"
+        ]],
+        ["excusefloran", [
+          "forgot to make weaponsss",
+          "isssn't feeling too confident about hunting right now",
+          "isss feeling lazy",
+          "thinksss you'd do a better job"
+        ]],
+        ["appreciation1", [
+          "Those <monster>s won't be a problem anymore, because you destroyed them.",
+          "You got rid of the <monster>s?",
+          "Oh, you sorted out the <monster>s?"
+        ]],
+        ["appreciation2", [
+          "Thanks for the help, I hope this reward is okay!",
+          "I appreciate you doing this for me. Please accept this gift.",
+          "I hope this gift is enough for the time you spent on my problem!",
+          "Thanks! I appreciate the help!",
+          "I'll sleep better knowing you've made it a little safer around here!",
+          "Thanks! You've made it so much safer to live around here."
+        ]]
+      ],
+      "title" : {
+        "default" : [
+          "Sorting out some <monster>s",
+          "Dealing with some <monster>s"
+        ]
+      },
+      "goalText" : {
+        "default" : [
+          "^cyan;I need some help with a matter of public safety."
+        ],
+        "floran" : [
+          "^cyan;Floran hasss sssomething for you to take care of..."
+        ],
+        "glitch" : [
+          "^cyan;Worried. Some marauders have rendered me afraid."
+        ]
+      },
+      "text" : {
+        "default" : {
+          "default" : [
+            "I'm <upset> and need your help! A <group> of <wild> ^orange;<monster>s^reset; <ambushed> me while I was <exploring> and they <ate> <belonging1>! This happened near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you <revenge1>^reset;?",
+            "I'm too scared to leave here after <rumours> a <group> of <wild> ^orange;<monster>s^reset; <loitering>. I heard they were last seen near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you <revenge2>^reset;?"
+          ],
+          "floran" : [
+            "Floran heard there isss a <group> of <wild> ^orange;<monster>s^reset; that are <loiteringfloran>. Floran would hunt them but Floran <excusefloran>. They are near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you <revengefloran>^reset;?"
+          ],
+          "glitch" : [
+            "Concerned. I'm <upset> and need your help! A <group> of <wild> ^orange;<monster>s^reset; <ambushed> me whilst I was out <exploring> and they <ate> <belonging1>! This happened near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you <revenge1>^reset;?",
+            "Worried. I'm too scared to leave here after <rumours> a <group> of <wild> ^orange;<monster>s^reset; <loitering>. I heard they were last seen near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you <revenge2>^reset;?"
+          ]
+        }
+      },
+      "completionText" : {
+        "default" : {
+          "default" : [
+            "<appreciation1> <appreciation2>"
+          ],
+          "floran" : [
+            "Floran appreciates the help!"
+          ],
+          "glitch" : [
+            "Pleased. <appreciation1> <appreciation2>"
+          ]
+        }
+      },
+      "failureText" : {
+        "default" : [
+          "Oops, I wasn't able to help <questGiver>."
+        ]
+      }
+    },
+    "requireTurnIn" : true,
+
+    "objectives" : [
+      {
+        "id" : "findPlace",
+        "text" : "Locate the <spawnPoint>"
+      },
+      {
+        "id" : "kill",
+        "text" : "Destroy the <monster>s"
+      },
+      {
+        "id" : "return",
+        "text" : "Return to <questGiver>"
+      }
+    ],
+    "spawnPointObjectiveRange" : 35,
+
+    "initialCompassTarget" : {
+      "targetType" : "parameter",
+      "target" : "spawnPoint"
+    },
+
+    "directions" : [
+      {
+        "angleRange" : [-45, 45],
+        "descriptions" : [
+          " above",
+          " above us",
+          " up above"
+        ]
+      },
+      {
+        "angleRange" : [-45, -135],
+        "descriptions" : [
+          " to spinward",
+          " spinward from here",
+          " spinward of us"
+        ]
+      },
+      {
+        "angleRange" : [135, -135],
+        "descriptions" : [
+          " below",
+          " below us",
+          " down below"
+        ]
+      },
+      {
+        "angleRange" : [135, 45],
+        "descriptions" : [
+          " to antispinward",
+          " antispinward from here",
+          " antispinward of us"
+        ]
+      }
+    ]
+  }
+}

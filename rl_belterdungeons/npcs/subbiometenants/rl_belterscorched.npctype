@@ -1,0 +1,10 @@
+{
+  "type" : "rl_belterscorched",
+  "baseType" : "scorched",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant", "shady"]
+    }
+  }
+}

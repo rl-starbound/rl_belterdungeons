@@ -1,0 +1,8 @@
+{
+  "author" : "rl.starbound",
+  "description" : "This mod enables the generation of space-themed dungeons in asteroid belts.",
+  "friendlyName" : "Belter Dungeons",
+  "includes" : ["rl_recruittimer"],
+  "name" : "rl_belterdungeons",
+  "version" : "1.0.0"
+}

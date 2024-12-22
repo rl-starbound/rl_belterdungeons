@@ -1,0 +1,56 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_spacegroup_small-mid",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "smallgroup-mid1", "smallgroup-mid2", "smallgroup-mid3" ],
+    "gravity" : 0,
+    "breathable" : false,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : false
+},
+
+  "parts" : [
+    {
+      "name" : "smallgroup-mid1",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "smallgroup-mid1.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+    {
+      "name" : "smallgroup-mid2",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "smallgroup-mid2.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+    {
+      "name" : "smallgroup-mid3",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "smallgroup-mid3.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+    {
+      "name" : "smallgroup-mid4",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "smallgroup-mid4.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+    {
+      "name" : "smallgroup-mid5",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "smallgroup-mid5.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    }
+  ]
+}

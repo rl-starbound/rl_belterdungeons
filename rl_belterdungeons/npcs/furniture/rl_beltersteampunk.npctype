@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltersteampunk",
+  "baseType" : "steampunk",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_tenant", "rl_belterdungeons_common"]
+    }
+  }
+}

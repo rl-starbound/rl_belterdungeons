@@ -1,0 +1,10 @@
+{
+  "type" : "rl_belterfoundry",
+  "baseType" : "foundry",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant"]
+    }
+  }
+}

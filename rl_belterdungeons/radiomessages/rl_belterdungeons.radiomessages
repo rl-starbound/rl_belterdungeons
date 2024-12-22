@@ -1,0 +1,14 @@
+{
+  "rl_belterdungeons-dungeonsFound" : {
+    "unique" : false,
+    "text" : "Scans of this asteroid field are inconclusive."
+  },
+  "rl_belterdungeons-dungeonsNotFound" : {
+    "unique" : false,
+    "text" : "Scans of this asteroid field indicate nothing unusual."
+  },
+  "rl_belterdungeons-mechBeaconDetected" : {
+    "type" : "tutorial",
+    "text" : "Scanners are picking up a signal that appears to be some kind of navigational beacon. Following the signal to its origin may reveal something of interest."
+  }
+}

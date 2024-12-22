@@ -1,0 +1,33 @@
+[
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_protect",
+    "value" : {
+      "checkIn" : {
+        "default" : {
+          "default" : [
+            "Please save me from the <threat>! They'll be here any time now.",
+            "Are you here to help? Some <threat> are coming for me!",
+            "What have I gotten myself into? I should never have gotten mixed up with <threat>.",
+            "Did <questGiver> send you? <questGiver.pronoun.capitalSubject> promised to arrange for my protection from the <threat>."
+          ]
+        },
+        "floran" : {
+          "default" : [
+            "Please ssave Floran from <threat>! They'll be here ssoon.",
+            "Are you here to fight? Ssome <threat> are hunting Floran!",
+            "Floran sshould never have gotten mixed up with <threat>.",
+            "Did <questGiver> ssend you? <questGiver.pronoun.capitalSubject> promisssed to help sstab <threat>."
+          ]
+        },
+        "glitch" : {
+          "default" : [
+            "Worried. Please save me from the <threat>! They'll be here any time now.",
+            "Tense. Are you here to help? Some <threat> are coming for me!",
+            "Flustered. What have I gotten myself into? I should never have gotten mixed up with <threat>.",
+            "Agitated. Did <questGiver> send you? <questGiver.pronoun.capitalSubject> promised to arrange for my protection from the <threat>."
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  [
+    { "op" : "test",
+      "path" : "/tiles/277/brush/1/0",
+      "value" : "object"
+    },
+    { "op" : "test",
+      "path" : "/tiles/277/brush/1/1",
+      "value" : "lunarbaselocker"
+    },
+    { "op" : "add",
+      "path" : "/tiles/277/brush/1/2/parameters/rl_questLocation",
+      "value" : { "disabled" : true }
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/tiles/278/brush/1/0",
+      "value" : "object"
+    },
+    { "op" : "test",
+      "path" : "/tiles/278/brush/1/1",
+      "value" : "lunarbaselocker"
+    },
+    { "op" : "add",
+      "path" : "/tiles/278/brush/1/2/parameters/rl_questLocation",
+      "value" : { "disabled" : true }
+    }
+  ]
+]

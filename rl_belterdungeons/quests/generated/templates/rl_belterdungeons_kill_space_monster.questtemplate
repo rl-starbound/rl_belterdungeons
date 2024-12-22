@@ -1,0 +1,153 @@
+{
+  "id" : "rl_belterdungeons_kill_space_monster.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    },
+    "monster" : {
+      "type" : "monsterType",
+      "example" : {
+        "name" : "Heavy Drone",
+        "typeName" : "heavydrone"
+      }
+    },
+    "items" : {
+      "type" : "itemList",
+      "example" : {
+        "items" : [{"name" : "rawbacon", "count" : 2}]
+      }
+    },
+    "spawnPoint" : {
+      "type" : "location"
+    },
+    "extraRewards" : {
+      "type" : "itemList",
+      "example" : {
+        "items" : [{"name" : "money", "count" : 1000}]
+      }
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards", "extraRewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/generated/kill_monster.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver",
+      "objective" : "monster"
+    },
+    "generatedText" : {
+      "text" : {
+        "first" : {
+          "floran" : [
+            "Firsst, we need Floran's ^orange;<items>^reset;. Not hard to find. Dangerous ^orange;<monster>^reset; near ^orange;<spawnPoint>^reset;<spawnPoint.direction> ate them. ^green;Hunt it and bring Floran's thingsss back!",
+            "First sstep, Floran need you to go on a little hunt. Floran sssaw ^orange;<monster>^reset; swallow ^orange;<items>^reset; near ^orange;<spawnPoint>^reset;<spawnPoint.direction>. Greedy ^orange;<monster>^reset;! ^green;Hunt it and bring Floran the stuff from inssside."
+          ],
+          "glitch" : [
+            "Bewildered.  I was awaiting a delivery of ^orange;<items>^reset; when a dangerous ^orange;<monster>^reset; raided the shipment near the ^orange;<spawnPoint>^reset;<spawnPoint.direction> and took everything! Could you ^green;confront it and retrieve my supplies?",
+            "Nervous. A dangerous ^orange;<monster>^reset; ambushed a shipment near the ^orange;<spawnPoint>^reset;<spawnPoint.direction> and took my ^orange;<items>^reset;! Can you ^green;neutralize it and bring back my supplies?"
+          ],
+          "default" : [
+            "The first step is finding the ^orange;<monster>^reset; that's been ambushing shipping near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. It stole my ^orange;<items>^reset;. ^green;You don't mind confronting it and retrieving my supplies^reset;, do you?",
+            "The first thing we'll need is ^orange;<items>^reset;. Unfortunately, a dangerous ^orange;<monster>^reset; raided my shipment and stole everything. It was last seen lurking around the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. Could you ^green;neutralize it and bring back my supplies?"
+          ]
+        },
+        "default" : {
+          "floran" : [
+            "Next sstep not tricky. A dangerous ^orange;<monster>^reset; near the ^orange;<spawnPoint>^reset;<spawnPoint.direction> ate Floran's ^orange;<items>^reset;. ^green;Hunt it and get stuff back.",
+            "Okay, now Floran needss ^orange;<items>^reset;. Floran sssaw ^orange;<monster>^reset; near the ^orange;<spawnPoint>^reset;<spawnPoint.direction> swallow the stuff we need! ^green;Hunt it and bring back the thingsss."
+          ],
+          "glitch" : [
+            "Shocked. A convoy was attacked recently by a fierce ^orange;<monster>^reset;, which made off with my ^orange;<items>^reset;. It was last seen flying towards the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. Could you ^green;confront it and retrieve my supplies?^reset; It couldn't have gotten far.",
+            "Ashamed. My ship was attacked by a fierce ^orange;<monster>^reset; near the ^orange;<spawnPoint>^reset;<spawnPoint.direction> and it stole my ^orange;<items>^reset; when I fled. Could you ^green;neutralize it and retrieve my things?"
+          ],
+          "default" : [
+            "Next, I'll need you to ^green;track down and destroy the ^orange;<monster>^green; that stole my ^orange;<items>^reset; in a shipping raid a few cycles ago. I need my stuff back! That ^orange;<monster>^reset; has been sighted near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>.",
+            "Next you'll need to track down a dangerous ^orange;<monster>^reset;. I was surveying near the ^orange;<spawnPoint>^reset;<spawnPoint.direction> earlier and it ambushed my ship and took my ^orange;<items>^reset; when I fled. Would you ^green;neutralize it and return what it's taken?"
+          ]
+        }
+      },
+      "completionText" : {
+        "first" : {
+          "floran" : [
+            "Impressive! You're a good hunter. Things <monster> ate are a little damaged, but still usable.",
+            "Floran knew you'd do it! <player> the <monster> hunter! Sssounds good, right? And now Floran has what we need."
+          ],
+          "glitch" : [
+            "Victorious. You retrieved my supplies! Next time a cowardly <monster> ambushes me, I'll be ready.",
+            "Impressed. You managed to defeat that <monster>!? You must be a great warrior! Thank you for your assistance."
+          ],
+          "default" : [
+            "Great work! That <monster> won't be bothering us anymore, and we have everything we need for phase two.",
+            "That <monster> never knew what hit it! Thanks for doing the dirty work and retrieving my supplies."
+          ]
+        },
+        "default" : {
+          "floran" : [
+            "Good job! Bet <monster> regretss eating Floran's ssstuff now. Okay, let's make use of the <items>.",
+            "Nice work! Floran wasn't sssure if you'd succeed. Lookss like <monster> needed to be asked vigorously to return ssstuff."
+          ],
+          "glitch" : [
+            "Relieved. Thank you for retrieving my supplies. They are important to my plans. Hopefully any marauders will learn not to antagonise us in future!",
+            "Pleased. You retrieved my belongings and neutralized the threat of that <monster>!"
+          ],
+          "default" : [
+            "That <monster> is finally gone? Thank you! Now that we've got <items> we can move forward.",
+            "Thank you! That <monster> should have thought twice before taking things that didn't belong to it."
+          ]
+        }
+      }
+    },
+    "requireTurnIn" : true,
+
+    "objectives" : [
+      {
+        "id" : "hunt",
+        "text" : "Destroy the <monster>"
+      },
+      {
+        "id" : "return",
+        "text" : "Bring the <items> to <questGiver>"
+      }
+    ],
+
+    "directions" : [
+      {
+        "angleRange" : [-45, 45],
+        "descriptions" : [
+          " above",
+          " above us",
+          " up above"
+        ]
+      },
+      {
+        "angleRange" : [-45, -135],
+        "descriptions" : [
+          " to spinward",
+          " spinward from here",
+          " spinward of us"
+        ]
+      },
+      {
+        "angleRange" : [135, -135],
+        "descriptions" : [
+          " below",
+          " below us",
+          " down below"
+        ]
+      },
+      {
+        "angleRange" : [135, 45],
+        "descriptions" : [
+          " to antispinward",
+          " antispinward from here",
+          " antispinward of us"
+        ]
+      }
+    ]
+  }
+}

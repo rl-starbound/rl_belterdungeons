@@ -1,0 +1,79 @@
+{
+  "type" : "rl_belterminer",
+  "baseType" : "miner",
+
+  "statusControllerSettings" : {
+    "stats" : {
+      "maxHealth" : {
+        "baseValue" : 100.0
+      }
+    }
+  },
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common"]
+    },
+
+    "dialog" : {
+      "converse" : {
+        "default" : {
+          "default" : [
+            "Mining belt rocks is lonely work, but it's a living.",
+            "I've heard erchius miners are being attacked by... something. I hope it doesn't come here too.",
+            "We belters have to stick together, or the terrestrials will take advantage of us.",
+            "You get accustomed to the lightness of the artificial gravity here.",
+            "I don't think I could live down a well anymore, with the high gravity.",
+            "Are you here to resupply us? Hope you brought deodorant, 'cause we're out.",
+            "Rock hoppers like me provide most of the raw materials modern civilization relies on.",
+            "Sometimes I like to just sit in the docking bay and stare out into the void.",
+            "Have you ever thought about walking naked in the void? Imagine surviving to tell the tale...",
+            "Is it night-time outside? Haha, just kidding. It's always night in space!",
+            "Do you ever get scared that you'll fall into the infinite, empty void of space by accident? I know I do!",
+            "You know, it's really hard to maintain a sleep cycle when there's no days or nights."
+          ]
+        }
+      },
+
+      "attack" : {
+        "default" : {
+          "default" : [
+            "Take this!",
+            "Stay away from me!",
+            "Get back!",
+            "Fall back!"
+          ]
+        }
+      },
+
+      "killedTarget" : {
+        "default" : {
+          "default" : [
+            "I think we're safe, for now.",
+            "What a mess..",
+            "I'm not cleaning that up..",
+            "I wasn't sure if we'd make it."
+          ]
+        }
+      }
+    }
+  },
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "minerhead", "parameters" : { "colorIndex" : 0 } } ],
+            "chest" : [ { "name" : "minerchest", "parameters" : { "colorIndex" : 0 } } ],
+            "legs" : [ { "name" : "humantier2pants", "parameters" : { "colorIndex" : 1 } } ],
+            "primary" : [
+              ""
+            ],
+            "sheathedprimary" : [
+              "npchammer"
+            ]
+          }
+        ] ]
+    ]
+  }
+}

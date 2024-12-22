@@ -1,0 +1,49 @@
+{
+  "type" : "rl_belteroutlawsoldier",
+  "baseType" : "outlawsoldier",
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "t2helm1", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "t2helm2", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "bandithat1", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "bandithat2", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "m1helmethead", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "weldershelmethead" },
+              { "name" : "eyepatchhead" },
+              { "name" : "apextier5shead", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier2head", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier3head", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier4head", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } }
+            ],
+            "back" : [
+              { "name" : "spearback" },
+              { "name" : "hunterback" },
+              { "name" : "hazmatback", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "spacesuitback", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } }
+            ],
+            "chest" : [
+              { "name" : "bettychest", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "hunterchest", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "mercenarychest", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier3chest", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier4chest", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } }
+            ],
+            "legs" : [
+              { "name" : "bettylegs", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "hunterlegs", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier1pants", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier2pants", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier3pants", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } },
+              { "name" : "humantier4pants", "parameters" : { "colorIndex" : [1, 2, 3, 4, 8, 9] } }
+            ],
+            "primary" : [ "npcbroadsword", "npcpetcapturepod" ],
+            "sheathedprimary" : [ "npcrocketlauncher", "npcsniperrifle" ]
+          }
+        ] ]
+    ]
+  }
+}

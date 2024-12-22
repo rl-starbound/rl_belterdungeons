@@ -1,0 +1,254 @@
+{
+  "id" : "rl_belterdungeons_protect.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity",
+      "indicator" : "/interface/quests/questreceiver.animation"
+    },
+    "target" : {
+      "type" : "entity",
+      "example" : {
+        "name" : "Alpha Betty"
+      }
+    },
+    "threat" : {
+      "type" : "npcType",
+      "example" : {
+        "species" : "human",
+        "typeName" : "bandit",
+        "name" : "bandits"
+      }
+    },
+    "spawnPoint" : {
+      "type" : "location",
+      "example" : {
+        "name" : "dark, scary cave"
+      }
+    }
+  },
+  "moneyRange" : [100, 150],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta": 10,
+  "script" : "/quests/scripts/generated/rl_belterdungeons_protect.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver",
+      "objective" : "threat"
+    },
+    "generatedText" : {
+      "title" : [
+        "Protect <target> from <threat>",
+        "Save <target> from <threat>"
+      ],
+      "goalText" : {
+        "floran" : [
+          "^cyan;Floran wantsss <target> to be ssafe. Floran has plan to make thiss work.",
+          "^cyan;Floran wantsss to protect <target> from threat."
+        ],
+        "glitch" : [
+          "^cyan;Worried. I am responsible for the safety of <target>, and now I hear <target.pronoun.copulative> in danger. ",
+          "^cyan;Eager. I have word that <target> may be in danger, and there is little time to prepare a defense."
+        ],
+        "default" : [
+          "^cyan;I've heard <target> might be in trouble, and am responsible for guaranteeing <target.pronoun.possessiveDet> safety.",
+          "^cyan;I've received information that <target> is at risk and need to prepare a defense."
+        ]
+      },
+      "text" : {
+        "first" : {
+          "floran" : [
+            "Floran heard that ^orange;<threat>^reset; are hunting ^orange;<target>^reset; and planning to attack from the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Floran needs <target> alive, so make sssure you protect <target.pronoun.object>.",
+            "Floran heard that ^orange;<target>^reset; upssset ^orange;<threat>^reset;, and they're coming through the ^orange;<spawnPoint>^reset;<spawnPoint.direction> to kill <target.pronoun.object>! Floran wantss you to ^green;protect <target>."
+          ],
+          "glitch" : [
+            "Tense. I heard talk of ^orange;<threat>^reset; approaching the ^orange;<spawnPoint>^reset;<spawnPoint.direction> and believe they are coming to kill ^orange;<target>^reset;. ^green;Can you help protect <target> from these foes?",
+            "Fervent. I have reason to believe ^orange;<threat>^reset;, coming through the ^orange;<spawnPoint>^reset;<spawnPoint.direction>, will try to kill ^orange;<target>^reset;. ^green;You must help protect <target>!"
+          ],
+          "default" : [
+            "Firstly, we need to deal with the ^orange;<threat>^reset; that are on their way to the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. I hear they're after ^orange;<target>^reset;! Do whatever you can to fend them off. ^green;<target> needs our protection!",
+            "The first task is going to be tough. Intel has it that ^orange<threat>^reset; are coming through the ^orange<spawnPoint>^reset;<spawnPoint.direction> and plan to attack ^orange;<target>^reset;! Make sure they don't succeed and ^green;protect <target> at all costs!"
+          ]
+        },
+        "next" : {
+          "floran" : [
+            "Next part not sso easy. Floran heard that ^orange;<threat>^reset;, coming through the ^orange;<spawnPoint>^reset;<spawnPoint.direction>, are planning to kill ^orange;<target>^reset;. Floran needs you to ^green;ssstop them and protect <target>.",
+            "Next part iss good timing. Floran heard on grapevine that ^orange;<threat>^reset; are coming through the ^orange;<spawnPoint>^reset;<spawnPoint.direction> to attack ^orange;<target>^reset;. Floran wants you to ^green;protect <target> from <threat>."
+          ],
+          "glitch" : [
+            "Flustered. I have received a tip-off that ^orange;<threat>^reset; are coming via the ^orange;<spawnPoint>^reset;<spawnPoint.direction> to attack ^orange;<target>^reset;! ^green;If you could help me protect <target>^reset;, I would be extremely grateful!",
+            "Agitated. I have received information that ^orange;<threat>^reset; are approaching, via the ^orange;<spawnPoint>^reset;<spawnPoint.direction>, and are coming to attack ^orange;<target>^reset;. ^green;If you can help me save <target>^reset;, you will win my gratitude."
+          ],
+          "default" : [
+            "Next we'll need to defend against ^orange;<threat>^reset; coming through the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. I've heard that their target is ^orange;<target>^reset;. If we show that we're willing to risk life and limb to ^green;protect <target>^reset;, then <target.pronoun.subject>'ll know <target.pronoun.subject> can trust us.",
+            "Next, we need to protect ^orange;<target>^reset;. There's a group of ^orange;<threat>^reset; on their way here through the ^orange;<spawnPoint>^reset;<spawnPoint.direction> to attack <target.pronoun.object>. ^green;Do whatever you can to keep <target> safe from harm!"
+          ]
+        },
+        "default" : {
+          "floran" : [
+            "Floran knows ^orange;<threat>^reset; have been hunting ^orange;<target>^reset;, and now Floran hears they are coming to the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. You have to ^green;keep <target> safe^reset;. Do that, and everyone winsss.",
+            "Floran knows ^orange;<target>^reset; got on the wrong ssside of ^orange;<threat>^reset;, and they'll attack from the ^orange;<spawnPoint>^reset;<spawnPoint.direction> any time now! But Floran wantss your help, so ^green;please protect <target> from <target.pronoun.possessiveDet> enemies."
+          ],
+          "glitch" : [
+            "Tense. I've been informed that ^orange;<threat>^reset; will be approaching from the ^orange;<spawnPoint>^reset;<spawnPoint.direction>, and ^orange;<target>^reset; is their target! ^green;Can you help me protect <target>?",
+            "Restless. I've received word that ^orange;<threat>^reset; arriving at the ^orange;<spawnPoint>^reset;<spawnPoint.direction> are coming for ^orange;<target>^reset;! ^green;You must help me protect <target>^reset;, before it is too late!"
+          ],
+          "default" : [
+            "Word is that ^orange;<threat>^reset; are on their way here to kill ^orange;<target>^reset;. Intel reports that they'll approach from the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. This can't be allowed to happen! ^green;Please help protect <target>^reset; however you can!",
+            "^orange;<target>^reset; is in danger! It seems there's a gang of ^orange;<threat>^reset; on their way to the ^orange;<spawnPoint>^reset;<spawnPoint.direction> with hostile intentions. ^green;Make sure they don't harm <target>.^reset; Do whatever it takes!"
+          ]
+        }
+      },
+      "completionText" : {
+        "first" : {
+          "floran" : [
+            "Well done, Floran's plan isss working perfectly! <target> is ssafe.",
+            "Good job, you saved <target>! Nice protection skillsss."
+          ],
+          "glitch" : [
+            "Relieved. <target> is safe now. Thank you!",
+            "Appreciative. Thanks to you, <target> is safe."
+          ],
+          "default" : [
+            "Thanks to you, <target> wasn't harmed. I'm sure <target.pronoun.copulative> extremely grateful to us. I know I would be!",
+            "You kept <target> safe! <target.pronoun.capitalSubject>'ll never forget that we saved <target.pronoun.possessiveDet> life. It feels like a bond has been created between us."
+          ]
+        },
+        "next" : {
+          "floran" : [
+            "Floran impressed at your combat ssskills. Sstupid <threat> weren't expecting that!",
+            "Floran impressed. Lucky for <target> the grapevine wass right, bet those <threat> weren't expecting that!"
+          ],
+          "glitch" : [
+            "Overjoyed. You helped protect <target>!",
+            "Impressed. You saved <target>! Thank you for your help!"
+          ],
+          "default" : [
+            "You made short work of those <threat>! We've also earned the trust of <target>. I'm sure that will prove helpful!",
+            "Well done! Those <threat> met their match."
+          ]
+        },
+        "default" : {
+          "floran" : [
+            "Successs! <target> knows I told you to ssstop <threat>.",
+            "Successs! <target> appreciated the protection."
+          ],
+          "glitch" : [
+            "Impressed. You are indeed a gallant knight! Thanks to you, <target> is safe.",
+            "Exuberant. You defeated the <threat> and saved <target>! You are no doubt a noble warrior!"
+          ],
+          "default" : [
+            "Hahaha, the <threat> were no match for us ... er, I mean you. I think this will have earned us <target>'s trust!",
+            "I'm impressed! The <threat> never stood a chance. I think we've earned <target>'s friendship as well."
+          ]
+        }
+      },
+      "abortText.questlocationRemoved" : {
+        "default" : {
+          "default" : [
+            "The <threat> were nowhere to be found? I guess my intel was bad.",
+            "You couldn't find the <threat>? I guess I had it wrong."
+          ],
+          "floran" : [
+            "The <threat> essscaped your hunt? Is okay, not all hunts sssuccessful.",
+            "You not find <threat>? Floran mussst have heard wrong."
+          ],
+          "glitch" : [
+            "Embarrassed. The <threat> were nowhere to be found? I'm sorry I wasted your time.",
+            "Chagrined. You couldn't find the <threat>? My intel must have been wrong."
+          ]
+        }
+      },
+      "failureText" : {
+        "default" : [
+          "You weren't able to save <target>. You should probably feel a little guilty about that.",
+          "You failed to protect <target>. Maybe you're not much of a fighter, after all.",
+          "You failed to protect <target>. Maybe you shouldn't agree to protect people in the future.",
+          "You failed to protect <target>. I guess things might've been different if I could've given you more notice."
+        ],
+        "floran" : [
+          "You not keep <target> safe! You feel bad about that?",
+          "<target> not protected! Maybe you not good fighter, after all.",
+          "You not protect <target>! Maybe you not agree to protect people when you bad fighter.",
+          "You not protect <target>! Floran knew Floran should have been lead fighter..."
+        ],
+        "glitch" : [
+          "Sad. You weren't able to save <target>. You should probably feel guilty about that.",
+          "Upset. You failed to protect <target>. Maybe you're not much of a fighter, after all.",
+          "Candid. You failed to protect <target>. Maybe you shouldn't agree to protect people in the future.",
+          "Contemplative. You failed to protect <target>. I guess things might have been different if I could have given you more notice."
+        ]
+      }
+    },
+    "requireTurnIn" : true,
+    "indicators" : ["target"],
+
+    // Player -> Target NPC
+    "requestCheckInNotification" : "rl_belterdungeons_protectCheckInRequested",
+    // Target NPC -> Player
+    "checkInConfirmedEventName" : "rl_belterdungeons_protectCheckInConfirmed",
+
+    "objectives" : [
+      {
+        "id" : "checkIn",
+        "text" : "Speak to <target>"
+      },
+      {
+        "id" : "findPlace",
+        "text" : "Investigate the <spawnPoint>"
+      },
+      {
+        "id" : "kill",
+        "text" : "Protect <target> from the <threat>"
+      },
+      {
+        "id" : "return",
+        "text" : "Return to <questGiver>"
+      }
+    ],
+    "spawnPointObjectiveRange" : 35,
+
+    "initialCompassTarget" : {
+      "targetType" : "parameter",
+      "target" : "target"
+    },
+
+    "directions" : [
+      {
+        "angleRange" : [-45, 45],
+        "descriptions" : [
+          " above",
+          " above us",
+          " up above"
+        ]
+      },
+      {
+        "angleRange" : [-45, -135],
+        "descriptions" : [
+          " to spinward",
+          " spinward from here",
+          " spinward of us"
+        ]
+      },
+      {
+        "angleRange" : [135, -135],
+        "descriptions" : [
+          " below",
+          " below us",
+          " down below"
+        ]
+      },
+      {
+        "angleRange" : [135, 45],
+        "descriptions" : [
+          " to antispinward",
+          " antispinward from here",
+          " antispinward of us"
+        ]
+      }
+    ]
+  }
+}

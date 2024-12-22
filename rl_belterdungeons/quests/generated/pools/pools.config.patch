@@ -1,0 +1,34 @@
+[
+  { "op" : "add",
+    "path" : "/isBelterNpcThreat",
+    "value" : {
+      "relation" : "BinaryPool",
+      "types" : ["TagSet", "NpcType"],
+      "poolFile" : "/quests/generated/pools/rl_belternpcthreats.config"
+    }
+  },
+  { "op" : "add",
+    "path" : "/isSingleBelterNpcThreat",
+    "value" : {
+      "relation" : "BinaryPool",
+      "types" : ["TagSet", "NpcType"],
+      "poolFile" : "/quests/generated/pools/rl_singlebelternpcthreats.config"
+    }
+  },
+  { "op" : "add",
+    "path" : "/isBelterMonsterThreat",
+    "value" : {
+      "relation" : "BinaryPool",
+      "types" : ["TagSet", "MonsterType"],
+      "poolFile" : "/quests/generated/pools/rl_beltermonsterthreats.config"
+    }
+  },
+  { "op" : "add",
+    "path" : "/isSingleBelterMonsterThreat",
+    "value" : {
+      "relation" : "BinaryPool",
+      "types" : ["TagSet", "MonsterType"],
+      "poolFile" : "/quests/generated/pools/rl_singlebeltermonsterthreats.config"
+    }
+  }
+]

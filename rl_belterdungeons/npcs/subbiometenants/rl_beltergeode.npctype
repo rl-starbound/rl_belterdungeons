@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltergeode",
+  "baseType" : "geode",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant"]
+    }
+  }
+}

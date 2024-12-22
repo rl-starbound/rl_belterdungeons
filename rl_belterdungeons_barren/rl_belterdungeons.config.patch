@@ -1,0 +1,6 @@
+[
+  { "op" : "add",
+    "path" : "/questlocationObjects/allowedWorldTypes/barren",
+    "value" : true
+  }
+]

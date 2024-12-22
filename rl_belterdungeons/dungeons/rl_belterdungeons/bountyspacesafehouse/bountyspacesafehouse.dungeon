@@ -1,0 +1,166 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_space_safehouse",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "entrance_1" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 3,
+    "protected" : true,
+    "extraDungeonIds" : [{
+      // +1 : exterior of the base
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "entrance_1",
+      "rules" : [
+        [ "doNotConnectToPart", [ "end_1", "end_2", "end_3", "end_4", "end_5", "end_6" ] ]
+      ],
+      "def" : [ "tmx", "entrance_1.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "room_1",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_1" ] ]
+      ],
+      "def" : [ "tmx", "room_1.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_2",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_2" ] ]
+      ],
+      "def" : [ "tmx", "room_2.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_3",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_3" ] ]
+      ],
+      "def" : [ "tmx", "room_3.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_4",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_4" ] ]
+      ],
+      "def" : [ "tmx", "room_4.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_5",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_5" ] ]
+      ],
+      "def" : [ "tmx", "room_5.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_6",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_6" ] ]
+      ],
+      "def" : [ "tmx", "room_6.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_7",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_7" ] ]
+      ],
+      "def" : [ "tmx", "room_7.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_8",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_8" ] ]
+      ],
+      "def" : [ "tmx", "room_8.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_9",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_9" ] ]
+      ],
+      "def" : [ "tmx", "room_9.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "room_10",
+      "rules" : [
+        [ "doNotCombineWith", [ "room_10" ] ]
+      ],
+      "def" : [ "tmx", "room_10.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "end_1",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotConnectToPart", [ "entrance_1" ] ]
+      ],
+      "def" : [ "tmx", "end_1.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "end_2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotConnectToPart", [ "entrance_1" ] ]
+      ],
+      "def" : [ "tmx", "end_2.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "end_3",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotConnectToPart", [ "entrance_1" ] ]
+      ],
+      "def" : [ "tmx", "end_3.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "end_4",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotConnectToPart", [ "entrance_1" ] ]
+      ],
+      "def" : [ "tmx", "end_4.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "end_5",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotConnectToPart", [ "entrance_1" ] ]
+      ],
+      "def" : [ "tmx", "end_5.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "end_6",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotConnectToPart", [ "entrance_1" ] ]
+      ],
+      "def" : [ "tmx", "end_6.json" ],
+      "chance" : 0
+    }
+  ]
+}

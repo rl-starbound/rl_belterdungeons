@@ -1,0 +1,231 @@
+{
+  "id" : "rl_belterdungeons_kill_space_monster_single.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    },
+    "monster" : {
+      "type" : "monsterType",
+      "example" : {
+        "name" : "Heavy Drone",
+        "typeName" : "heavydrone"
+      }
+    },
+    "spawnPoint" : {
+      "type" : "location"
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards", "extraRewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/generated/kill.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver",
+      "objective" : "monster"
+    },
+    "generatedText" : {
+      "fluff" : [
+        ["genericPluralizedMonsterTerm", [
+          "monsters"
+        ]],
+        ["giant", [
+          "dangerous",
+          "powerful",
+          "terrifying",
+          "killer",
+          "deadly"
+        ]],
+        ["giantfloran", [
+          "ssstrong",
+          "ssscary",
+          "deadly",
+          "tough"
+        ]],
+        ["exploring", [
+          "exploring",
+          "flying",
+          "surveying",
+          "traveling"
+        ]],
+        ["earlier", [
+          "earlier",
+          "a few cycles ago",
+          "several hours ago"
+        ]],
+        ["disaster", [
+          "something terrible happened",
+          "I had a close call",
+          "I narrowly avoided a terrible fate",
+          "I had a scary encounter"
+        ]],
+        ["fate", [
+          "attacked my ship",
+          "nearly killed me",
+          "tried to kill me",
+          "wrecked my ship"
+        ]],
+        ["talk", [
+          "talk",
+          "rumours"
+        ]],
+        ["rumour1", [
+          "has a reputation for killing unwary explorers",
+          "has been attacking innocent belters",
+          "has been raiding shipping with impunity",
+          "has been terrorizing travelers",
+          "is constantly searching for its next victim",
+          "is the result of an experiment gone wrong",
+          "preys on defenseless merchant convoys",
+          "whispers the names of those it plans to kill next"
+        ]],
+        ["request", [
+          "deal with it",
+          "sort it out",
+          "destroy it for me",
+          "get rid of it"
+        ]],
+        ["challengefloran", [
+          "If you think you're ssstrong enough",
+          "If you are brave enough",
+          "If you are up for the challenge",
+          "If you are a worthy hunter",
+          "If you are a brave enough hunter"
+        ]],
+        ["appreciation1", [
+          "You defeated the <giant> <monster>?",
+          "You got rid of the <monster>?",
+          "Oh, you sorted out that <giant> <monster>?"
+        ]],
+        ["appreciation2", [
+          "You're the best fighter around! I hope this reward makes it worth your while!",
+          "Thanks! I appreciate the help!",
+          "I'll sleep better knowing you've made it a little safer around here!",
+          "Thanks! You've made it so much safer to live around here.",
+          "Now I can sleep knowing that thing won't be around!"
+        ]],
+        ["floranappreciation", [
+          "Floran is very impresssed!",
+          "Floran wasn't sssure you could do it!",
+          "Floran is surprised at your ssskills!",
+          "Floran won't doubt you in future... Not that Floran wasss doubting you!"
+        ]]
+      ],
+      "title" : {
+        "default" : [
+          "The <giant> <monster>",
+          "<monster> Hunter"
+        ],
+        "floran" : [
+          "The <monster> challenge",
+          "<monster> Hunter"
+        ]
+      },
+      "goalText" : {
+        "default" : [
+          "^cyan;I need some help with a matter of public safety."
+        ],
+        "floran" : [
+          "^cyan;Floran hasss a challenge for you."
+        ],
+        "glitch" : [
+          "^cyan;Scared. There is a threat that needs handling."
+        ]
+      },
+      "text" : {
+        "default" : {
+          "default" : [
+            "There's been <talk> about a <giant> ^orange;<monster>^reset; near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. Some are saying that it <rumour1>! Can you ^green;<request>^reset;, so I can feel safe again?",
+            "I was <exploring> near the ^orange;<spawnPoint>^reset;<spawnPoint.direction> <earlier> when <disaster>! A <giant> ^orange;<monster>^reset; was there and <fate>.  Can you ^green;<request>^reset;?"
+          ],
+          "floran" : [
+            "Floran has heard talk of a <giantfloran> ^orange;<monster>^reset; near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. Floran thinks thisss sounds like a good hunt! <challengefloran>, ^green;you should go and blassst it^reset;!"
+          ],
+          "glitch" : [
+            "Terrified. There's been <talk> about a <giant> ^orange;<monster>^reset; over near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. Some are saying that it <rumour1>! Can you ^green;<request>^reset;, and save us all?",
+            "Distressed. I was out <exploring> near the ^orange;<spawnPoint>^reset;<spawnPoint.direction> <earlier> when <disaster>! A <giant> ^orange;<monster>^reset; was there and <fate>.  Can you ^green;<request>^reset;?"
+          ]
+        }
+      },
+      "completionText" : {
+        "default" : {
+          "default" : [
+            "<appreciation1> <appreciation2>"
+          ],
+          "floran" : [
+            "You hunted the <monster>? <floranappreciation>"
+          ],
+          "glitch" : [
+            "Overjoyed. <appreciation1> <appreciation2>"
+          ]
+        }
+      },
+      "failureText" : {
+        "default" : [
+          "I guess I wasn't able to help <questGiver> in time. That's a shame."
+        ]
+      }
+    },
+    "requireTurnIn" : true,
+
+    "objectives" : [
+      {
+        "id" : "findPlace",
+        "text" : "Locate the <spawnPoint>"
+      },
+      {
+        "id" : "kill",
+        "text" : "Destroy the <monster>"
+      },
+      {
+        "id" : "return",
+        "text" : "Return to <questGiver>"
+      }
+    ],
+    "spawnPointObjectiveRange" : 35,
+
+    "initialCompassTarget" : {
+      "targetType" : "parameter",
+      "target" : "spawnPoint"
+    },
+
+    "directions" : [
+      {
+        "angleRange" : [-45, 45],
+        "descriptions" : [
+          " above",
+          " above us",
+          " up above"
+        ]
+      },
+      {
+        "angleRange" : [-45, -135],
+        "descriptions" : [
+          " to spinward",
+          " spinward from here",
+          " spinward of us"
+        ]
+      },
+      {
+        "angleRange" : [135, -135],
+        "descriptions" : [
+          " below",
+          " below us",
+          " down below"
+        ]
+      },
+      {
+        "angleRange" : [135, 45],
+        "descriptions" : [
+          " to antispinward",
+          " antispinward from here",
+          " antispinward of us"
+        ]
+      }
+    ]
+  }
+}

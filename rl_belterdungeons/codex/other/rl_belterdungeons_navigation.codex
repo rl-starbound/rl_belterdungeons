@@ -1,0 +1,27 @@
+{
+  "id" : "rl_belterdungeons_navigation",
+  "title" : "Navigation for Belters",
+  "description" : "A primer on navigating in asteroid belts.",
+  "icon" : "/codex/human/humancover2.png",
+  "contentPages" : [
+
+    "Terrestrials grow up with navigational directions such as \"up\", \"down\", \"north\", \"south\", \"east\", and \"west\" fixed with respect to their planet's gravity well and magnetic poles. In asteroid belts, navigating isn't that different. We just use different words.
+
+The biggest misconception about the belts is that there isn't a gravity well. This is, of course, wrong. Unlike ter- restrials, whose lives are dominated by planetary gravity, we belters move according to our star's. \"In\" or \"sun-",
+
+    "ward\" means going down the well, and \"out\" or \"voidward\" means moving toward the edge of the system.
+
+All of the rocks in a belt orbit its star at more or less the same velocity, and the direction of the rotation is \"spin- ward\". Its opposite direction is \"anti- spinward\".
+
+\"Up\" and \"down\" are arbitrary con- cepts in microgravity, but by conven- tion \"up\" is above the plane of the ecliptic, and \"down\" is below the plane. To find \"up\", face sunward and orient",
+
+    "your right hand spinward. \"Up\" will be above you and \"down\" below you.
+
+With a common vocabulary, we can now begin an introductory examination of orbital mechanics..."
+
+  ],
+    "itemConfig" : {
+    "rarity" : "Common",
+    "price" : 25
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltermerchanttenant",
+  "baseType" : "merchanttenant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant", "rl_belterdungeons_merchant"]
+    }
+  }
+}

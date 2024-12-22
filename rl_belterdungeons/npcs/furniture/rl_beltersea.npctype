@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltersea",
+  "baseType" : "sea",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_tenant", "rl_belterdungeons_common"]
+    }
+  }
+}

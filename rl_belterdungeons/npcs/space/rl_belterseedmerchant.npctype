@@ -1,0 +1,11 @@
+{
+  "type" : "rl_belterseedmerchant",
+  "baseType" : "seedmerchant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common"],
+      "enableParticipation" : true
+    }
+  }
+}

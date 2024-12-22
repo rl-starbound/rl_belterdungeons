@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltervillager",
+  "baseType" : "villager",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common"]
+    }
+  }
+}

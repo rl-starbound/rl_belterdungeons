@@ -1,0 +1,10 @@
+{
+  "type" : "rl_systemthreat_npc",
+
+  "broadcastArea" : [0, 0, 1, 1],
+
+  "scripts" : [
+    "/stagehands/rl_systemthreat_npc.lua"
+  ],
+  "scriptDelta" : 1
+}

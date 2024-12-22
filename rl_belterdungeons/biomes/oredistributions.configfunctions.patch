@@ -1,0 +1,9 @@
+[
+  { "op" : "add",
+    "path" : "/rl_beltasteroid",
+    "value" : [
+      [0.5, [ [ "copper", 0.65 ], [ "silver", 0.55 ], [ "gold", 0.45 ], [ "iron", 0.65 ] ] ],
+      [1.5, [ [ "copper", 0.65 ], [ "silver", 0.55 ], [ "gold", 0.45 ], [ "iron", 0.65 ], [ "tungsten", 0.35 ] ] ]
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "type" : "rl_belterpeacekeepertenant",
+  "baseType" : "peacekeepertenant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant", "rl_belterdungeons_guard"]
+    }
+  }
+}

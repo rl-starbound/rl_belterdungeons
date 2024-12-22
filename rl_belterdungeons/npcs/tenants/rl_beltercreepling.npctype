@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltercreepling",
+  "baseType" : "creepling",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant", "shady"]
+    }
+  }
+}

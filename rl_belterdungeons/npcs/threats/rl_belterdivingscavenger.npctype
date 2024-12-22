@@ -1,0 +1,20 @@
+{
+  "type" : "rl_belterdivingscavenger",
+  "baseType" : "divingscavenger",
+
+  "scriptConfig" : {
+    "dialog" : {
+      "attack" : {
+        "hylotl" : {
+          "default" : [
+            "Rival submariners! Get them!",
+            "You'll regret coming here!",
+            "I hope you're ready for a watery grave!",
+            "You'll be sleeping with the fishes when we're done with you!",
+            "You can't beat us!"
+          ]
+        }
+      }
+    }
+  }
+}

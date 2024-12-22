@@ -1,0 +1,29 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_friendly_ark",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "friendly_ark" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true,
+    "extraDungeonIds" : [{
+      // +1 : exterior of the base
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "friendly_ark",
+      "rules" : [],
+      "def" : [ "tmx", "friendly_ark.json" ]
+    }
+  ]
+}

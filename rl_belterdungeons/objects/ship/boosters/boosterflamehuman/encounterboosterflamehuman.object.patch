@@ -1,0 +1,30 @@
+[
+  { "op" : "replace",
+    "path" : "/description",
+    "value" : "A twin pair of primary thrusters. Be careful around the exhaust."
+  },
+  { "op" : "replace",
+    "path" : "/shortdescription",
+    "value" : "Twin Booster Flames"
+  },
+  { "op" : "replace",
+    "path" : "/apexDescription",
+    "value" : "Boosters. These have been known to malfunction and explode."
+  },
+  { "op" : "replace",
+    "path" : "/avianDescription",
+    "value" : "Boosters, the wings of a ship."
+  },
+  { "op" : "replace",
+    "path" : "/humanDescription",
+    "value" : "These things eat through fuel."
+  },
+  { "op" : "add",
+    "path" : "/health",
+    "value" : 5
+  },
+  { "op" : "add",
+    "path" : "/rooting",
+    "value" : true
+  }
+]

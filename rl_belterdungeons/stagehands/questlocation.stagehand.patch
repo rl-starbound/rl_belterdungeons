@@ -1,0 +1,6 @@
+[
+  { "op" : "add",
+    "path" : "/scripts/-",
+    "value" : "/stagehands/rl_dynamic_questlocation.lua"
+  }
+]

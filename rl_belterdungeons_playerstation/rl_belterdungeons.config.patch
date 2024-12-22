@@ -1,0 +1,18 @@
+[
+  { "op" : "add",
+    "path" : "/belterColonyDeeds/allowedWorldTypes/playerstation",
+    "value" : true
+  },
+  { "op" : "add",
+    "path" : "/questGenerators/byWorldType/playerstation",
+    "value" : "SystemThreatQuestGenerator"
+  },
+  { "op" : "add",
+    "path" : "/questlocationObjects/allowedWorldTypes/playerstation",
+    "value" : true
+  },
+  { "op" : "add",
+    "path" : "/questlocationObjects/replacementTagSetByWorldType/playerstation",
+    "value" : "space"
+  }
+]

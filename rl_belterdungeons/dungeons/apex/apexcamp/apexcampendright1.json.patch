@@ -1,0 +1,34 @@
+[
+  { "op" : "test",
+    "path" : "/layers/3/name",
+    "value" : "objects"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/0/height",
+    "value" : 32
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/0/id",
+    "value" : 908
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/0/properties/parameters",
+    "inverse" : true
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/0/width",
+    "value" : 38
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/0/x",
+    "value" : 336
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/0/y",
+    "value" : 152
+  },
+  { "op" : "add",
+    "path" : "/layers/3/objects/0/properties/parameters",
+    "value" : "{\"rl_questLocation\":{\"locationType\":\"rl_questlocationobjects.apexflagapex\"}}"
+  }
+]

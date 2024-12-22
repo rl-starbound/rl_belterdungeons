@@ -1,0 +1,14 @@
+[
+  { "op" : "replace",
+    "path" : "/biome",
+    "value" : "rl_beltasteroids"
+  },
+  { "op" : "replace",
+    "path" : "/threatRange",
+    "value" : [2, 2]
+  },
+  { "op" : "replace",
+    "path" : "/ambientLightLevel",
+    "value" : [96, 96, 96]
+  }
+]

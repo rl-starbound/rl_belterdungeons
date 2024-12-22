@@ -1,0 +1,34 @@
+[
+  { "op" : "test",
+    "path" : "/layers/3/name",
+    "value" : "objects"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/45/height",
+    "value" : 48
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/45/id",
+    "value" : 1078
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/45/properties/parameters",
+    "value" : "{\"treasurePools\":[\"dinerChest\"]}"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/45/width",
+    "value" : 120
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/45/x",
+    "value" : 984
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/45/y",
+    "value" : 568
+  },
+  { "op" : "replace",
+    "path" : "/layers/3/objects/45/properties/parameters",
+    "value" : "{\"treasurePools\":[\"dinerChest\"],\"rl_questLocation\":{\"disabled\":true}}"
+  }
+]

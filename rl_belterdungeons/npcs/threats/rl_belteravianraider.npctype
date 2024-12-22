@@ -1,0 +1,31 @@
+{
+  "type" : "rl_belteravianraider",
+  "baseType" : "avianraider",
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "pilothead" },
+              { "name" : "bandithat2", "parameters" : { "colorIndex" : 11 } },
+              { "name" : "apextier5shead", "parameters" : { "colorIndex" : 11 } }
+            ],
+            "back" : [
+              { "name" : "moneybagsback", "parameters" : { "colorIndex" : 11 } },
+              { "name" : "survivalgearback" }
+            ],
+            "chest" : [
+              { "name" : "pilotchest", "parameters" : { "colorIndex" : 11 } },
+              { "name" : "copperarmorchest", "parameters" : { "colorIndex" : 11 } }
+            ],
+            "legs" : [
+              { "name" : "copperarmorpants", "parameters" : { "colorIndex" : 11 } },
+              { "name" : "cowboylegs" }
+            ],
+            "primary" : [ "npcpistol" ]
+          }
+        ] ]
+    ]
+  }
+}

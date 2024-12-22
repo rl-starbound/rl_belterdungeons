@@ -1,0 +1,10 @@
+{
+  "type" : "rl_belterglitchcastle",
+  "baseType" : "glitchcastle",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant"]
+    }
+  }
+}

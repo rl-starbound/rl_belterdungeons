@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -eu
+
+if [ ! -f _metadata ]; then
+  echo 'ERROR: not in mod root. Aborting.' >&2
+  exit 1
+fi
+
+if [ -d _tiled ]; then
+  find _tiled -type l -delete
+  find _tiled -empty -delete
+fi
+
+
+if [ -d tilesets ]; then
+  find tilesets -type l -delete
+  find tilesets -empty -delete
+fi

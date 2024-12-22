@@ -1,0 +1,8 @@
+{
+  "author" : "rl.starbound",
+  "description" : "This mod enables Belter Dungeons tenants, space quests, quest location objects, and system threat quest generation on player space stations.",
+  "friendlyName" : "Belter Dungeons - Player Stations Addon",
+  "name" : "rl_belterdungeons_playerstation",
+  "requires" : ["rl_belterdungeons"],
+  "version" : "1.0.0"
+}

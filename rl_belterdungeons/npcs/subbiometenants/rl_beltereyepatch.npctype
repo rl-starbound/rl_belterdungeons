@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltereyepatch",
+  "baseType" : "eyepatch",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_tenant", "rl_belterdungeons_common"]
+    }
+  }
+}

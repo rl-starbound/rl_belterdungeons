@@ -1,0 +1,201 @@
+{
+  "id" : "rl_belterdungeons_kill_npcs.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity",
+      "indicator" : "/interface/quests/questreceiver.animation"
+    },
+    "enemy" : {
+      "type" : "npcType",
+      "example" : {
+        "name" : "bandits",
+        "typeName" : "bandit"
+      }
+    },
+    "spawnPoint" : {
+      "type" : "location"
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 10,
+  "script" : "/quests/scripts/generated/rl_belterdungeons_kill.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver",
+      "objective" : "enemy"
+    },
+    "generatedText" : {
+      "fluff" : [
+        ["request", [
+          "neutralize",
+          "take care of",
+          "get rid of"
+        ]],
+        ["appreciation", [
+          "I'm impressed! Thank you so much!",
+          "I feel so much safer now, thank you! Take this gift for all your help.",
+          "You've helped make us just a little bit safer!",
+          "Thanks! I was sure those <enemy> were up to no good.",
+          "Thank you! Hopefully this gift is enough to repay you.",
+          "Thanks! I'll surely feel less nervous around here now."
+        ]],
+        ["floranexcuse", [
+          "Floran has to ssharpen weaponsss",
+          "Floran thinkss you might need the practice",
+          "Floran isss too busy with work",
+          "isss not challenge for Floran"
+        ]]
+      ],
+      "title" : {
+        "default" : [
+          "Some <enemy> to neutralize",
+          "An incoming <enemy> attack"
+        ]
+      },
+      "goalText" : {
+        "default" : [
+          "^cyan;A group of <enemy> are coming for us!",
+          "^cyan;Dangerous <enemy> are on their way here."
+        ],
+        "floran" : [
+          "^cyan;Floran heard about <enemy> hunting nearby.",
+          "^cyan;Floran heard <enemy> will attack sssoon."
+        ],
+        "glitch" : [
+          "^cyan;Worried. Some <enemy> will be here shortly.",
+          "^cyan;Tense. I heard <enemy> were planning an attack."
+        ]
+      },
+      "text" : {
+        "default" : {
+          "default" : [
+            "I've intercepted signals indicating that a group of ^orange;<enemy>^reset; are planning an attack. It'll happen any time now, near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you <request> the <enemy>?",
+            "I've been warned that some ^orange;<enemy>^reset; plan to attack via the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you go and <request> the <enemy>^reset; before things get out of hand?"
+          ],
+          "floran" : [
+            "Floran intercepted ^orange;<enemy>^reset;' attack plan. They say they will start attack at the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. Floran would defend, but <floranexcuse>. ^green;Could you ssstab <enemy> for Floran?",
+            "Sssome ^orange;<enemy>^reset; are planning attack at ^orange;<spawnPoint>^reset;<spawnPoint.direction> sssoon. Floran want to fight, but <floranexcuse>. ^green;Can you <request> <enemy> for Floran?"
+          ],
+          "glitch" : [
+            "Distressed. I have intercepted signals indicating that a group of ^orange;<enemy>^reset; are planning an attack. It may start at any time, near the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you <request> the <enemy>?",
+            "Concerned. I have been warned that some ^orange;<enemy>^reset; plan to attack via the ^orange;<spawnPoint>^reset;<spawnPoint.direction>. ^green;Could you go and <request> the <enemy>^reset; before things get out of control?"
+          ]
+        }
+      },
+      "completionText" : {
+        "default" : {
+          "default" : [
+            "You dealt with the <enemy>? <appreciation>",
+            "So the <enemy> are no longer a threat? <appreciation>"
+          ],
+          "floran" : [
+            "You dealt with <enemy>? Floran appreciatesss the help!",
+            "You dealt with <enemy>? Thank you! Though, Floran could have done it if Floran had ssspare time..."
+          ],
+          "glitch" : [
+            "Appreciative. You dealt with the <enemy>? <appreciation>",
+            "Relieved. The <enemy> are no longer a threat? <appreciation>"
+          ]
+        }
+      },
+      "abortText.questlocationRemoved" : {
+        "default" : {
+          "default" : [
+            "The <enemy> were nowhere to be found? I guess my intel was bad.",
+            "You couldn't find the <enemy>? I guess I had it wrong."
+          ],
+          "floran" : [
+            "The <enemy> essscaped your hunt? Is okay, not all hunts sssuccessful.",
+            "You not find <enemy>? Floran mussst have heard wrong."
+          ],
+          "glitch" : [
+            "Embarrassed. The <enemy> were nowhere to be found? I'm sorry I wasted your time.",
+            "Chagrined. You couldn't find the <enemy>? My intel must have been wrong."
+          ]
+        }
+      },
+      "failureText" : {
+        "default" : [
+          "If I'm being honest, you weren't much help to me.",
+          "Thanks for your effort. I guess..."
+        ],
+        "floran" : [
+          "Is okay, not everyone cut out to be great hunter.",
+          "Practice and one day you sssucceed at hunt. Maybe."
+        ],
+        "glitch" : [
+          "Candid. You weren't much help to me.",
+          "Disingenuous. Thanks for your effort."
+        ]
+      }
+    },
+    "requireTurnIn" : true,
+
+    "objectives" : [
+      {
+        "id" : "findPlace",
+        "text" : "Investigate the <spawnPoint>"
+      },
+      {
+        "id" : "kill",
+        "text" : "Kill the <enemy>"
+      },
+      {
+        "id" : "return",
+        "text" : "Return to <questGiver>"
+      }
+    ],
+    "spawnPointObjectiveRange" : 35,
+
+    "initialCompassTarget" : {
+      "targetType" : "parameter",
+      "target" : "spawnPoint"
+    },
+
+    "treasureNote" : [
+      "Don't forget the goods left at the <treasureLocation><treasureLocation.direction>.",
+      "The stuff is hidden at the <treasureLocation><treasureLocation.direction>.",
+      "Transfer of the loot to take place at the <treasureLocation><treasureLocation.direction>."
+    ],
+
+    "directions" : [
+      {
+        "angleRange" : [-45, 45],
+        "descriptions" : [
+          " above",
+          " above us",
+          " up above"
+        ]
+      },
+      {
+        "angleRange" : [-45, -135],
+        "descriptions" : [
+          " to spinward",
+          " spinward from here",
+          " spinward of us"
+        ]
+      },
+      {
+        "angleRange" : [135, -135],
+        "descriptions" : [
+          " below",
+          " below us",
+          " down below"
+        ]
+      },
+      {
+        "angleRange" : [135, 45],
+        "descriptions" : [
+          " to antispinward",
+          " antispinward from here",
+          " antispinward of us"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+[
+  { "op" : "add",
+    "path" : "/colonyTags/-",
+    "value" : "light"
+  },
+  { "op" : "add",
+    "path" : "/hasObjectItem",
+    "value" : false
+  }
+]

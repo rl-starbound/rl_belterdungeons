@@ -1,0 +1,104 @@
+[
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/4/height",
+      "value" : 40
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/4/id",
+      "value" : 1858
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/4/properties/parameters",
+      "value" : "{\"treasurePools\":[\"basicSpaceTreasure\"]}"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/4/width",
+      "value" : 40
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/4/x",
+      "value" : 832
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/4/y",
+      "value" : 496
+    },
+    { "op" : "replace",
+      "path" : "/layers/3/objects/4/properties/parameters",
+      "value" : "{\"treasurePools\":[\"basicSpaceTreasure\"],\"rl_questLocation\":{\"disabled\":true}}"
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/15/height",
+      "value" : 40
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/15/id",
+      "value" : 1940
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/15/properties/parameters",
+      "value" : "{\"treasurePools\":[\"basicSpaceTreasure\"]}"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/15/width",
+      "value" : 40
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/15/x",
+      "value" : 872
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/15/y",
+      "value" : 496
+    },
+    { "op" : "replace",
+      "path" : "/layers/3/objects/15/properties/parameters",
+      "value" : "{\"treasurePools\":[\"basicSpaceTreasure\"],\"rl_questLocation\":{\"disabled\":true}}"
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/36/height",
+      "value" : 40
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/36/id",
+      "value" : 2008
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/36/properties/parameters",
+      "value" : "{\"treasurePools\":[\"basicSpaceTreasure\"]}"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/36/width",
+      "value" : 40
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/36/x",
+      "value" : 832
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/36/y",
+      "value" : 496
+    },
+    { "op" : "replace",
+      "path" : "/layers/3/objects/36/properties/parameters",
+      "value" : "{\"treasurePools\":[\"basicSpaceTreasure\"],\"rl_questLocation\":{\"disabled\":true}}"
+    }
+  ]
+]

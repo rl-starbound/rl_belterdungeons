@@ -1,0 +1,17 @@
+{
+  "quest-rl_belterdungeons_protect-target-notification": {
+    "type": "module",
+    "name": "quest-rl_belterdungeons_protect-target-notification",
+    "title": "",
+    "properties": {}
+  },
+  "rl_belterdungeons_maybeGenerateQuest": {
+    "type": "action",
+    "name": "rl_belterdungeons_maybeGenerateQuest",
+    "title": "",
+    "properties": {},
+    "category": "quest",
+    "script": "/scripts/actions/rl_belterdungeons_quests.lua",
+    "output": {}
+  }
+}

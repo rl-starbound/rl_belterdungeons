@@ -1,0 +1,11 @@
+{
+  "type" : "rl_belterindustrialmerchant",
+  "baseType" : "industrialmerchant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common"],
+      "enableParticipation" : true
+    }
+  }
+}

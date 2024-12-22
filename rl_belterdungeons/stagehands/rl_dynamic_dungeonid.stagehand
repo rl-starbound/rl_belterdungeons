@@ -1,0 +1,10 @@
+{
+  "type" : "rl_dynamic_dungeonid",
+
+  "broadcastArea" : [0, 0, 1, 1],
+
+  "scripts" : [
+    "/stagehands/rl_dynamic_dungeonid.lua"
+  ],
+  "scriptDelta" : 1
+}

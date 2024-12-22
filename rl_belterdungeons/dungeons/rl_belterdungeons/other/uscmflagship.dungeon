@@ -1,0 +1,29 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_uscmflagship",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "uscmflagship" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true,
+    "extraDungeonIds" : [{
+      // +1 : exterior of the base
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "uscmflagship",
+      "rules" : [],
+      "def" : [ "tmx", "uscmflagship.json" ]
+    }
+  ]
+}

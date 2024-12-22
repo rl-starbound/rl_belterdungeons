@@ -1,0 +1,6 @@
+[
+  { "op" : "add",
+    "path" : "/scripts/-",
+    "value" : "rl_belterdungeons_dockingfield.lua"
+  }
+]

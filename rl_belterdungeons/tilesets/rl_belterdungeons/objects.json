@@ -1,0 +1,93 @@
+{
+  "margin" : 0,
+  "name" : "rl_belterdungeons/objects",
+  "properties" : {
+  },
+  "spacing" : 0,
+  "tilecount" : 7,
+  "tileheight" : 8,
+  "tileproperties" : {
+    "0" : {
+      "//description" : "This guidance beacon marks the position of a landing bay.",
+      "//name" : "rl_beltermechbeacon",
+      "//shortdescription" : "Belter Landing Beacon",
+      "imagePositionX" : "-16",
+      "imagePositionY" : "-16",
+      "object" : "rl_beltermechbeacon",
+      "tilesetDirection" : "right"
+    },
+    "1" : {
+      "//description" : "...",
+      "//name" : "rl_invisibleshieldgenerator",
+      "//shortdescription" : "Invisible Shield Generator",
+      "imagePositionX" : "0",
+      "imagePositionY" : "0",
+      "object" : "rl_invisibleshieldgenerator",
+      "tilesetDirection" : "right"
+    },
+    "2" : {
+      "//description" : "A large breakable capsule often found in asteroid belts.",
+      "//name" : "rl_belterspacecapsule",
+      "//shortdescription" : "Surface-Mounted Capsule",
+      "imagePositionX" : "-8",
+      "imagePositionY" : "0",
+      "object" : "rl_belterspacecapsule"
+    },
+    "3" : {
+      "//description" : "A large breakable capsule often found in asteroid belts.",
+      "//name" : "rl_belterspacecapsule_orientation1",
+      "//shortdescription" : "Surface-Mounted Capsule",
+      "imagePositionX" : "-8",
+      "imagePositionY" : "-8",
+      "object" : "rl_belterspacecapsule"
+    },
+    "4" : {
+      "//description" : "A large breakable capsule often found in asteroid belts.",
+      "//name" : "rl_belterspacecapsule_orientation2",
+      "//shortdescription" : "Surface-Mounted Capsule",
+      "imagePositionX" : "0",
+      "imagePositionY" : "-8",
+      "object" : "rl_belterspacecapsule"
+    },
+    "5" : {
+      "//description" : "A large breakable capsule often found in asteroid belts.",
+      "//name" : "rl_belterspacecapsule_orientation3",
+      "//shortdescription" : "Surface-Mounted Capsule",
+      "imagePositionX" : "-8",
+      "imagePositionY" : "-8",
+      "object" : "rl_belterspacecapsule"
+    },
+    "6" : {
+      "//description" : "It sure doesn't look like this could generate a shield.",
+      "//name" : "rl_beltershieldgenerator",
+      "//shortdescription" : "Shield Generator",
+      "imagePositionX" : "-8",
+      "imagePositionY" : "-8",
+      "object" : "rl_beltershieldgenerator"
+    }
+  },
+  "tiles" : {
+    "0" : {
+      "image" : "../../../../tiled/packed/objects/mechbeacon.png"
+    },
+    "1" : {
+      "image" : "../../_tiled/rl_belterdungeons/objects/rl_invisibleshieldgenerator.png"
+    },
+    "2" : {
+      "image" : "../../../../tiled/packed/objects/capsulespace.png"
+    },
+    "3" : {
+      "image" : "../../../../tiled/packed/objects/capsulespace_orientation1.png"
+    },
+    "4" : {
+      "image" : "../../../../tiled/packed/objects/capsulespace_orientation2.png"
+    },
+    "5" : {
+      "image" : "../../../../tiled/packed/objects/capsulespace_orientation3.png"
+    },
+    "6" : {
+      "image" : "../../_tiled/rl_belterdungeons/objects/rl_beltershieldgenerator.png"
+    }
+  },
+  "tilewidth" : 8
+}

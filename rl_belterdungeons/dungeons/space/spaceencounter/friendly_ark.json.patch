@@ -1,0 +1,34 @@
+[
+  { "op" : "test",
+    "path" : "/layers/3/name",
+    "value" : "objects"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/91/height",
+    "value" : 40
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/91/id",
+    "value" : 3167
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/91/properties/parameters",
+    "value" : "{\"treasurePools\":[\"spaceChestTreasure\"]}"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/91/width",
+    "value" : 40
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/91/x",
+    "value" : 664
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/91/y",
+    "value" : 440
+  },
+  { "op" : "replace",
+    "path" : "/layers/3/objects/91/properties/parameters",
+    "value" : "{\"treasurePools\":[\"spaceChestTreasure\"],\"rl_questLocation\":{\"disabled\":true}}"
+  }
+]

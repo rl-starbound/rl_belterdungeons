@@ -1,0 +1,34 @@
+{
+  "type" : "rl_belteroutlawbandit",
+  "baseType" : "outlawbandit",
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "eyepatchhead", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "apextier5ahead", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "apextier5shead", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "mercenaryhead", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "humantier5ahead", "parameters" : { "colorIndex" : [1] } }
+            ],
+            "chest" : [
+              { "name" : "goldarmorchest", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "mercenarychest", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "humantier3chest", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "humantier4chest", "parameters" : { "colorIndex" : [1] } }
+            ],
+            "legs" : [
+              { "name" : "goldarmorlegs", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "mercenarylegs", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "humantier3pants", "parameters" : { "colorIndex" : [1] } },
+              { "name" : "humantier4pants", "parameters" : { "colorIndex" : [1] } }
+            ],
+            "primary" : [ "npcpetcapturepod" ],
+            "sheathedprimary" : [ "npcassaultrifle", "npcsniperrifle" ]
+          }
+        ] ]
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "type" : "rl_asteroidbeltmanager",
+
+  "broadcastArea" : [0, 0, 1, 1],
+
+  "scripts" : [
+    "/stagehands/rl_asteroidbeltmanager.lua"
+  ],
+  "scriptDelta" : 10,
+
+  "dungeons" : {
+    "rl_belterdungeons_asteroidencounter" : {},
+    "rl_belterdungeons_astrofae_haven" : {},
+    "rl_belterdungeons_base_ruin" : { "weight" : 2.0 },
+    "rl_belterdungeons_base_ruin2" : {},
+    "rl_belterdungeons_encounter_1" : {},
+    "rl_belterdungeons_friendly_arcade" : {},
+    "rl_belterdungeons_friendly_ark" : {},
+    "rl_belterdungeons_friendly_lab" : { "weight" : 4.0 },
+    "rl_belterdungeons_island_garden" : {},
+    "rl_belterdungeons_letheia_1" : {},
+    "rl_belterdungeons_merchant_island" : { "weight" : 2.0 },
+    "rl_belterdungeons_miniknogbase" : {},
+    "rl_belterdungeons_neutral_ancient_asteroid" : {},
+    "rl_belterdungeons_neutral_mining_asteroids" : { "weight" : 8.0 },
+    "rl_belterdungeons_novakid_asteroid_saloon" : {},
+    "rl_belterdungeons_offices" : {},
+    "rl_belterdungeons_peacekeeperstation" : {},
+    "rl_belterdungeons_pods" : {},
+    "rl_belterdungeons_poptop_farm" : {},
+    "rl_belterdungeons_shelter" : { "weight" : 5.0 },
+    "rl_belterdungeons_space_camp" : { "weight" : 4.0 },
+    "rl_belterdungeons_space_diner" : {},
+    "rl_belterdungeons_space_hotel" : {},
+    "rl_belterdungeons_space_lair" : { "minimumThreatLevel" : 4.9, "weight" : 0.25 },
+    "rl_belterdungeons_space_penguins" : {},
+    "rl_belterdungeons_space_pirates" : { "weight" : 4.0 },
+    "rl_belterdungeons_space_safehouse" : { "weight" : 2.0 },
+    "rl_belterdungeons_storage" : { "weight" : 2.0 },
+    "rl_belterdungeons_uscm_base_ruin" : { "minimumThreatLevel" : 4.9, "weight" : 0.25 },
+    "rl_belterdungeons_uscmflagship" : { "minimumThreatLevel" : 3.9, "weight" : 0.25 },
+    "rl_belterdungeons_uscmship" : { "minimumThreatLevel" : 3.9 }
+  },
+  "worldConfigs" : {
+    "16000x7000" : {
+      "dungeonCountRange" : [0, 2],
+      "yRanges" : [[2500, 3000], [4000, 4500]]
+    }
+  }
+}

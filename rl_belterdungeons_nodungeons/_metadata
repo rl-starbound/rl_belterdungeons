@@ -1,0 +1,8 @@
+{
+  "author" : "rl.starbound",
+  "description" : "This mod provides the assets and scripts needed to generate dungeons in asteroid belts, but disables the generation of the dungeons. See the documentation accompanying \"Belter Dungeons\" for more information.",
+  "friendlyName" : "No Belter Dungeons",
+  "name" : "rl_belterdungeons",
+  "priority" : 1,
+  "version" : "1.0.0"
+}

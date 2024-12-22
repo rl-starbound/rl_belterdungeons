@@ -1,0 +1,455 @@
+[
+  { "op" : "add",
+    "path" : "/rl_beltasteroids",
+    "value" : {
+      "encounter" : {
+        "name" : "asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounterrare_capsule" : {
+        "name" : "asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_bountyspacesafehouse",
+    "value" : {
+      "encounter1" : {
+        "name" : "shady station",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "garden" : {
+        "name" : "shady station's garden",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_gangmember" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_cultistship",
+    "value" : {
+      "encounter1" : {
+        "name" : "bow of the cultist ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter2" : {
+        "name" : "bow of the cultist ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_hazard",
+    "value" : {
+      "pirate_wreckage1" : {
+        "name" : "remains of the looted ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "pirate_wreckage2" : {
+        "name" : "remains of the looted ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "pirate_wreckage3" : {
+        "name" : "remains of the looted ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "wreckage1" : {
+        "name" : "wreckage of the destroyed ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "wreckage2" : {
+        "name" : "wreckage of the destroyed ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_merchantindustrialship",
+    "value" : {
+      "cargo_bay1" : {
+        "name" : "industrial ship's cargo bay",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "cargo_bay2" : {
+        "name" : "industrial ship's cargo bay",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_miniknogbase",
+    "value" : {
+      "encounter" : {
+        "name" : "Miniknog station",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_neutral_ancient_asteroid",
+    "value" : {
+      "encounter1" : {
+        "name" : "ancient monument",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_ancient" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_neutral_mining_asteroids",
+    "value" : {
+      "base1" : {
+        "name" : "mining base",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "base4" : {
+        "name" : "mining base",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "base5" : {
+        "name" : "mining base",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "base6" : {
+        "name" : "mining base",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "base17" : {
+        "name" : "mining base",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "cargo_bay2" : {
+        "name" : "mining equipment bay",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "cargo_bay11" : {
+        "name" : "mining equipment bay",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "cargo_bay16" : {
+        "name" : "mining equipment bay",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "encounter7" : {
+        "name" : "mining asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter9" : {
+        "name" : "mining asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter10" : {
+        "name" : "mining asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter13" : {
+        "name" : "mining asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter14" : {
+        "name" : "shattered asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter15" : {
+        "name" : "mining asteroids",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter18" : {
+        "name" : "hollowed asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter20" : {
+        "name" : "mining asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "platform3" : {
+        "name" : "mining platform",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "platform8" : {
+        "name" : "mining platform",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      },
+      "platform19" : {
+        "name" : "mining platform above the hollowed asteroid",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_pirateship",
+    "value" : {
+      "encounter1" : {
+        "name" : "bow of the pirate ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter2" : {
+        "name" : "bow of the pirate ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter3" : {
+        "name" : "bow of the pirate ship",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_refinery",
+    "value" : {
+      "cargo_bay1" : {
+        "name" : "refinery",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "cargo_bay2" : {
+        "name" : "refinery",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic", "rl_space_friendly" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_space_diner",
+    "value" : {
+      "cargo_bay1" : {
+        "name" : "diner's cargo bay",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_space_lair",
+    "value" : {
+      "encounter3" : {
+        "name" : "shady station",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_uscm_base_ruin",
+    "value" : {
+      "cargo_bay" : {
+        "name" : "ruined base's cargo hold",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "encounter" : {
+        "name" : "ruined base",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "engineering" : {
+        "name" : "wrecked reactor",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "security_station" : {
+        "name" : "ruined base's security station",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_belterdungeons_uscmflagship",
+    "value" : {
+      "dock" : {
+        "name" : "USCM derelict's dock",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
+      "engineering" : {
+        "name" : "USCM derelict's engineering section",
+        "tags" : [ "rl_positive_g", "rl_breathable", "rl_space_generic" ],
+        "range" : 1600
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/rl_questlocationobjects",
+    "value" : {
+      "apexflagapex" : {
+        "name" : "Apex flag",
+        "tags" : [ "apex", "friendly" ],
+        "range" : 600
+      },
+      "apexmechbeacon" : {
+        "name" : "landing beacon",
+        "tags" : [ "apex", "friendly" ],
+        "range" : 600
+      },
+      "apexmechplatform" : {
+        "name" : "mech platform",
+        "tags" : [ "apex", "friendly" ],
+        "range" : 600
+      },
+      "apexteleporter" : {
+        "name" : "teleporter",
+        "tags" : [ "apex", "friendly" ],
+        "range" : 600
+      },
+      "distressbeacon" : {
+        "name" : "distress beacon",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "flagapex" : {
+        "name" : "Apex flag",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "flagavian" : {
+        "name" : "Avian flag",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "flagfloran" : {
+        "name" : "Floran flag",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "flagglitch" : {
+        "name" : "Glitch flag",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "flaghuman" : {
+        "name" : "Human flag",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "flaghylotl" : {
+        "name" : "Hylotl flag",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "flagnovakid" : {
+        "name" : "Novakid flag",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "gangmechbeacon" : {
+        "name" : "landing beacon",
+        "tags" : [ "gangmember", "friendly" ],
+        "range" : 600
+      },
+      "gangteleporter" : {
+        "name" : "teleporter",
+        "tags" : [ "gangmember", "friendly" ],
+        "range" : 600
+      },
+      "humanshipmechbeacon" : {
+        "name" : "ship's landing beacon",
+        "tags" : [ "human", "friendly" ],
+        "range" : 600
+      },
+      "humanshipmechplatform" : {
+        "name" : "ship's mech platform",
+        "tags" : [ "human", "friendly" ],
+        "range" : 600
+      },
+      "locker" : {
+        "name" : "locker",
+        "tags" : [
+          // empty tags; intended as container, not beam-in site
+        ],
+        "range" : 600
+      },
+      "mechbeacon" : {
+        "name" : "landing beacon",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "mechplatform" : {
+        "name" : "mech platform",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "shipmechbeacon" : {
+        "name" : "ship's landing beacon",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "shipmechplatform" : {
+        "name" : "ship's mech platform",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "shippingcontainer" : {
+        "name" : "shipping container",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "shipteleporter" : {
+        "name" : "ship's teleporter",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      },
+      "storageshelf" : {
+        "name" : "storage shelf",
+        "tags" : [
+          // empty tags; intended as container, not beam-in site
+        ],
+        "range" : 600
+      },
+      "storeshelf" : {
+        "name" : "store shelf",
+        "tags" : [
+          // empty tags; intended as container, not beam-in site
+        ],
+        "range" : 600
+      },
+      "storeshelfrusty" : {
+        "name" : "rusty store shelf",
+        "tags" : [
+          // empty tags; intended as container, not beam-in site
+        ],
+        "range" : 600
+      },
+      "teleporter" : {
+        "name" : "teleporter",
+        "tags" : [ "generic", "friendly" ],
+        "range" : 600
+      }
+    }
+  }
+]

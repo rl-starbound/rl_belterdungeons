@@ -1,0 +1,320 @@
+[
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/633/height",
+      "value" : 80
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/633/id",
+      "value" : 3652
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/633/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/633/width",
+      "value" : 48
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/633/x",
+      "value" : 2024
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/633/y",
+      "value" : 1384
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/633/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{ \"rl_questLocation\" : { \"disabled\" : true } }"
+        }
+      ]
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/634/height",
+      "value" : 80
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/634/id",
+      "value" : 3654
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/634/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/634/width",
+      "value" : 48
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/634/x",
+      "value" : 3416
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/634/y",
+      "value" : 2288
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/634/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{ \"rl_questLocation\" : { \"disabled\" : true } }"
+        }
+      ]
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/641/height",
+      "value" : 80
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/641/id",
+      "value" : 3661
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/641/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/641/width",
+      "value" : 48
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/641/x",
+      "value" : 3328
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/641/y",
+      "value" : 808
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/641/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{ \"rl_questLocation\" : { \"disabled\" : true } }"
+        }
+      ]
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/642/height",
+      "value" : 80
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/642/id",
+      "value" : 3662
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/642/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/642/width",
+      "value" : 48
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/642/x",
+      "value" : 6504
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/642/y",
+      "value" : 2008
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/642/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{ \"rl_questLocation\" : { \"disabled\" : true } }"
+        }
+      ]
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/644/height",
+      "value" : 80
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/644/id",
+      "value" : 3665
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/644/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/644/width",
+      "value" : 48
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/644/x",
+      "value" : 8280
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/644/y",
+      "value" : 2056
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/644/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{ \"rl_questLocation\" : { \"disabled\" : true } }"
+        }
+      ]
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/647/height",
+      "value" : 80
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/647/id",
+      "value" : 3669
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/647/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/647/width",
+      "value" : 48
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/647/x",
+      "value" : 11088
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/647/y",
+      "value" : 2152
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/647/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{ \"rl_questLocation\" : { \"disabled\" : true } }"
+        }
+      ]
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/648/height",
+      "value" : 80
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/648/id",
+      "value" : 3670
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/648/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/648/width",
+      "value" : 48
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/648/x",
+      "value" : 13048
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/648/y",
+      "value" : 1664
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/648/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{ \"rl_questLocation\" : { \"disabled\" : true } }"
+        }
+      ]
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/660/height",
+      "value" : 80
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/660/id",
+      "value" : 3706
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/660/properties/0/name",
+      "value" : "parameters"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/660/properties/0/value",
+      "value" : "{ \"interactData\" : \"\/interface\/warping\/returncultistmission.config\" }"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/660/width",
+      "value" : 64
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/660/x",
+      "value" : 14520
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/660/y",
+      "value" : 1776
+    },
+    { "op" : "replace",
+      "path" : "/layers/3/objects/660/properties/0/value",
+      "value" : "{ \"interactData\" : \"\/interface\/warping\/returncultistmission.config\", \"rl_questLocation\" : { \"disabled\" : true } }"
+    }
+  ]
+]

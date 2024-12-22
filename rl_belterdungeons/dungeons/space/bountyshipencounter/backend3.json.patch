@@ -1,0 +1,38 @@
+[
+  { "op" : "test",
+    "path" : "/layers/3/name",
+    "value" : "objects"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/20/height",
+    "value" : 48
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/20/id",
+    "value" : 2257
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/20/properties/0/name",
+    "value" : "parameters"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/20/properties/0/value",
+    "value" : "{\"treasurePools\":[\"basicSpaceTreasure\"]}"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/20/width",
+    "value" : 120
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/20/x",
+    "value" : 416
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/20/y",
+    "value" : 376
+  },
+  { "op" : "replace",
+    "path" : "/layers/3/objects/20/properties/0/value",
+    "value" : "{\"treasurePools\":[\"basicSpaceTreasure\"],\"rl_questLocation\":{\"disabled\":true}}"
+  }
+]

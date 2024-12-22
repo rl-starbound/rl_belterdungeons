@@ -1,0 +1,29 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_novakid_asteroid_saloon",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "novakid_asteroid_saloon" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true,
+    "extraDungeonIds" : [{
+      // +1 : exterior of the base
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "novakid_asteroid_saloon",
+      "rules" : [],
+      "def" : [ "tmx", "novakid_asteroid_saloon.json" ]
+    }
+  ]
+}

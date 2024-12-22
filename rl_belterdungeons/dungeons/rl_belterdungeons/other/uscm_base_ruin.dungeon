@@ -1,0 +1,29 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_uscm_base_ruin",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "uscm_base_ruin" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true,
+    "extraDungeonIds" : [{
+      // +1 : exterior of the base
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "uscm_base_ruin",
+      "rules" : [],
+      "def" : [ "tmx", "uscm_base_ruin.json" ]
+    }
+  ]
+}

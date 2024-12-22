@@ -1,0 +1,24 @@
+[
+  [
+    { "op" : "test",
+      "path" : "/scripts",
+      "inverse" : true
+    },
+    { "op" : "add",
+      "path" : "/scripts",
+      "value" : [ ]
+    }
+  ],
+  [
+    { "op" : "add",
+      "path" : "/scripts/-",
+      "value" : "/scripts/rl_questlocationobject.lua"
+    },
+    { "op" : "add",
+      "path" : "/rl_questLocation",
+      "value" : {
+        "locationType" : "rl_questlocationobjects.storeshelfrusty"
+      }
+    }
+  ]
+]

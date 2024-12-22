@@ -1,0 +1,10 @@
+[
+  { "op" : "add",
+    "path" : "/spawnEntities/monsterEvolution/masteroid",
+    "value" : "masteroidmid"
+  },
+  { "op" : "add",
+    "path" : "/spawnEntities/monsterEvolution/masteroidmid",
+    "value" : "masteroidlarge"
+  }
+]

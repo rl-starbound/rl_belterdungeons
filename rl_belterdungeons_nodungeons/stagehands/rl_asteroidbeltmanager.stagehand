@@ -1,0 +1,18 @@
+{
+  "type" : "rl_asteroidbeltmanager",
+
+  "broadcastArea" : [0, 0, 1, 1],
+
+  "scripts" : [
+    "/stagehands/rl_asteroidbeltmanager.lua"
+  ],
+  "scriptDelta" : 10,
+
+  "dungeons" : {},
+  "worldConfigs" : {
+    "16000x7000" : {
+      "dungeonCountRange" : [0, 0],
+      "yRanges" : [[2500, 3000], [4000, 4500]]
+    }
+  }
+}

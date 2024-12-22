@@ -1,0 +1,10 @@
+{
+  "type" : "rl_belterbartender",
+  "baseType" : "bartender",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "author" : "rl.starbound",
+  "description" : "This mod enables Belter Dungeons quest location objects on barren worlds.",
+  "friendlyName" : "Belter Dungeons - Barren Worlds Addon",
+  "name" : "rl_belterdungeons_barren",
+  "requires" : ["rl_belterdungeons"],
+  "version" : "1.0.0"
+}

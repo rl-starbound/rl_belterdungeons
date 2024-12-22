@@ -1,0 +1,58 @@
+{
+  "objectName" : "rl_beltermechbeaconvalidator",
+  "colonyTags" : [],
+  "rarity" : "Common",
+  "category" : "other",
+  "price" : 0,
+  "printable" : false,
+  "description" : "An administrative tool to validate Belter Mech Beacons.",
+  "shortdescription" : "Mech Beacon Validator",
+  "race" : "generic",
+
+  "lightColor" : [73, 140, 179],
+  "lightColorOff" : [185, 0, 0],
+
+  "inventoryIcon" : "/objects/mission/statuslight/statuslighticon.png",
+  "orientations" : [
+    {
+      "image" : "/objects/mission/statuslight/statuslight.png:<color>.off",
+      "imagePosition" : [-8, -8],
+
+      "direction" : "left",
+      "flipImages" : true,
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    },
+    {
+      "image" : "/objects/mission/statuslight/statuslight.png:<color>.off",
+      "imagePosition" : [-8, -8],
+
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ],
+
+  "scripts" : [
+    "/objects/wired/light/light.lua",
+    "rl_beltermechbeaconvalidator.lua"
+  ],
+  "scriptDelta" : 60,
+
+  "interactive" : false,
+
+  "breakDropOptions" : [ ],
+  "smashDropOptions" : [ ],
+
+  "defaultLightState" : false,
+
+  "animation" : "/objects/wired/light/lighttoggle2bgfullbright.animation",
+
+  "animationParts" : {
+    "bg" : "/objects/mission/statuslight/statuslight.png",
+    "fg" : "/objects/mission/statuslight/statuslightlit.png"
+  },
+  "animationPosition" : [-8, -8]
+}

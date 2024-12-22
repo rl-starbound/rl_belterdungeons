@@ -1,0 +1,40 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_space_camp1",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "space_camp1" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 2,
+    "protected" : true,
+    "extraDungeonIds" : [{
+      // +1 : exterior of the base
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "space_camp1",
+      "rules" : [],
+      "def" : [ "tmx", "space_camp1.json" ],
+      "chance" : 1
+    },
+
+    // NO SHIP
+    {
+      "name" : "no_ship",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/hazards/no-ship.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    }
+  ]
+}

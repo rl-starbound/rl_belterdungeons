@@ -1,0 +1,14 @@
+[
+  { "op" : "test",
+    "path" : "/particleEmitters/captureParticles",
+    "inverse" : true
+  },
+  { "op" : "add",
+    "path" : "/particleEmitters/captureParticles",
+    "value" : {
+      "particles" : [
+        { "particle" : "monstercapture" }
+      ]
+    }
+  }
+]

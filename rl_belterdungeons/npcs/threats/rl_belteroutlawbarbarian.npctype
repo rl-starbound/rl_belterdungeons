@@ -1,0 +1,38 @@
+{
+  "type" : "rl_belteroutlawbarbarian",
+  "baseType" : "outlawbarbarian",
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "gladiatorhead" },
+              { "name" : "ethnichead", "parameters" : { "colorIndex" : [4,7,11] } },
+              { "name" : "floranskullhead" },
+              { "name" : "vicioushead" },
+              { "name" : "goathead" },
+              { "name" : "apextier5shead", "parameters" : { "colorIndex" : [4,7,11] } },
+              { "name" : "florantier6mhead", "parameters" : { "colorIndex" : [4,7,11] } },
+              { "name" : "florantier5mhead", "parameters" : { "colorIndex" : [4,7,11] } }
+            ],
+            "back" : [
+              { "name" : "spearback" },
+              { "name" : "jeffback" },
+              { "name" : "predatoryback" }
+            ],
+            "chest" : [
+              { "name" : "florantier6mchest", "parameters" : { "colorIndex" : [4,7,11] } },
+              { "name" : "florantier5mchest", "parameters" : { "colorIndex" : [4,7,11] } }
+            ],
+            "legs" : [
+              { "name" : "florantier6mpants", "parameters" : { "colorIndex" : [4,7,11] } },
+              { "name" : "florantier5mpants", "parameters" : { "colorIndex" : [4,7,11] } }
+            ],
+            "primary" : [ "npchammer", "npcpetcapturepod" ],
+            "sheathedprimary" : [ "npcfloranassaultrifle" ]
+          }
+        ] ]
+    ]
+  }
+}

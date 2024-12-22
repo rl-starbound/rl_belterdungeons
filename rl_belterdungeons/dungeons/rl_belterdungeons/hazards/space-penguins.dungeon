@@ -1,0 +1,100 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_space_penguins",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [
+      "hazard-pirate1-safe", "hazard-pirate2-safe", "hazard-pirate3-safe",
+      "hazard-wreckage1-safe", "hazard-wreckage2-safe"
+    ],
+    "gravity" : 0,
+    "breathable" : false,
+    "maxRadius" : 1000000,
+    "maxParts" : 2,
+    "protected" : false,
+    "extraDungeonIds" : [{
+      // +1 : unused
+    }, {
+      // +2 : interior of the ship, if any
+      "breathable" : true,
+      "gravity" : 80,
+      "protected" : true
+    }, {
+      // +3 : exterior of the ship, if any
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // HAZARD ZONE
+    {
+      "name" : "hazard-pirate1-safe",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "hazard-pirate1-safe.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+    {
+      "name" : "hazard-pirate2-safe",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "hazard-pirate2-safe.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+    {
+      "name" : "hazard-pirate3-safe",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "hazard-pirate3-safe.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+    {
+      "name" : "hazard-wreckage1-safe",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "hazard-wreckage1-safe.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+    {
+      "name" : "hazard-wreckage2-safe",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "hazard-wreckage2-safe.json" ],
+      "chance" : 1,
+      "markDungeonId" : false
+    },
+
+    // PENGUIN SHIP
+    {
+      "name" : "penguin_1",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/penguinship/back_1.json" ],
+      "chance" : 0.45
+    },
+    {
+      "name" : "penguin_2",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/penguinship/back_2.json" ],
+      "chance" : 0.45
+    },
+
+    // NO SHIP
+    {
+      "name" : "no_ship",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "no-ship.json" ],
+      "chance" : 0.1,
+      "markDungeonId" : false
+    }
+  ]
+}

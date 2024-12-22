@@ -1,0 +1,17 @@
+{
+  "type" : "rl_belterchefmerchant",
+  "baseType" : "chefmerchant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common"]
+    },
+
+    "reactions" : {
+      "spontaneous" : [
+        [5.0, "sleep", { "timeRange" : [0.7, 0.9] }],
+        [1.0, "wander"]
+      ]
+    }
+  }
+}

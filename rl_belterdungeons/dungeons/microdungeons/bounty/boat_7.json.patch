@@ -1,0 +1,86 @@
+[
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/height",
+      "value" : 32
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/id",
+      "value" : 1002
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/width",
+      "value" : 38
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/x",
+      "value" : 232
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/y",
+      "value" : 72
+    },
+    { "op" : "replace",
+      "path" : "/layers/3/objects/16/x",
+      "value" : 224
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/16/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{\"rl_questLocation\":{\"disabled\":true}}"
+        }
+      ]
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/layers/3/name",
+      "value" : "objects"
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/height",
+      "value" : 32
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/id",
+      "value" : 1002
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/properties",
+      "inverse" : true
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/width",
+      "value" : 38
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/x",
+      "value" : 224
+    },
+    { "op" : "test",
+      "path" : "/layers/3/objects/16/y",
+      "value" : 72
+    },
+    { "op" : "add",
+      "path" : "/layers/3/objects/16/properties",
+      "value" : [
+        {
+          "name" : "parameters",
+          "type" : "string",
+          "value" : "{\"rl_questLocation\":{\"disabled\":true}}"
+        }
+      ]
+    }
+  ]
+]

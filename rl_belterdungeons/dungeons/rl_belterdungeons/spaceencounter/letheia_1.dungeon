@@ -1,0 +1,95 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_letheia_1",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "letheia_1" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 2,
+    "protected" : true,
+    "extraDungeonIds" : [{
+      // +1 : exterior of the base
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }, {
+      // +2 : interior of the ship, if any
+      "breathable" : true,
+      "gravity" : 80,
+      "protected" : true
+    }, {
+      // +3 : exterior of the ship, if any
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "letheia_1",
+      "rules" : [],
+      "def" : [ "tmx", "letheia_1.json" ],
+      "chance" : 1
+    },
+
+    // MERCHANT SHIP
+    {
+      "name" : "back_1",
+      "rules" : [
+        [ "doNotCombineWith", [ "back_1", "back_2" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantastroship/back_1.json" ],
+      "chance" : 0.15
+    },
+    {
+      "name" : "back_2",
+      "rules" : [
+        [ "doNotCombineWith", [ "back_1", "back_2" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantastroship/back_2.json" ],
+      "chance" : 0.15
+    },
+    {
+      "name" : "front_1",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "front_1", "front_2", "front_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantastroship/front_1.json" ],
+      "chance" : 0.3
+    },
+    {
+      "name" : "front_2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "front_1", "front_2", "front_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantastroship/front_2.json" ],
+      "chance" : 0.3
+    },
+    {
+      "name" : "front_3",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "front_1", "front_2", "front_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantastroship/front_3.json" ],
+      "chance" : 0.3
+    },
+
+    // NO SHIP
+    {
+      "name" : "no_ship",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/hazards/no-ship.json" ],
+      "chance" : 0.7,
+      "markDungeonId" : false
+    }
+  ]
+}

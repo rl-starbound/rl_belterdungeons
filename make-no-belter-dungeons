@@ -1,0 +1,67 @@
+#!/bin/sh
+
+set -eu
+
+STARBOUND_DIR="${HOME}/GOG-Games/Starbound/game"
+
+# Fail if we're not in the repo root.
+if ! [ -d rl_belterdungeons ] || ! [ -d rl_belterdungeons_nodungeons ]; then
+  printf 'Error: Not executed from the repository root.\n' >&2
+  exit 1
+fi
+
+rm -fr tmp
+rm -f rl_belterdungeons_nodungeons.pak
+
+# Start by copying Belter Dungeons.
+cp -pr rl_belterdungeons tmp
+
+# Remove contents unnecessary for no-dungeons distribution.
+rm -fr tmp/_tiled
+find tmp/dungeons -type f -name "*.dungeon" -delete
+find tmp/dungeons -type f -name "*.json" -delete
+find tmp/dungeons -empty -delete
+rm -fr tmp/tilesets
+rm -f tmp/asteroids_worlds.config.patch
+
+# Replace mod assets with no-dungeons equivalents.
+cp -pr rl_belterdungeons_nodungeons/* tmp
+
+cd tmp
+
+# Fail if we're not at a top-level mod directory.
+if [ ! -f _metadata ]; then
+  echo 'ERROR: not in mod root. Aborting.' >&2
+  exit 1
+fi
+
+find . -iname "*~"
+if [ "$(find . -iname "*~" | wc -l)" -gt 0 ]; then
+  printf 'Error: backup files found in mod source.\n'
+  exit 1
+fi
+
+find . -empty
+if [ "$(find . -empty | wc -l)" -gt 0 ]; then
+  printf 'Error: empty directories or files found in mod source.\n'
+  exit 1
+fi
+
+if [ -r tilesets ]; then
+  find tilesets -type l
+  if [ "$(find tilesets -type l | wc -l)" -gt 0 ]; then
+    printf 'Error: symlinked tilesets found in mod source.\n'
+    exit 1
+  fi
+fi
+
+if [ "$(find . -type d ! -perm 0755 | wc -l)" -gt 0 ]; then
+  find . -type d ! -perm 0755 -exec chmod 0755 {} \;
+fi
+
+if [ "$(find . -type f ! -perm 0644 | wc -l)" -gt 0 ]; then
+  find . -type f ! -perm 0644 -exec chmod 0644 {} \;
+fi
+
+"${STARBOUND_DIR}/linux/asset_packer" . ../rl_belterdungeons_nodungeons.pak
+chmod 0644 ../rl_belterdungeons_nodungeons.pak

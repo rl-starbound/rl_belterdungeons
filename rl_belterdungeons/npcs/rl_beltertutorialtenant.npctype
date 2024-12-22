@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltertutorialtenant",
+  "baseType" : "tutorialtenant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common", "rl_belterdungeons_tenant"]
+    }
+  }
+}

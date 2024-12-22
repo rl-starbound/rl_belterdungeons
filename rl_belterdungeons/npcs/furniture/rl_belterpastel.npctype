@@ -1,0 +1,10 @@
+{
+  "type" : "rl_belterpastel",
+  "baseType" : "pastel",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_tenant", "rl_belterdungeons_common"]
+    }
+  }
+}

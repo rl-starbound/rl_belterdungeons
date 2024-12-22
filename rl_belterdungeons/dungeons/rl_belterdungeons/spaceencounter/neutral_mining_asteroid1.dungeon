@@ -1,0 +1,219 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_neutral_mining_asteroid1",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [
+      "neutral_mining_asteroid1"
+    ],
+    "gravity" : 0,
+    "breathable" : false,
+    "maxRadius" : 1000000,
+    "maxParts" : 10,
+    "protected" : false,
+    "extraDungeonIds" : [{
+      // +1 : interior, if any
+      "breathable" : true,
+      "gravity" : 40,
+      "protected" : false
+    }, {
+      // +2 : interior of the ship, if any
+      "breathable" : true,
+      "gravity" : 80,
+      "protected" : true
+    }, {
+      // +3 : exterior of the ship, if any
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // LAYOUTS
+    {
+      "name" : "neutral_mining_asteroid1",
+      "rules" : [],
+      "def" : [ "tmx", "neutral_mining_asteroid1.json" ],
+      "chance" : 1
+    },
+
+    // ASTEROIDS
+    {
+      "name" : "neutral_mining_asteroid2",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid2" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid2.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid3",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid3" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid3.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid7",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid7" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid7.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid8",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid8" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid8.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid9",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid9" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid9.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid10",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid10" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid10.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid11",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid11" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid11.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid12",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid12" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid12.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid13",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid13" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid13.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid14",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid14" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid14.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid15",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid15" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid15.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid16",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid16" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid16.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid18",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid18" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid18.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid19",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid19" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid19.json" ],
+      "chance" : 1
+    },
+    {
+      "name" : "neutral_mining_asteroid20",
+      "rules" : [
+        [ "doNotCombineWith", [ "neutral_mining_asteroid20" ] ]
+      ],
+      "def" : [ "tmx", "neutral_mining_asteroid20.json" ],
+      "chance" : 1
+    },
+
+    // MERCHANT SHIP
+    {
+      "name" : "back_1",
+      "rules" : [
+        [ "doNotCombineWith", [ "back_1", "back_2" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantindustrialship/back_1.json" ],
+      "chance" : 0.1
+    },
+    {
+      "name" : "back_2",
+      "rules" : [
+        [ "doNotCombineWith", [ "back_1", "back_2" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantindustrialship/back_2.json" ],
+      "chance" : 0.1
+    },
+    {
+      "name" : "front_1",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "front_1", "front_2", "front_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantindustrialship/front_1.json" ],
+      "chance" : 0.3
+    },
+    {
+      "name" : "front_2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "front_1", "front_2", "front_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantindustrialship/front_2.json" ],
+      "chance" : 0.3
+    },
+    {
+      "name" : "front_3",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "front_1", "front_2", "front_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/merchantindustrialship/front_3.json" ],
+      "chance" : 0.3
+    },
+
+    // NO SHIP
+    {
+      "name" : "no_ship",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/hazards/no-ship.json" ],
+      "chance" : 0.8,
+      "markDungeonId" : false
+    }
+  ]
+}

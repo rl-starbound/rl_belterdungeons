@@ -1,0 +1,11 @@
+{
+  "type" : "rl_belterastromerchant",
+  "baseType" : "astromerchant",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_common"],
+      "enableParticipation" : true
+    }
+  }
+}

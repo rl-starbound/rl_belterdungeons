@@ -1,0 +1,137 @@
+{
+  "type" : "rl_belterwanderingmerchant",
+  "baseType" : "wanderingmerchant",
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [ { "name" : "industrialcrewhead" } ],
+            "back" : [ { "name" : "boilerback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "jumpsuitchest", "parameters" : { "colorIndex" : [1] } } ],
+            "legs" : [ { "name" : "jumpsuitlegs", "parameters" : { "colorIndex" : [1] } } ]
+          },
+          {
+            "head" : [ { "name" : "industrialcrewhead" } ],
+            "back" : [ { "name" : "boilerback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "jumpsuitchest", "parameters" : { "colorIndex" : [4] } } ],
+            "legs" : [ { "name" : "jumpsuitlegs", "parameters" : { "colorIndex" : [4] } } ]
+          },
+          {
+            "head" : [ { "name" : "industrialcrewhead" } ],
+            "back" : [ { "name" : "boilerback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "jumpsuitchest", "parameters" : { "colorIndex" : [6] } } ],
+            "legs" : [ { "name" : "jumpsuitlegs", "parameters" : { "colorIndex" : [6] } } ]
+          },
+          {
+            "head" : [ { "name" : "industrialcrewhead" } ],
+            "back" : [ { "name" : "boilerback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "jumpsuitchest", "parameters" : { "colorIndex" : [7] } } ],
+            "legs" : [ { "name" : "jumpsuitlegs", "parameters" : { "colorIndex" : [7] } } ]
+          },
+          {
+            "head" : [ { "name" : "industrialcrewhead" } ],
+            "back" : [ { "name" : "boilerback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "jumpsuitchest", "parameters" : { "colorIndex" : [8] } } ],
+            "legs" : [ { "name" : "jumpsuitlegs", "parameters" : { "colorIndex" : [8] } } ]
+          },
+          {
+            "head" : [ { "name" : "industrialcrewhead" } ],
+            "back" : [ { "name" : "boilerback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "jumpsuitchest", "parameters" : { "colorIndex" : [11] } } ],
+            "legs" : [ { "name" : "jumpsuitlegs", "parameters" : { "colorIndex" : [11] } } ]
+          },
+          {
+            "back" : [ { "name" : "parachutepackback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "startrackchest", "parameters" : { "colorIndex" : [4] } } ],
+            "legs" : [ { "name" : "startracklegs" } ]
+          },
+          {
+            "back" : [ { "name" : "parachutepackback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "startrackchest", "parameters" : { "colorIndex" : [5] } } ],
+            "legs" : [ { "name" : "startracklegs" } ]
+          },
+          {
+            "back" : [ { "name" : "parachutepackback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "startrackchest", "parameters" : { "colorIndex" : [6] } } ],
+            "legs" : [ { "name" : "startracklegs" } ]
+          },
+          {
+            "back" : [ { "name" : "parachutepackback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "startrackchest", "parameters" : { "colorIndex" : [7] } } ],
+            "legs" : [ { "name" : "startracklegs" } ]
+          },
+          {
+            "back" : [ { "name" : "parachutepackback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "startrackchest", "parameters" : { "colorIndex" : [8] } } ],
+            "legs" : [ { "name" : "startracklegs" } ]
+          },
+          {
+            "back" : [ { "name" : "parachutepackback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "startrackchest", "parameters" : { "colorIndex" : [9] } } ],
+            "legs" : [ { "name" : "startracklegs" } ]
+          },
+          {
+            "back" : [ { "name" : "foundryforemanback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "spacesuitchest", "parameters" : { "colorIndex" : [0] } } ],
+            "legs" : [ { "name" : "spacesuitlegs", "parameters" : { "colorIndex" : [0] } } ]
+          },
+          {
+            "back" : [ { "name" : "foundryforemanback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "spacesuitchest", "parameters" : { "colorIndex" : [0] } } ],
+            "legs" : [ { "name" : "spacesuitlegs", "parameters" : { "colorIndex" : [0] } } ]
+          },
+          {
+            "back" : [ { "name" : "foundryforemanback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "spacesuitchest", "parameters" : { "colorIndex" : [0] } } ],
+            "legs" : [ { "name" : "spacesuitlegs", "parameters" : { "colorIndex" : [0] } } ]
+          },
+          {
+            "back" : [ { "name" : "foundryforemanback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "spacesuitchest", "parameters" : { "colorIndex" : [5] } } ],
+            "legs" : [ { "name" : "spacesuitlegs", "parameters" : { "colorIndex" : [5] } } ]
+          },
+          {
+            "back" : [ { "name" : "foundryforemanback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "spacesuitchest", "parameters" : { "colorIndex" : [5] } } ],
+            "legs" : [ { "name" : "spacesuitlegs", "parameters" : { "colorIndex" : [5] } } ]
+          },
+          {
+            "back" : [ { "name" : "foundryforemanback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "spacesuitchest", "parameters" : { "colorIndex" : [5] } } ],
+            "legs" : [ { "name" : "spacesuitlegs", "parameters" : { "colorIndex" : [5] } } ]
+          },
+          {
+            "back" : [ { "name" : "hazmatback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "neochest", "parameters" : { "colorIndex" : [0] } } ],
+            "legs" : [ { "name" : "neolegs", "parameters" : { "colorIndex" : [0] } } ]
+          },
+          {
+            "back" : [ { "name" : "hazmatback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "neochest", "parameters" : { "colorIndex" : [0] } } ],
+            "legs" : [ { "name" : "neolegs", "parameters" : { "colorIndex" : [0] } } ]
+          },
+          {
+            "back" : [ { "name" : "hazmatback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "neochest", "parameters" : { "colorIndex" : [5] } } ],
+            "legs" : [ { "name" : "neolegs", "parameters" : { "colorIndex" : [5] } } ]
+          },
+          {
+            "back" : [ { "name" : "hazmatback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "neochest", "parameters" : { "colorIndex" : [5] } } ],
+            "legs" : [ { "name" : "neolegs", "parameters" : { "colorIndex" : [5] } } ]
+          },
+          {
+            "back" : [ { "name" : "hazmatback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "neochest", "parameters" : { "colorIndex" : [7] } } ],
+            "legs" : [ { "name" : "neolegs", "parameters" : { "colorIndex" : [7] } } ]
+          },
+          {
+            "back" : [ { "name" : "hazmatback", "parameters" : { "colorIndex" : [2] } } ],
+            "chest" : [ { "name" : "neochest", "parameters" : { "colorIndex" : [7] } } ],
+            "legs" : [ { "name" : "neolegs", "parameters" : { "colorIndex" : [7] } } ]
+          }
+        ] ]
+    ]
+  }
+}

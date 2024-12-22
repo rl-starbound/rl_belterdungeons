@@ -1,0 +1,34 @@
+[
+  { "op" : "test",
+    "path" : "/layers/3/name",
+    "value" : "objects"
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/64/height",
+    "value" : 40
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/64/id",
+    "value" : 1760
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/64/properties/parameters",
+    "inverse" : true
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/64/width",
+    "value" : 40
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/64/x",
+    "value" : 464
+  },
+  { "op" : "test",
+    "path" : "/layers/3/objects/64/y",
+    "value" : 256
+  },
+  { "op" : "add",
+    "path" : "/layers/3/objects/64/properties/parameters",
+    "value" : "{\"rl_questLocation\":{\"disabled\":true}}"
+  }
+]

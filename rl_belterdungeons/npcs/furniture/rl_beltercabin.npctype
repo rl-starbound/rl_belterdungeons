@@ -1,0 +1,10 @@
+{
+  "type" : "rl_beltercabin",
+  "baseType" : "cabin",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_tenant", "rl_belterdungeons_common"]
+    }
+  }
+}

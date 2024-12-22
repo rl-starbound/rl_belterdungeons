@@ -1,0 +1,6 @@
+[
+  { "op" : "add",
+    "path" : "/deploymentConfig/scripts/-",
+    "value" : "/scripts/deployment/rl_belterdungeons_playermechdeployment.lua"
+  }
+]

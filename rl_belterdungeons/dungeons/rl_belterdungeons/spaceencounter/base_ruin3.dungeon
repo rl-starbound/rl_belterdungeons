@@ -1,0 +1,338 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_base_ruin3",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [ "base_ruin3" ],
+    "gravity" : 40,
+    "breathable" : true,
+    "maxRadius" : 1000000,
+    "maxParts" : 4,
+    "protected" : false,
+    "extraDungeonIds" : [{
+      // +1 : unused
+    }, {
+      // +2 : interior of the ship, if any
+      "breathable" : true,
+      "gravity" : 80,
+      "protected" : true
+    }, {
+      // +3 : exterior of the ship, if any
+      "breathable" : false,
+      "gravity" : 0,
+      "protected" : true
+    }]
+  },
+
+  "parts" : [
+
+    // BASE
+    {
+      "name" : "base_ruin3",
+      "rules" : [],
+      "def" : [ "tmx", "base_ruin3.json" ],
+      "chance" : 1
+    },
+
+    // COCKPIT
+    {
+      "name" : "cockpit1",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "cockpit1", "cockpit2", "cockpit3" ] ],
+        [ "doNotConnectToPart", [ "backend1", "backend2", "backend3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/cockpit1.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "cockpit2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "cockpit1", "cockpit2", "cockpit3" ] ],
+        [ "doNotConnectToPart", [ "backend1", "backend2", "backend3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/cockpit2.json" ],
+      "chance" : 0
+    },
+    {
+      "name" : "cockpit3",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "cockpit1", "cockpit2", "cockpit3" ] ],
+        [ "doNotConnectToPart", [ "backend1", "backend2", "backend3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/cockpit3.json" ],
+      "chance" : 0
+    },
+
+    // REAR / ENGINE / MECH ENTRY
+    {
+      "name" : "backend1",
+      "rules" : [
+        [ "doNotCombineWith", [ "backend1", "backend2", "backend3" ] ],
+        [ "doNotConnectToPart", [ "cockpit1", "cockpit2", "cockpit3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/backend1.json" ],
+      "chance" : 0.12
+    },
+    {
+      "name" : "backend2",
+      "rules" : [
+        [ "doNotCombineWith", [ "backend1", "backend2", "backend3" ] ],
+        [ "doNotConnectToPart", [ "cockpit1", "cockpit2", "cockpit3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/backend2.json" ],
+      "chance" : 0.12
+    },
+    {
+      "name" : "backend3",
+      "rules" : [
+        [ "doNotCombineWith", [ "backend1", "backend2", "backend3" ] ],
+        [ "doNotConnectToPart", [ "cockpit1", "cockpit2", "cockpit3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/backend3.json" ],
+      "chance" : 0.12
+    },
+
+    // MIDDLE
+    {
+      "name" : "middle1a",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle1a", "middle1b", "middle2a", "middle2b", "middle2c", "middle2d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle1a.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle1b",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle1a", "middle1b", "middle2a", "middle2b", "middle2c", "middle2d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle1b.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle2a",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle1a", "middle1b", "middle2a", "middle2b", "middle2c", "middle2d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle2a.json" ],
+      "chance" : 0.25
+    },
+    {
+      "name" : "middle2b",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle1a", "middle1b", "middle2a", "middle2b", "middle2c", "middle2d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle2b.json" ],
+      "chance" : 0.25
+    },
+    {
+      "name" : "middle2c",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle1a", "middle1b", "middle2a", "middle2b", "middle2c", "middle2d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle2c.json" ],
+      "chance" : 0.25
+    },
+    {
+      "name" : "middle2d",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle1a", "middle1b", "middle2a", "middle2b", "middle2c", "middle2d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle2d.json" ],
+      "chance" : 0.25
+    },
+    {
+      "name" : "middle3a",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle3a", "middle3b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle3a.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle3b",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle3a", "middle3b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle3b.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle4a",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle4a", "middle4b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle4a.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle4b",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle4a", "middle4b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle4b.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle5a",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle5a", "middle5b", "middle5c" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle5a.json" ],
+      "chance" : 0.25
+    },
+    {
+      "name" : "middle5b",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle5a", "middle5b", "middle5d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle5b.json" ],
+      "chance" : 0.25
+    },
+    {
+      "name" : "middle5c",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle5a", "middle5c", "middle5d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle5c.json" ],
+      "chance" : 0.25
+    },
+    {
+      "name" : "middle5d",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle5b", "middle5c", "middle5d" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle5d.json" ],
+      "chance" : 0.25
+    },
+    {
+      "name" : "middle6a",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle6a", "middle6b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle6a.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle6b",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle6a", "middle6b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle6b.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle7a",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle7a", "middle7b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle7a.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle7b",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle7a", "middle7b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle7b.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle8a",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle8a", "middle8b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle8a.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "middle8b",
+      "rules" : [
+        [ "doNotCombineWith", [ "middle8a", "middle8b" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/pirateship/middle8b.json" ],
+      "chance" : 0.5
+    },
+
+    // CULTIST SHIP - COCKPIT
+    {
+      "name" : "cultist_front_1",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "cultist_front_1", "cultist_front_2" ] ],
+        [ "doNotConnectToPart", [ "cultist_back_1", "cultist_back_2" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/cultistship/front_1.json" ],
+      "chance" : 0.5
+    },
+    {
+      "name" : "cultist_front_2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ],
+        [ "doNotCombineWith", [ "cultist_front_1", "cultist_front_2" ] ],
+        [ "doNotConnectToPart", [ "cultist_back_1", "cultist_back_2" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/cultistship/front_2.json" ],
+      "chance" : 0.5
+    },
+
+    // CULTIST SHIP - REAR / ENGINE / MECH ENTRY
+    {
+      "name" : "cultist_back_1",
+      "rules" : [
+        [ "doNotCombineWith", [ "cultist_back_1", "cultist_back_2" ] ],
+        [ "doNotConnectToPart", [ "cultist_front_1", "cultist_front_2" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/cultistship/back_1.json" ],
+      "chance" : 0.02
+    },
+    {
+      "name" : "cultist_back_2",
+      "rules" : [
+        [ "doNotCombineWith", [ "cultist_back_1", "cultist_back_2" ] ],
+        [ "doNotConnectToPart", [ "cultist_front_1", "cultist_front_2" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/cultistship/back_2.json" ],
+      "chance" : 0.02
+    },
+
+    // CULTIST SHIP - MIDDLE
+    {
+      "name" : "cultist_middle_1",
+      "rules" : [
+        [ "doNotCombineWith", [ "cultist_middle_1", "cultist_middle_2", "cultist_middle_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/cultistship/middle_1.json" ],
+      "chance" : 0.3
+    },
+    {
+      "name" : "cultist_middle_2",
+      "rules" : [
+        [ "doNotCombineWith", [ "cultist_middle_1", "cultist_middle_2", "cultist_middle_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/cultistship/middle_2.json" ],
+      "chance" : 0.3
+    },
+    {
+      "name" : "cultist_middle_3",
+      "rules" : [
+        [ "doNotCombineWith", [ "cultist_middle_1", "cultist_middle_2", "cultist_middle_3" ] ]
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/cultistship/middle_3.json" ],
+      "chance" : 0.3
+    },
+
+    // NO SHIP
+    {
+      "name" : "no_ship",
+      "rules" : [
+      ],
+      "def" : [ "tmx", "/dungeons/rl_belterdungeons/hazards/no-ship.json" ],
+      "chance" : 0.6,
+      "markDungeonId" : false
+    }
+  ]
+}

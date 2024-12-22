@@ -1,0 +1,23 @@
+[
+  { "op" : "add",
+    "path" : "/-",
+    "value" : {
+      "name" : "rl_beltasteroids_scandroid",
+
+      "spawnParameters" : {
+        "area" : "air",
+        "region" : "all",
+        "time" : "all"
+      },
+      "groupSize" : [1, 1],
+      "spawnChance" : 0.01,
+      "monsterType" : [
+        [0.99, "scandroid"],
+        [0.01, "cultistscandroid"]
+      ],
+      "monsterParameters" : {
+        "aggressive" : true
+      }
+    }
+  }
+]

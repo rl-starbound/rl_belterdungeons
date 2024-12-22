@@ -1,0 +1,23 @@
+[
+  { "op" : "test",
+    "path" : "/root/children/1/children/1/type",
+    "value" : "action"
+  },
+  { "op" : "test",
+    "path" : "/root/children/1/children/1/name",
+    "value" : "maybeGenerateQuest"
+  },
+  { "op" : "add",
+    "path" : "/scripts/-",
+    "value" : "/scripts/actions/rl_belterdungeons_quests.lua"
+  },
+  { "op" : "replace",
+    "path" : "/root/children/1/children/1",
+    "value" : {
+      "title" : "",
+      "type" : "action",
+      "name" : "rl_belterdungeons_maybeGenerateQuest",
+      "parameters" : {}
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "type" : "rl_belterretroscifi",
+  "baseType" : "retroscifi",
+
+  "scriptConfig" : {
+    "questGenerator" : {
+      "pools" : ["rl_belterdungeons_tenant", "rl_belterdungeons_common"]
+    }
+  }
+}

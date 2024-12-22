@@ -1,0 +1,43 @@
+{
+  "type" : "rl_belteroutlawknight",
+  "baseType" : "outlawknight",
+
+  "items" : {
+    "override" : [
+      [0, [
+          {
+            "head" : [
+              { "name" : "valkyriehelm", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "vikinghead", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "plainhoodhead", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "herocaphead", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "plumeknighthead", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "knighthead", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "glitchtier2head", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "glitchtier3head", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "glitchtier4head", "parameters" : { "colorIndex" : 1 } }
+            ],
+            "back" : [
+              { "name" : "spearback" },
+              { "name" : "hunterback" },
+              { "name" : "raggedcapeback", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "simplecapeback", "parameters" : { "colorIndex" : 1 } }
+            ],
+            "chest" : [
+              { "name" : "glitchtier2chest", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "glitchtier3chest", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "glitchtier4chest", "parameters" : { "colorIndex" : 1 } }
+            ],
+            "legs" : [
+              { "name" : "glitchtier1pants", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "glitchtier2pants", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "glitchtier3pants", "parameters" : { "colorIndex" : 1 } },
+              { "name" : "glitchtier4pants", "parameters" : { "colorIndex" : 1 } }
+            ],
+            "primary" : [ "npcpetcapturepod", "npcbroadsword" ],
+            "sheathedprimary" : [ "npcrocketlauncher", "npcsniperrifle" ]
+          }
+        ] ]
+    ]
+  }
+}

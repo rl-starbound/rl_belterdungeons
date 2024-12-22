@@ -1,0 +1,22 @@
+[
+  { "op" : "replace",
+    "path" : "/description",
+    "value" : "A large primary thruster. Be careful around the exhaust."
+  },
+  { "op" : "replace",
+    "path" : "/shortdescription",
+    "value" : "Big Booster Flame"
+  },
+  { "op" : "replace",
+    "path" : "/inventoryIcon",
+    "value" : "boostericon.png"
+  },
+  { "op" : "add",
+    "path" : "/health",
+    "value" : 5
+  },
+  { "op" : "add",
+    "path" : "/rooting",
+    "value" : true
+  }
+]
