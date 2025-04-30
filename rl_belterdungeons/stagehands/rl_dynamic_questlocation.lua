@@ -3,7 +3,6 @@
 -- the behvavior is identical to the base game.
 function addTreasure(treasurePool, threatLevel)
   threatLevel = threatLevel or world.threatLevel()
-  sb.logInfo("rl_dynamic_questlocation: addTreasure: threat level = %s", threatLevel)
   local objectTypes = config.getParameter("treasureChests", {"treasurechest"})
   local treasure = root.createTreasure(treasurePool, threatLevel)
   local chest = findChestWithSpace(objectTypes, treasure)

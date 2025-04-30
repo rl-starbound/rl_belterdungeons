@@ -27,12 +27,9 @@ function init()
   if self.parameters.persistent == nil then
     self.parameters.persistent = true
   end
-
-  sb.logInfo("rl_systemthreat_monster: init: %s %s %s", self.monster, entity.position(), self.parameters)
 end
 
 function update(dt)
-  sb.logInfo("rl_systemthreat_monster: update: spawnMonster %s %s %s", self.monster, entity.position(), self.parameters)
   world.spawnMonster(self.monster, entity.position(), self.parameters)
 
   stagehand.die()

@@ -24,7 +24,6 @@ function SystemThreatQuestGenerator:generateUniqueIds(planner, plan)
           end,
 
         [QuestPredicands.TemporaryNpc] = function (npc)
-            sb.logInfo("rl_systemthreat_generator: SystemThreatQuestGenerator.generateUniqueIds: matched TemporaryNpc")
             local entityId = npc:spawn()
             local uniqueId = sb.makeUuid()
             npc.entityId = entityId
@@ -35,7 +34,6 @@ function SystemThreatQuestGenerator:generateUniqueIds(planner, plan)
           end,
 
         [QuestPredicands.TemporarySystemThreatNpc] = function (npc)
-            sb.logInfo("rl_systemthreat_generator: SystemThreatQuestGenerator.generateUniqueIds: matched TemporarySystemThreatNpc")
             local entityId = npc:spawn()
             local uniqueId = sb.makeUuid()
             npc.entityId = entityId
@@ -108,7 +106,6 @@ function SystemThreatQuestGenerator:generateParameter(templateId, paramName, par
       end,
 
     [QuestPredicands.TemporaryNpc] = function (npc)
-        sb.logInfo("rl_systemthreat_generator: SystemThreatQuestGenerator.generateParameter: matched TemporaryNpc")
         local uniqueId = npc.uniqueId
         local entityId = npc.entityId
         assert(uniqueId ~= nil and entityId ~= nil and world.entityExists(entityId))
@@ -123,7 +120,6 @@ function SystemThreatQuestGenerator:generateParameter(templateId, paramName, par
       end,
 
     [QuestPredicands.TemporarySystemThreatNpc] = function (npc)
-        sb.logInfo("rl_systemthreat_generator: SystemThreatQuestGenerator.generateParameter: matched TemporarySystemThreatNpc")
         local uniqueId = npc.uniqueId
         local entityId = npc.entityId
         assert(uniqueId ~= nil and entityId ~= nil and world.entityExists(entityId))
@@ -207,7 +203,6 @@ end
 function SystemThreatQuestGenerator:createRewardBag(overallDifficulty)
   local bag = QuestGenerator.createRewardBag(self, overallDifficulty)
   if bag then
-    sb.logInfo("SystemThreatQuestGenerator:createRewardBag: overriding level to %s", math.max(world.getProperty("rl_starSystemThreatLevel", 3), world.threatLevel()))
     bag.items[1].parameters.treasure.level = math.max(
       world.getProperty("rl_starSystemThreatLevel", 3),
       world.threatLevel()

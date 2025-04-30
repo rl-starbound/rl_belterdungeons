@@ -147,7 +147,6 @@ function SpawnSystemThreatEntities:spawnUnique(evolve, miniboss, statusEffects, 
   self.justSpawned = true
   self.data.entitiesNeedReserving = entitySpawnConfig.entityType == "npc"
   self.data.entitiesAvailable = entitySpawnConfig.entityType ~= "npc"
-  sb.logInfo("rl_spawn_systemthreat_entities: spawnUnique: spawned uniqueId: %s", uniqueId)
   return uniqueId, entityId
 end
 
@@ -211,9 +210,7 @@ end
 -- start. In this subclass we provide a mechanism to delay the spawning
 -- until a trigger event has occurred in the quest.
 function SpawnSystemThreatEntities:questStarted()
-  sb.logInfo("rl_spawn_systemthreat_entities: questStarted")
   if self.config.triggeredBy == "questStart" or self.config.triggeredBy == nil then
-    sb.logInfo("rl_spawn_systemthreat_entities: questStarted: spawning")
     SpawnEntities.questStarted(self)
     self.data.hasTriggered = true
   end
@@ -222,9 +219,7 @@ end
 function SpawnSystemThreatEntities:triggerSpawn(group)
   assert(self.config.triggeredBy == "message")
   if self.data.hasTriggered then return end
-  sb.logInfo("rl_spawn_systemthreat_entities: triggerSpawn: %s", group)
   if group == self.config.group then
-    sb.logInfo("rl_spawn_systemthreat_entities: triggerSpawn: spawning: %s", group)
     -- First, check that the questlocation entity still exists. If it
     -- was removed between when the quest was accepted and when it was
     -- triggered, the quest must be aborted.
@@ -259,10 +254,8 @@ end
 
 function SpawnSystemThreatEntities:playerStarted(player)
   if not self.data.hasTriggered then
-    sb.logInfo("rl_spawn_systemthreat_entities: playerStarted: waiting: %s", player)
     self.data.playersWaiting[player] = true
   else
-    sb.logInfo("rl_spawn_systemthreat_entities: playerStarted: started %s", player)
     SpawnEntities.playerStarted(self, player)
   end
 end

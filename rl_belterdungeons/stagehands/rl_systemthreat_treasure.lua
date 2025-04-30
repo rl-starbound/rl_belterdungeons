@@ -18,7 +18,6 @@ function init()
   self.region[3] = self.region[3] - 0.03125
   self.region[4] = self.region[4] - 0.03125
   self.centroid = rect.center(self.region)
-  sb.logInfo("rl_systemthreat_treasure: init: region = %s; centroid = %s", self.region, self.centroid)
 
   -- `treasurePools` must be a JSON list of the treasure pool names to
   -- be spawned.
@@ -30,14 +29,12 @@ function init()
   -- In the context of celestial worlds, use the world seed as the basis
   -- for the item seeds. In all other contexts, use a random seed.
   self.seed = util.hashString(worldSeed .. util.tableToString(self.region))
-  sb.logInfo("rl_systemthreat_treasure: init: seed = %s", self.seed)
 
   -- Default to the minimum spaceThreatLevel in `/celestial.config`.
   self.level = math.max(
     world.getProperty("rl_starSystemThreatLevel", 3),
     world.threatLevel()
   )
-  sb.logInfo("rl_systemthreat_treasure: init: threat level = %s", self.level)
 end
 
 function update(dt)
@@ -55,9 +52,7 @@ function update(dt)
     stagehand.die()
     return
   end
-  sb.logInfo("rl_systemthreat_treasure: update: containers = %s", containers)
   local container = containers[1]
-  sb.logInfo("rl_systemthreat_treasure: update: nearest container = %s", world.entityPosition(container))
 
   local numSpawned = 0
   for _, v in ipairs(self.treasurePools) do
@@ -65,7 +60,6 @@ function update(dt)
       self.centroid, v, self.level, self.seed
     )
     if spawned ~= nil then
-      sb.logInfo("rl_systemthreat_treasure: update: spawned treasure %s", spawned)
       numSpawned = numSpawned + #spawned
     end
   end
@@ -79,7 +73,6 @@ function update(dt)
   local treasureItems = world.itemDropQuery(
     rect.ll(self.region), rect.ur(self.region)
   )
-  sb.logInfo("rl_systemthreat_treasure: update: queried treasure items = %s", treasureItems)
   if #treasureItems ~= numSpawned then
     sb.logWarn("rl_systemthreat_treasure: update: " ..
       "spawned item count (%s) does not match queried item count (%s)",
@@ -90,7 +83,6 @@ function update(dt)
   for _, v in ipairs(treasureItems) do
     local itemDrop = world.takeItemDrop(v)
     if itemDrop ~= nil then
-      sb.logInfo("rl_systemthreat_treasure: update: collecting item %s", itemDrop)
       -- First, try to stack the item with similar items.
       itemDrop = world.containerStackItems(container, itemDrop)
       if itemDrop ~= nil then

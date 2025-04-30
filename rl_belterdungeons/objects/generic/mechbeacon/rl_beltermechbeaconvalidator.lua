@@ -11,7 +11,6 @@ function init()
         object.smash(true)
       end
     else
-      sb.logInfo("rl_beltermechbeaconvalidator: init: already run; deactivating")
       script.setUpdateDelta(0)
     end
   end
@@ -31,11 +30,9 @@ function update(dt)
   end
 
   local mechBeacons = world.getProperty("rl_belterdungeons_mechBeacons", {})
-  sb.logInfo("rl_beltermechbeaconvalidator: update: mechBeacons = %s", mechBeacons)
   for k, _ in pairs(mechBeacons) do
     local pos = world.findUniqueEntity(k):result()
     mechBeacons[k] = pos
-    sb.logInfo("rl_beltermechbeaconvalidator: update: validating %s at %s", k, pos)
   end
   world.setProperty("rl_belterdungeons_mechBeacons", mechBeacons)
   broadcastMechBeaconsReset()
@@ -47,7 +44,6 @@ end
 
 function broadcastMechBeaconsReset()
   for _, v in ipairs(world.players()) do
-    sb.logInfo("rl_beltermechbeaconvalidator: broadcastMechBeaconsReset: sending rl_belterdungeons_resetMechBeacons to %s", v)
     world.sendEntityMessage(v, "rl_belterdungeons_resetMechBeacons")
   end
 end

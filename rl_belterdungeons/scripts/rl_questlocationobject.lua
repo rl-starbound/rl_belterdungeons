@@ -68,7 +68,6 @@ local function calculateObjectGeometry(spaces, spaceHash)
     end
   end
   geometry.region = shallowCopy(geometry.boundBox)
-  sb.logInfo("rl_questlocationobject: calculateObjectGeometry: %s geometry = %s", object.name(), sb.printJson(geometry))
   return geometry
 end
 
@@ -88,9 +87,7 @@ end
 
 local function disableQuestLocation()
   if self.rl_qlo_quest then
-    sb.logInfo("rl_questlocationobject: disableQuestLocation: unregistering location %s", entity.uniqueId())
     if self.rl_qlo_location.tags then self.rl_qlo_location:unregister() end
-    sb.logInfo("rl_questlocationobject: disableQuestLocation: killing quest participant")
     self.rl_qlo_quest:die()
 
     self.rl_qlo_location = nil
@@ -110,10 +107,7 @@ local function disableQuestLocation()
     -- then when terminating quest location object behavior, this script
     -- should disable further updates. In the event that the object is
     -- uninit'ed and init'ed again, this will be reset.
-    sb.logInfo("rl_questlocationobject: disableQuestLocation: disabling updates")
     script.setUpdateDelta(0)
-  else
-    sb.logInfo("rl_questlocationobject: disableQuestLocation: not disabling updates")
   end
 end
 
@@ -181,13 +175,11 @@ end
 
 local function environmentScan()
   if maybeBuildTags() then
-    sb.logInfo("rl_questlocationobject: environmentScan: location %s got new tags: %s", entity.uniqueId(), sb.printJson(storage.rl_qlo_tags))
     if self.rl_qlo_location.tags then self.rl_qlo_location:unregister() end
     self.rl_qlo_location.tags = storage.rl_qlo_tags
     if regionSizeCheck(storage.rl_qlo_geometry.region) and
        not self.rl_qlo_quest:hasQuest()
     then
-      sb.logInfo("rl_questlocationobject: environmentScan: registering location %s for new tags", entity.uniqueId())
       self.rl_qlo_location:register()
     end
   end
@@ -209,7 +201,6 @@ local function expandRegion()
     if world.pointTileCollision(
       position, {"Null", "Block", "Dynamic", "Slippery"}
     ) then
-      sb.logInfo("rl_questlocationobject: expandRegion: collision inside object bound box, not expanding")
       return region
     end
   end
@@ -244,17 +235,14 @@ local function expandRegion()
   if not doorOffset then
     doorOffset = floorOffset and math.floor(floorOffset) or diff[2]
   end
-  sb.logInfo("rl_questlocationobject: expandRegion: final bottom offset = %s", doorOffset)
   region[2] = region[2] - doorOffset
   -- expand to left
-  sb.logInfo("want to expand %s to the left", diff[1])
   size = rect.size(region)
   for j=1,diff[1] do
     if world.rectTileCollision(
       {region[1] - 1, region[2], region[1], region[4]},
       {"Null", "Block", "Dynamic", "Slippery"}
     ) then
-      sb.logInfo("collided tile to left")
       break
     else
       local collision = nil
@@ -266,22 +254,18 @@ local function expandRegion()
         if #doors > 0 then collision = true; break end
       end
       if collision then
-        sb.logInfo("collided door to the left")
         break
       else
-        sb.logInfo("expanded 1 to the left")
         region[1] = region[1] - 1
       end
     end
   end
   -- expand to right
-  sb.logInfo("want to expand %s to the right", diff[1])
   for j=1,diff[1] do
     if world.rectTileCollision(
       {region[3], region[2], region[3] + 1, region[4]},
       {"Null", "Block", "Dynamic", "Slippery"}
     ) then
-      sb.logInfo("collided tile to right")
       break
     else
       local collision = nil
@@ -293,23 +277,19 @@ local function expandRegion()
         if #doors > 0 then collision = true; break end
       end
       if collision then
-        sb.logInfo("collided door to the right")
         break
       else
-        sb.logInfo("expanded 1 to the right")
         region[3] = region[3] + 1
       end
     end
   end
   -- expand to top
-  sb.logInfo("want to expand %s to the top", diff[2])
   size = rect.size(region)
   for j=1,diff[2] do
     if world.rectTileCollision(
       {region[1], region[4], region[3], region[4] + 1},
       {"Null", "Block", "Dynamic", "Slippery"}
     ) then
-      sb.logInfo("collided tile to top")
       break
     else
       local collision = nil
@@ -321,10 +301,8 @@ local function expandRegion()
         if #doors > 0 then collision = true; break end
       end
       if collision then
-        sb.logInfo("collided door to the top")
         break
       else
-        sb.logInfo("expanded 1 to the top")
         region[4] = region[4] + 1
       end
     end
@@ -337,10 +315,8 @@ local function regionScan()
     util.debugLog("Parts of the questlocation object are unloaded - skipping region check")
     return
   end
-  sb.logInfo("scanning for region for object %s", object.name())
   local newRegion = expandRegion()
   if not compare(storage.rl_qlo_geometry.region, newRegion) then
-    sb.logInfo("rl_questlocationobject: regionScan: location %s got new region: %s", entity.uniqueId(), sb.printJson(newRegion))
     if self.rl_qlo_location.tags then self.rl_qlo_location:unregister() end
     storage.rl_qlo_geometry.region = newRegion
     self.rl_qlo_location.region = newRegion
@@ -348,7 +324,6 @@ local function regionScan()
        regionSizeCheck(storage.rl_qlo_geometry.region) and
        not self.rl_qlo_quest:hasQuest()
     then
-      sb.logInfo("rl_questlocationobject: regionScan: registering location %s for new region", entity.uniqueId())
       self.rl_qlo_location:register()
     end
   end
@@ -363,7 +338,6 @@ function init()
 
   local questLocation = config.getParameter("rl_questLocation")
   if questLocation.disabled and not storage.rl_qlo_tags then
-    sb.logInfo("rl_questlocationobject: init: disabled by config")
     disableQuestLocation()
     return
   end
@@ -371,7 +345,6 @@ function init()
   local qloConfig = root.assetJson("/rl_belterdungeons.config:questlocationObjects")
   local worldAllowed = qloConfig.allowedWorldTypes[world.type()]
   if not worldAllowed and not storage.rl_qlo_tags then
-    sb.logInfo("rl_questlocationobject: init: world type '%s' not allowed", world.type())
     disableQuestLocation()
     return
   end
@@ -384,7 +357,6 @@ function init()
      not self.rl_qlo_region_expandable and
      not storage.rl_qlo_tags
   then
-    sb.logInfo("rl_questlocationobject: %s region %s is too small to use as a questlocation", object.name(), sb.printJson(storage.rl_qlo_geometry.region))
     disableQuestLocation()
     return
   end
@@ -440,13 +412,11 @@ function init()
   -- QLO is no longer valid, we must allow init to complete to allow the
   -- object to unregister itself before disabling the QLO behavior.
   if questLocation.disabled or not worldAllowed then
-    sb.logInfo("rl_questlocationobject: init: disabling previously enabled QLO")
     disableQuestLocation()
     return
   end
   if not sizeAcceptable then
     if self.rl_qlo_region_expandable then
-      sb.logInfo("Activating expandable object")
       local regionScanTimer = Timer:new("rl_qlo_regionScanTimer", {
         delay = regionScanDelay,
         completeCallback = regionScan,
@@ -457,7 +427,6 @@ function init()
       end
       self.rl_qlo_timers:manage(regionScanTimer)
     else
-      sb.logInfo("rl_questlocationobject: %s region %s is too small to use as a questlocation, disabling", object.name(), sb.printJson(storage.rl_qlo_geometry.region))
       disableQuestLocation()
       return
     end
@@ -467,22 +436,18 @@ function init()
   if originalScriptDelta ~= 10 and #config.getParameter('scripts', {}) < 2 then
     -- If this script file is the only script assigned to this object,
     -- then it doesn't need a faster scriptDelta than 10.
-    sb.logInfo("rl_questlocationobject: init: setting update delta to 10")
     script.setUpdateDelta(10)
   elseif originalScriptDelta == 0 or originalScriptDelta > 10 then
     -- Quest location objects require the update function to be called
     -- at least once every 10 ticks. If the object definition sets
     -- scriptDelta to 0 or to more than 10, then set it to 10.
-    sb.logInfo("rl_questlocationobject: init: setting update delta to 10")
     script.setUpdateDelta(10)
   end
 end
 
 function die(smash)
   if self.rl_qlo_quest then
-    sb.logInfo("rl_questlocationobject: die: unregistering location %s", entity.uniqueId())
     if self.rl_qlo_location.tags then self.rl_qlo_location:unregister() end
-    sb.logInfo("rl_questlocationobject: die: killing quest participant")
     self.rl_qlo_quest:die()
   end
 
@@ -491,7 +456,6 @@ end
 
 function uninit()
   if self.rl_qlo_quest then
-    sb.logInfo("rl_questlocationobject: uninit: uniniting quest participant")
     self.rl_qlo_quest:uninit()
   end
 
@@ -511,14 +475,12 @@ function update(dt)
     if self.rl_qlo_location:isRegistered() and
        (not regionSizeCheck(storage.rl_qlo_geometry.region) or self.rl_qlo_quest:hasQuest())
     then
-      sb.logInfo("rl_questlocationobject: update: temporarily unregistering location %s", entity.uniqueId())
       if self.rl_qlo_location.tags then self.rl_qlo_location:unregister() end
     elseif storage.rl_qlo_tags and
            regionSizeCheck(storage.rl_qlo_geometry.region) and
            not self.rl_qlo_location:isRegistered() and
            not self.rl_qlo_quest:hasQuest()
     then
-      sb.logInfo("rl_questlocationobject: update: registering location %s", entity.uniqueId())
       self.rl_qlo_location:register()
     end
 
@@ -555,18 +517,14 @@ end
 -- to the world.
 function addTreasure(treasurePool, threatLevel)
   threatLevel = threatLevel or world.threatLevel()
-  sb.logInfo("rl_dynamic_questlocation: addTreasure: threat level = %s", threatLevel)
   local chest = entity.id()
   if not world.containerSize(chest) then
-    sb.logInfo("rl_questlocationobject: addTreasure: object not a container")
     return false
   end
   local treasure = root.createTreasure(treasurePool, threatLevel)
   if not containerHasSpace(chest, #treasure) then
-    sb.logInfo("rl_questlocationobject: addTreasure: insufficient space in container object")
     return false
   end
-  sb.logInfo("rl_questlocationobject: addTreasure: adding treasure to container object")
   for _,item in pairs(treasure) do
     local overflow = world.containerAddItems(chest, item)
     if overflow then

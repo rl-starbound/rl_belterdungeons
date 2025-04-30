@@ -20,9 +20,6 @@ local function getTieredItems(species, typeName, level, overrides)
       tieredItems = v[2]
     end
   end
-  if tieredItems then
-    sb.logInfo("rl_belterdungeons_colonydeed: getTieredItems: %s", sb.printJson(tieredItems))
-  end
   return tieredItems
 end
 
@@ -42,7 +39,6 @@ end
 
 function spawn(tenant)
   if self.rlBelterWorldTypes[world.type()] then
-    sb.logInfo("rl_belterdungeons_colonydeed: using rl_spawnBelterTenant")
     return rl_spawnBelterTenant(tenant)
   end
   return previous_spawn(tenant)
@@ -58,8 +54,6 @@ function rl_spawnBelterTenant(tenant)
     tenant.type = tenantType
     tenant.isBelterTenant = true
     tenantType = nil
-  elseif not tenant.isBelterTenant then
-    sb.logInfo("rl_belterdungeons_colonydeed: no belter replacement for %s", tenant.type)
   end
 
   -- Keep track of type changes, which may occur throughout the lifetime
@@ -121,7 +115,6 @@ function rl_spawnBelterTenant(tenant)
   if tenant.spawn == "npc" then
     -- Support rl_recruittimer degraduation
     if tenant.degraduationInfo then
-      sb.logInfo("rl_belterdungeons_colonydeed: rl_spawnBelterTenant: adding degraduation info into tenant overrides")
       overrides.scriptConfig = overrides.scriptConfig or {}
       overrides.scriptConfig.questGenerator = overrides.scriptConfig.questGenerator or {}
       overrides.scriptConfig.questGenerator.graduation = overrides.scriptConfig.questGenerator.graduation or {}
@@ -130,7 +123,6 @@ function rl_spawnBelterTenant(tenant)
       overrides.scriptConfig.questGenerator.graduation.timeout = tenant.degraduationInfo.timeout
       tenant.degraduationInfo = nil
     elseif tenant.degraduationInfo == false then
-      sb.logInfo("rl_belterdungeons_colonydeed: rl_spawnBelterTenant: removing degraduation info in tenant overrides")
       if overrides.scriptConfig and
          overrides.scriptConfig.questGenerator and
          overrides.scriptConfig.questGenerator.graduation
@@ -149,8 +141,6 @@ function rl_spawnBelterTenant(tenant)
         end
       end
       tenant.degraduationInfo = nil
-    else
-      sb.logInfo("rl_belterdungeons_colonydeed: rl_spawnBelterTenant: not altering degraduation info in tenant overrides")
     end
 
     -- The type change must be processed by this point, and the new type

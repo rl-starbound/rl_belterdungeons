@@ -12,10 +12,8 @@ function init()
         world.threatLevel()
       ), 3, 6
     )
-    sb.logInfo("rl_belterspacecapsule: init: threat level = %s", level)
 
     storage.treasurePool = string.format("rlBelterDungeonsCapsuleSpace%d", level)
-    sb.logInfo("rl_belterspacecapsule: init: treasure pool = %s", storage.treasurePool)
   end
   object.setConfigParameter("smashDropPool", storage.treasurePool)
 end

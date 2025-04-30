@@ -10,8 +10,6 @@ function init()
   -- `dungeonIdOffset` must be a positive integer. The sum of the base
   -- dungeonId and the offset must be within the idRange.
   self.dungeonIdOffset = config.getParameter("dungeonIdOffset")
-
-  sb.logInfo("rl_dynamic_dungeonid: init: dungeonIdOffset = %s", self.dungeonIdOffset)
 end
 
 function update(dt)
@@ -37,7 +35,6 @@ function update(dt)
   end
 
   local dungeonId = world.dungeonId(pos) + self.dungeonIdOffset
-  sb.logInfo("rl_dynamic_dungeonid: update: setDungeonId %s", dungeonId)
   if dungeonId >= idRange[1] and dungeonId <= idRange[2] then
     for _, v in ipairs(regions) do
       world.setDungeonId(v, dungeonId)

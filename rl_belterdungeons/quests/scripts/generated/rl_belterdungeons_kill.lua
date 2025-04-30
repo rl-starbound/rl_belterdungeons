@@ -32,14 +32,12 @@ function onUpdate(dt)
 end
 
 function onAbort(_, _, reason)
-  sb.logInfo("rl_belterdungeons_kill: onAbort: reason = %s", reason)
   if reason then
     local textGenerator = currentQuestTextGenerator()
     setPortraits(bind(textGenerator.substituteTags, textGenerator))
     local failureText = textGenerator:generateText(
       string.format("abortText.%s", reason), "default"
     )
-    sb.logInfo("rl_belterdungeons_kill: onAbort: failureText = %s", failureText)
     if failureText and failureText ~= "" then
       quest.setFailureText(failureText)
     end
@@ -63,7 +61,6 @@ function onEntitiesDead(_, _, group)
 end
 
 function onEntitiesSpawned(_, _, group, entityNames)
-  sb.logInfo("rl_belterdungeons_kill: onEntitiesSpawned: received spawn event: %s", group)
   if not objective("findPlace"):isComplete() then
     objective("findPlace"):complete()
   end
@@ -86,7 +83,6 @@ function triggerSpawn()
   util.wait(2)
 
   objective("findPlace"):complete()
-  sb.logInfo("rl_belterdungeons_kill: triggerSpawn: sending spawn trigger for: %s", "enemies")
   self.questClient:sendToStagehand("rl_triggerSpawnEntities", "enemies")
 
   return true

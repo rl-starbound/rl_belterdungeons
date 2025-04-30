@@ -49,12 +49,9 @@ function init()
     self.typeName = util.randomChoice(self.typeName)
   end
   math.randomseed(util.seedTime())
-
-  sb.logInfo("rl_systemthreat_npc: init: %s %s %s %s %s %s", entity.position(), self.species, self.typeName, self.level, self.seed, self.parameters)
 end
 
 function update(dt)
-  sb.logInfo("rl_systemthreat_npc: update: spawnNpc %s %s %s %s %s %s", entity.position(), self.species, self.typeName, self.level, self.seed, self.parameters)
   world.spawnNpc(entity.position(), self.species, self.typeName,
     self.level, self.seed, self.parameters
   )

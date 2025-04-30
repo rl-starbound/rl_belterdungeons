@@ -28,7 +28,6 @@ function rl_belterdungeons_generateNewArc()
   if not self.questGenerator then
     local generators = root.assetJson("/rl_belterdungeons.config:questGenerators")
     local generatorClassName = generators.byWorldType[world.type()] or "QuestGenerator"
-    sb.logInfo("rl_belterdungeons_quests: rl_belterdungeons_generateNewArc: using generator: %s", generatorClassName)
     local generatorScript = generators.script[generatorClassName]
     if generatorScript then require(generatorScript) end
     local generatorClass = _ENV[generatorClassName]

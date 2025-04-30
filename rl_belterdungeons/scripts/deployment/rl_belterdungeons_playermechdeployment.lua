@@ -9,15 +9,12 @@ function init()
   )
 
   self.rl_currentWorldId = player.worldId()
-  sb.logInfo("playermechdeployment: init: currentWorldId = %s", self.rl_currentWorldId)
   self.rl_isCelestialWorld = rl_worldIdCoordinate(self.rl_currentWorldId)
-  sb.logInfo("playermechdeployment: init: isCelestialWorld = %s", self.rl_isCelestialWorld)
 
   message.setHandler("rl_asteroidbeltmanager_completed",
     rl_asteroidbeltmanagerCompleted)
 
   message.setHandler("rl_belterdungeons_resetMechBeacons", function()
-      sb.logInfo("playermechdeployment: received rl_belterdungeons_resetMechBeacons")
       self.rl_belterdungeons_beaconPositions = nil
     end)
 
@@ -46,11 +43,9 @@ function update(dt)
       if self.rl_belterdungeons_beaconPositions then
         rl_belterdungeons_drawBeacons()
       else
-        sb.logInfo("playermechdeployment: update: in powered mech fetching beacons")
         self.rl_belterdungeons_beaconPositions = world.getProperty(
           "rl_belterdungeons_mechBeacons", {}
         )
-        sb.logInfo("playermechdeployment: update: rl_belterdungeons_mechBeacons = %s", self.rl_belterdungeons_beaconPositions)
       end
     end
   end
@@ -90,10 +85,8 @@ function rl_belterdungeons_asteroidbeltmanager_load(worldId)
     if findManager:succeeded() then
       -- findUniqueEntity returns the position, about which we do not
       -- care. We only care to validate the existence of the unique Id.
-      sb.logInfo("playermechdeployment: rl_belterdungeons_asteroidbeltmanager_load: found rl_asteroidbeltmanager")
       return stagehandType
     else
-      sb.logInfo("playermechdeployment: rl_belterdungeons_asteroidbeltmanager_load: attempting to spawn rl_asteroidbeltmanager...")
       world.spawnStagehand({5, 5}, stagehandType, stagehandParameters)
     end
     coroutine.yield()
@@ -134,7 +127,6 @@ function rl_asteroidbeltmanagerCompleted(_, _, dungeonsCount)
 end
 
 function rl_systemThreatScannerCallback(_, _, success)
-  sb.logInfo("playermechdeployment: received rl_systemThreatScannerCallback")
   self.rl_systemthreatscanner_completed = true
 end
 

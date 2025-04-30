@@ -45,19 +45,13 @@ function init()
   self.parameters.scriptConfig.gang.species = nil
 
   if type(self.species) == "table" then
-    sb.logInfo("rl_systemthreat_gangmember: init: multispecies gang")
     math.randomseed(self.seed)
     self.species = util.randomChoice(self.species)
     math.randomseed(util.seedTime())
-  else
-    sb.logInfo("rl_systemthreat_gangmember: init: single species gang: %s", self.species)
   end
-
-  sb.logInfo("rl_systemthreat_gangmember: init: %s %s %s %s %s %s", entity.position(), self.species, self.typeName, self.level, self.seed, self.parameters)
 end
 
 function update(dt)
-  sb.logInfo("rl_systemthreat_gangmember: update: spawnNpc %s %s %s %s %s %s", entity.position(), self.species, self.typeName, self.level, self.seed, self.parameters)
   world.spawnNpc(entity.position(), self.species, self.typeName,
     self.level, self.seed, self.parameters
   )

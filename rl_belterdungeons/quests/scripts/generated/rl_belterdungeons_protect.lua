@@ -16,7 +16,6 @@ function onInit()
 end
 
 function onQuestStart()
-  sb.logInfo("rl_belterdungeons_protect: onQuestStart: started")
   setIndicators({"target"})
 end
 
@@ -38,14 +37,12 @@ function onUpdate(dt)
 end
 
 function onAbort(_, _, reason)
-  sb.logInfo("rl_belterdungeons_protect: onAbort: reason = %s", reason)
   if reason then
     local textGenerator = currentQuestTextGenerator()
     setPortraits(bind(textGenerator.substituteTags, textGenerator))
     local failureText = textGenerator:generateText(
       string.format("abortText.%s", reason), "default"
     )
-    sb.logInfo("rl_belterdungeons_protect: onAbort: failureText = %s", failureText)
     if failureText and failureText ~= "" then
       quest.setFailureText(failureText)
     end
@@ -68,10 +65,8 @@ function onEnemiesDead(_, _)
 end
 
 function onEnemiesSpawned(_, _, group, entityNames)
-  sb.logInfo("rl_belterdungeons_protect: onEnemiesSpawned: received event")
   if not objective("findPlace"):isComplete() then objective("findPlace"):complete() end
   if not objective("checkIn"):isComplete() then onCheckInConfirmed(nil, entity.id()) end
-  sb.logInfo("rl_belterdungeons_protect: onEnemiesSpawned: setting indicators to: %s", entityNames)
   setIndicators(entityNames)
 end
 
@@ -92,7 +87,6 @@ function triggerSpawn()
   util.wait(2)
 
   objective("findPlace"):complete()
-  sb.logInfo("rl_belterdungeons_protect: triggerSpawn: sending spawn trigger for: %s", "enemies")
   self.questClient:sendToStagehand("rl_triggerSpawnEntities", "enemies")
 
   return true

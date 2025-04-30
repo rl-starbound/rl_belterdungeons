@@ -26,7 +26,6 @@ function init()
 
   self.serverUuid = player.serverUuid()
   self.worldId = player.worldId()
-  sb.logInfo("rl_systemthreatscanner: init: current world = %s", self.worldId)
 
   local coordinate = worldIdCoordinate(self.worldId)
   if not coordinate then
@@ -36,13 +35,11 @@ function init()
     return
   end
   self.systemCoordinate = coordinateSystem(coordinate)
-  sb.logInfo("rl_systemthreatscanner: init: current system = %s", self.systemCoordinate)
 
   local existingWorldId = world.getProperty("rl_worldId")
   if existingWorldId and existingWorldId == self.worldId then
     local existingThreatLevel = world.getProperty("rl_starSystemThreatLevel")
     if existingThreatLevel then
-      sb.logInfo("rl_systemthreatscanner: init: threat level already set to %s", existingThreatLevel)
       self.status = statusCodes.alreadyExists
       self.threatLevel = existingThreatLevel
       pane.dismiss()
@@ -52,7 +49,6 @@ function init()
 
   self.worldSeed = util.hashString(self.worldId)
   self.gangConfig = generateGang(self.worldSeed)
-  sb.logInfo("rl_systemthreatscanner: init: gangConfig = %s", self.gangConfig)
 end
 
 function update(dt)
@@ -81,12 +77,9 @@ function update(dt)
       sb.logWarn("rl_systemthreatscanner: update: timed out")
       self.status = statusCodes.timedOut
       pane.dismiss()
-    else
-      sb.logInfo("rl_systemthreatscanner: update: loading star parameters; waiting...")
     end
     return
   end
-  --sb.logInfo("rl_systemthreatscanner: update: star parameters = %s", starParameters)
   self.threatLevel = math.floor(starParameters.spaceThreatLevel)
 
   self.status = statusCodes.success
@@ -106,7 +99,6 @@ function dismissed()
   if self.status == statusCodes.invalid then return end
 
   if self.status == statusCodes.success then
-    sb.logInfo("rl_systemthreatscanner: dismissed: threat level = %s", self.threatLevel)
     world.setProperty("rl_gangConfig", self.gangConfig)
     world.setProperty("rl_worldId", self.worldId)
     world.setProperty("rl_worldSeed", self.worldSeed)
@@ -114,7 +106,6 @@ function dismissed()
   end
 
   if world.entityExists(self.playerId) then
-    sb.logInfo("rl_systemthreatscanner: dismissed: sending callback")
     world.sendEntityMessage(self.playerId, "rl_systemThreatScannerCallback",
       self.status == statusCodes.alreadyExists or self.status == statusCodes.success
     )
@@ -138,11 +129,9 @@ function generateGang(seed)
 
   -- Add species, which is not part of gang config in the base game.
   local multispecies = config.getParameter("gangConfig.multispeciesChance", 0.2)
-  sb.logInfo("rl_systemthreatscanner: generateGang: multispecies chance = %s", multispecies)
   local species = config.getParameter("gangConfig.speciesChoices", {
     "apex", "avian", "floran", "glitch", "human", "hylotl", "novakid"
   })
-  sb.logInfo("rl_systemthreatscanner: generateGang: species choices = %s", species)
   if multispecies - rand:randf(0.0, 1.0) < 0 then
     species = util.randomFromList(species, rand)
   end

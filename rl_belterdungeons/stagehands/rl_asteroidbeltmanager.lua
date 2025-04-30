@@ -2,7 +2,6 @@ require "/interface/cockpit/cockpitutil.lua"
 require "/scripts/util.lua"
 
 function init()
-  sb.logInfo("rl_asteroidbeltmanager: init: world type = %s", world.type())
   local tryUniqueId = config.getParameter("tryUniqueId")
   if entity.uniqueId() ~= tryUniqueId then
     if world.findUniqueEntity(tryUniqueId):result() == nil then
@@ -31,12 +30,10 @@ function init()
     world.getProperty("rl_starSystemThreatLevel", 3),
     world.threatLevel()
   )
-  sb.logInfo("rl_asteroidbeltmanager: init: star system threat level = %s", threatLevel)
 
   self.state = world.getProperty("rl_asteroidbeltmanager_state")
   if self.state then
     if self.state.dungeonsGenerated >= self.state.dungeonCount then
-      sb.logInfo("rl_asteroidbeltmanager: init: already executed; deactivating")
       script.setUpdateDelta(0)
     end
   else
@@ -56,7 +53,6 @@ function init()
     local dungeonCountRange = worldConfig["dungeonCountRange"] or {0, 0}
     local dungeonTypes = {}
     local seed = util.hashString(worldId)
-    sb.logInfo("rl_asteroidbeltmanager: init: seed = %s", seed)
     local yRanges = worldConfig["yRanges"]
 
     math.randomseed(seed)
@@ -74,7 +70,6 @@ function init()
 
     for i = 0, dungeonCount - 1 do
       if #(dungeons.pool) == 0 then
-        sb.logInfo("rl_asteroidbeltmanager: init: truncating dungeonCount to %s", i)
         dungeonCount = i
         break
       end
@@ -84,7 +79,6 @@ function init()
       })
       table.insert(dungeonTypes, weightedRandomPop(dungeons, seed))
     end
-    sb.logInfo("rl_asteroidbeltmanager: init: will generate %s dungeons", dungeonCount)
 
     math.randomseed(util.seedTime())
 
@@ -99,7 +93,6 @@ function init()
     }
     world.setProperty("rl_asteroidbeltmanager_state", self.state)
   end
-  sb.logInfo("rl_asteroidbeltmanager: init: previously generated %s dungeons", self.state.dungeonsGenerated)
 end
 
 function update(dt)
@@ -108,17 +101,14 @@ function update(dt)
     local baseDungeonId = self.state.nextDungeonId
     local dungeonCoords = self.state.dungeonCoords[self.state.dungeonsGenerated + 1]
     local dungeonType = self.state.dungeonTypes[self.state.dungeonsGenerated + 1]
-    sb.logInfo("rl_asteroidbeltmanager: update: generating dungeon %s with dungeonId = %s", self.state.dungeonsGenerated, self.state.nextDungeonId)
 
     local metadata = root.dungeonMetadata(dungeonType)
-    sb.logInfo("rl_asteroidbeltmanager: update: loading %s dungeon type with %s anchor parts, %s gravity, %s breathable, %s protected", dungeonType, #metadata.anchor, metadata.gravity, metadata.breathable, metadata.protected)
     world.setDungeonBreathable(baseDungeonId, metadata.breathable)
     world.setDungeonGravity(baseDungeonId, metadata.gravity)
     world.setTileProtection(baseDungeonId, metadata.protected)
     if metadata.extraDungeonIds then
       for _, v in ipairs(metadata.extraDungeonIds) do
         self.state.nextDungeonId = self.state.nextDungeonId + 1
-        sb.logInfo("rl_asteroidbeltmanager: update: adding extra dungeon id %s with %s gravity, %s breathable, %s protected", self.state.nextDungeonId, v.gravity or 0, v.breathable or false, v.protected or false)
         world.setDungeonBreathable(self.state.nextDungeonId, v.breathable or false)
         world.setDungeonGravity(self.state.nextDungeonId, v.gravity or 0)
         world.setTileProtection(self.state.nextDungeonId, v.protected or false)
@@ -127,7 +117,6 @@ function update(dt)
     sb.logInfo("Placing dungeon %s", dungeonType)
     world.placeDungeon(dungeonType, dungeonCoords, baseDungeonId)
 
-    sb.logInfo("rl_asteroidbeltmanager: update: generated dungeon %s", self.state.dungeonsGenerated)
     self.state.dungeonsGenerated = self.state.dungeonsGenerated + 1
     self.state.nextDungeonId = self.state.nextDungeonId + 1
     world.setProperty("rl_asteroidbeltmanager_state", self.state)
@@ -135,7 +124,6 @@ function update(dt)
   math.randomseed(util.seedTime())
 
   if self.state.dungeonsGenerated >= self.state.dungeonCount then
-    sb.logInfo("rl_asteroidbeltmanager: update: finished executing; deactivating")
     if self.state.parentEntityId and
        world.entityExists(self.state.parentEntityId)
     then
@@ -163,7 +151,6 @@ function buildDungeonsPool(dungeons, threatLevel)
     then
       local weight = v.weight or 1
       if weight < 0 then weight = 0 end
-      sb.logInfo("rl_asteroidbeltmanager: buildDungeonsPool: inserting %s with weight %s", k, weight)
       table.insert(retval.pool, {weight, k})
       retval.totalWeight = retval.totalWeight + weight
     end
@@ -197,12 +184,8 @@ end
 
 function weightedRandomPop(dungeons, seed)
   local choice = dungeons.totalWeight * sb.staticRandomDouble(seed)
-  sb.logInfo("rl_asteroidbeltmanager: weightedRandomPop: totalWeight = %s", dungeons.totalWeight)
-  sb.logInfo("rl_asteroidbeltmanager: weightedRandomPop: choice = %s", choice)
   for index, pair in ipairs(dungeons.pool) do
-    sb.logInfo("rl_asteroidbeltmanager: weightedRandomPop: checking %s with weight %s", pair[2], pair[1])
     choice = choice - pair[1]
-    sb.logInfo("rl_asteroidbeltmanager: weightedRandomPop: remaining choice = %s", choice)
     if choice < 0 then
       table.remove(dungeons.pool, index)
       dungeons.totalWeight = dungeons.totalWeight - pair[1]
