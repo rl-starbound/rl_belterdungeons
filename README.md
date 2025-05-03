@@ -6,7 +6,7 @@ The **Belter Dungeons** mod adds the framework necessary to spawn major dungeons
 * deterministic pseudo-random generation, allowing folks with the same mod sets to share coordinates;
 * difficulty that scales with the star system in which the asteroid belt resides;
 * randomly generated space quests with quest locations in the new dungeons;
-* quest location objects to allow players to enable quest generation in their own dungeons
+* quest location objects to allow players to enable quest generation in their own bases.
 
 For the initial release of this mod, the dungeons included will be enhanced variations of most of the space encounters in the base game. I plan to extend this mod by adding packs of original asteroid belt dungeons over time, but also hope that other mod authors will be inspired to do likewise.
 
@@ -14,7 +14,7 @@ For the initial release of this mod, the dungeons included will be enhanced vari
 
 As always, making a backup of your game's `storage` folder is strongly recommended before installing this (or any other) mod.
 
-After this mod has been installed, the first time (and only the first time) that the first player deploys into each asteroid belt, a set of dungeons will spawn into that belt at pseudo-random locations. This means that any bases you've already built in asteroid belts could be overwritten the first time you visit them after installing this mod. If you have already built bases in one or more asteroid belts, it is **strongly recommended** that before you install this mod, first install the **No Belter Dungeons** mod and visit each of your asteroid belt bases briefly, which will protect those bases from the dungeon generation in this mod. After doing this, you must uninstall the No Belter Dungeons mod and install this mod.
+After this mod has been installed, the first time (and only the first time) that the first player deploys into each asteroid belt, a set of dungeons will spawn into that belt at pseudo-random locations. This means that any bases you've already built in asteroid belts could be overwritten the first time you visit them after installing this mod. If you have already built bases in one or more asteroid belts, it is **strongly recommended** that before you install this mod, first install the [No Belter Dungeons](https://community.playstarbound.com/resources/no-belter-dungeons.6358/) mod and visit each of your asteroid belt bases briefly, which will protect those bases from the dungeon generation in this mod. After doing this, you must uninstall the No Belter Dungeons mod and install this mod.
 
 ## Belter Dungeons
 
@@ -89,7 +89,7 @@ This mod has few touch-points into the base game code, and uses Starbound moddin
 
 ## Uninstallation
 
-**Because this mod adds a biome and quest locations, removing it will break asteroid belts that generated while it was installed. If you no longer wish to use this mod, it is strongly recommended to replace it with the No Belter Dungeons mod**, which provides the definitions for the assets in this mod, but will not spawn them into newly-visited asteroid belts.
+**Because this mod adds a biome and quest locations, removing it will break asteroid belts that generated while it was installed. If you no longer wish to use this mod, it is strongly recommended to replace it with the [No Belter Dungeons](https://community.playstarbound.com/resources/no-belter-dungeons.6358/) mod**, which provides the definitions for the assets in this mod, but will not spawn them into newly-visited asteroid belts.
 
 If you insist on removing this mod and not replacing it with No Belter Dungeons, then you must delete the `universe.chunks` file from your `universe` folder after removing the mod, and allow it to regenerate. Any asteroid belts that generated while this mod was installed may crash after it is removed, and the only way to correct this would be to delete the corresponding `.world` files and allow them to regenerate.
 
@@ -124,5 +124,5 @@ If you have any questions, bug reports, or ideas for improvement, please contact
 Permission to include this mod or parts thereof in derived works, to distribute copies of this mod verbatim, or to distribute modified copies of this mod, is granted unconditionally to Chucklefish LTD. Such permissions are also granted to other parties automatically, provided the following conditions are met:
 
 * Credit is given to the author(s) specified in this mod's `_metadata` file;
-* A link is provided to **TBD** in the accompanying files or documentation of any derived work;
+* A link is provided to [this page](https://community.playstarbound.com/resources/belter-dungeons.6357/) and/or the [source repository](https://github.com/rl-starbound/rl_belterdungeons) in the accompanying files or documentation of any derived work;
 * The name "rl_belterdungeons" is not used as the metadata name of any derived mod without explicit consent of the author(s); however, the name may be used in verbatim distribution of this mod. For the purposes of this clause, minimal changes to metadata files to allow distribution on Steam shall be considered a verbatim distribution so long as authorship attribution remains.

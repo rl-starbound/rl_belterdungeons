@@ -1,6 +1,6 @@
 # Belter Dungeons Modding Guide
 
-This guide provides documentation for creating new dungeons to be spawned into [asteroid belts](https://starbounder.org/Asteroid_Field) by the **Belter Dungeons** mod. It assumes familiarity with Starbound dungeon creation and the [Tiled](https://www.mapeditor.org/) dungeon editor. Given that asteroid belt dungeon creation is an advanced topic, those not already familiar with Starbound dungeon creation should look for a tutorial on the basics before delving into this guide.
+This guide provides documentation for creating new dungeons to be spawned into [asteroid belts](https://starbounder.org/Asteroid_Field) by the [Belter Dungeons](https://community.playstarbound.com/resources/belter-dungeons.6357/) mod. It assumes familiarity with Starbound dungeon creation and the [Tiled](https://www.mapeditor.org/) dungeon editor. Given that asteroid belt dungeon creation is an advanced topic, those not already familiar with Starbound dungeon creation should look for a tutorial on the basics before delving into this guide.
 
 As always, the best way to learn Starbound modding is to unpack the source and read it. Feel free to unpack the Belter Dungeons source and examine the assets, scripts, etc.
 
@@ -94,7 +94,7 @@ Next, you'll need to symlink the Belter Dungeons tiled image files into your mod
 
 ```
 cd -- "${HOME}/starbound-src/your_mod1/your_mod1/_tiled"
-ln -fs "${HOME}/starbound-src/rl_belterdungeons/rl_belterdungeons/_tiled/rl_belterdungeons"
+ln -fs -- "${HOME}/starbound-src/rl_belterdungeons/rl_belterdungeons/_tiled/rl_belterdungeons"
 ```
 
 Finally, you'll need to symlink both the base game tilesets and the Belter Dungeons tilesets into your mod's `tilesets` folder. These commands work for Linux and Mac OS (assuming you substitute `your_mod1` with your mod's name):
@@ -158,7 +158,7 @@ fi
 
 From within the `starbound-src/rl_belterdungeons/rl_belterdungeons` folder, I run the command `../make-starbound-pak` instead of directly running the asset packer and it ensures that any symlinks are removed from the `_tiled` and `tilesets` folders before packing the assets.
 
-Of course, after packing assets, I need to re-add the symlinks before I can use continue working on the mod using Tiled. This can be done by re-executing the commands from the [Configuring Your Mod for Tiled](#Configuring_Your_Mod_for_Tiled) section, although you may want to write another script to automate that.
+Of course, after packing assets, I need to re-add the symlinks before I can use continue working on the mod using Tiled. This can be done by re-executing the commands from the [Configuring Your Mod for Tiled](#configuring-your-mod-for-tiled) section, although you may want to write another script to automate that.
 
 ### A Note About Name Prefixing
 
@@ -365,7 +365,7 @@ The `rl_dynamic_dungeonid` stagehand is created by defining a rectangular region
 { "dungeonIdOffset" : 1 }
 ```
 
-Going back to the [Dungeon Metadata](#Dungeon_Metadata) section of this guide, the `dungeonIdOffset` value will be the position in the `extraDungeonIds` list corresponding to the rectangular region. In the example defined in that section, the configuration shown above would correspond to the "main exterior" zone and at run time would have a dungeon ID of 105, featuring 0 gravity, no air, and shielding.
+Going back to the [Dungeon Metadata](#dungeon-metadata) section of this guide, the `dungeonIdOffset` value will be the position in the `extraDungeonIds` list corresponding to the rectangular region. In the example defined in that section, the configuration shown above would correspond to the "main exterior" zone and at run time would have a dungeon ID of 105, featuring 0 gravity, no air, and shielding.
 
 A tricky implementation detail of `rl_dynamic_dungeonid` to keep in mind is that a dungeon must define, in the metadata in its `.dungeon` file, extra dungeon IDs for every offset up to the maximum offset that can generate in the dungeon. For example, if the maximum offset that exists in any dungeon part that can generate into your dungeon is 6, then your dungeon metadata must include six extra dungeon ID entries, even if the first five are never used.
 

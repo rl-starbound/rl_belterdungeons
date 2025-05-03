@@ -1,11 +1,11 @@
 # Starbound mod: No Belter Dungeons
 
-The **No Belter Dungeons** mod adds the framework necessary to spawn major dungeons into [asteroid belts](https://starbounder.org/Asteroid_Field), but disables the generation of the dungeons. It is intended as an alternative to the **Belter Dungeons** mod, to handle a couple of use cases:
+The **No Belter Dungeons** mod adds the framework necessary to spawn major dungeons into [asteroid belts](https://starbounder.org/Asteroid_Field), but disables the generation of the dungeons. It is intended as an alternative to the [Belter Dungeons](https://community.playstarbound.com/resources/belter-dungeons.6357/) mod, to handle a couple of use cases:
 
 1. Users who want to protect existing asteroid belt bases before installing Belter Dungeons.
 1. Users who don't want to spawn new asteroid belt dungeons into asteroid belts, but who also don't want to lose the custom objects that have already spawned into existing asteroid belt dungeons.
 
-Outside of those two use cases, most users will not want this mod, but may want Belter Dungeons.
+**Outside of those two use cases, most users will not want this mod, but may want Belter Dungeons.**
 
 As always, making a backup of your game's `storage` folder is strongly recommended before installing this (or any other) mod.
 
@@ -48,5 +48,5 @@ If you have any questions, bug reports, or ideas for improvement, please contact
 Permission to include this mod or parts thereof in derived works, to distribute copies of this mod verbatim, or to distribute modified copies of this mod, is granted unconditionally to Chucklefish LTD. Such permissions are also granted to other parties automatically, provided the following conditions are met:
 
 * Credit is given to the author(s) specified in this mod's `_metadata` file;
-* A link is provided to **TBD** in the accompanying files or documentation of any derived work;
+* A link is provided to [this page](https://community.playstarbound.com/resources/no-belter-dungeons.6358/) and/or the [source repository](https://github.com/rl-starbound/rl_belterdungeons) in the accompanying files or documentation of any derived work;
 * The name "rl_belterdungeons" is not used as the metadata name of any derived mod without explicit consent of the author(s); however, the name may be used in verbatim distribution of this mod. For the purposes of this clause, minimal changes to metadata files to allow distribution on Steam shall be considered a verbatim distribution so long as authorship attribution remains.

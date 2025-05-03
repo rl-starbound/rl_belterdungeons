@@ -9,11 +9,14 @@ fi
 
 if [ -d _tiled ]; then
   find _tiled -type l -delete
+fi
+if [ -d _tiled ]; then
   find _tiled -empty -delete
 fi
 
-
 if [ -d tilesets ]; then
   find tilesets -type l -delete
+fi
+if [ -d tilesets ]; then
   find tilesets -empty -delete
 fi
