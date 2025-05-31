@@ -3,6 +3,10 @@
     "unique" : false,
     "text" : "This text should never appear. Congratulations, you have found a bug in my programming."
   },
+  "rl_belterdungeons-dungeonsFoundMulti" : {
+    "unique" : false,
+    "text" : "This text should never appear. Congratulations, you have found a bug in my programming."
+  },
   "rl_belterdungeons-dungeonsNotFound" : {
     "unique" : false,
     "text" : "Scans have found nothing interesting in this asteroid belt."

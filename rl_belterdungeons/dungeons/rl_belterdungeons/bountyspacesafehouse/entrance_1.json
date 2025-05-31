@@ -161,7 +161,7 @@
          "name":"stagehands",
          "objects":[
                 {
-                 "height":80,
+                 "height":120,
                  "id":1913,
                  "name":"",
                  "properties":[
@@ -178,12 +178,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
-                 "x":976,
-                 "y":384
+                 "width":120,
+                 "x":864,
+                 "y":312
                 }, 
                 {
-                 "height":80,
+                 "height":120,
                  "id":1914,
                  "name":"",
                  "properties":[
@@ -200,9 +200,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
-                 "x":888,
-                 "y":1064
+                 "width":120,
+                 "x":672,
+                 "y":1104
                 }],
          "opacity":1,
          "type":"objectgroup",

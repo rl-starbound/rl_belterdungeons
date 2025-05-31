@@ -22,7 +22,7 @@ local function spawnSystemThreatEntity(spawnConfig)
   if type(spawnConfig.parameters.scriptConfig) == "table" then
     parameters.scriptConfig = shallowCopy(spawnConfig.parameters.scriptConfig)
   end
-  parameters.level = (parameters.level or math.max(world.getProperty("rl_starSystemThreatLevel", 3), world.threatLevel())) + (spawnConfig.levelBoost or 0)
+  parameters.level = (parameters.level or math.max(world.getProperty("rl_starSystemThreatLevel") or 2, world.threatLevel())) + (spawnConfig.levelBoost or 0)
 
   local typeName = spawnConfig.typeName
   local species = spawnConfig.species
@@ -192,7 +192,7 @@ function SpawnSystemThreatEntities:spawnTreasure(config)
 
   local location = locations[math.random(#locations)]
   local entityId = world.loadUniqueEntity(location.uniqueId)
-  local threatLevel = math.max(world.getProperty("rl_starSystemThreatLevel", 3), world.threatLevel())
+  local threatLevel = math.max(world.getProperty("rl_starSystemThreatLevel") or 2, world.threatLevel())
   if world.callScriptedEntity(entityId, "addTreasure", config.treasurePool, threatLevel) then
     return location
   end

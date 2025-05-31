@@ -11,8 +11,9 @@
       {
         "select" : 1,
         "pool" : [
-          [ 0.6, "asteroidskimbus" ],
-          [ 0.4, "rl_beltasteroids_scandroid" ]
+          [ 0.4, "rl_beltasteroids_skimbus" ],
+          [ 0.3, "rl_beltasteroids_minidrone" ],
+          [ 0.3, "rl_beltasteroids_scandroid" ]
         ]
       }
     ]
@@ -46,7 +47,7 @@
     "items" : [
       {
         "mode" : "floor",
-        "priority" : 1,
+        "priority" : 2,
         "variants" : 1,
         "distribution" : "/biomes/distributions.config:mainBiomeRareMicrodungeon",
 
@@ -55,12 +56,21 @@
       },
       {
         "mode" : "floor",
-        "priority" : 1,
+        "priority" : 2,
         "variants" : 1,
         "distribution" : "/biomes/distributions.config:mainBiomeEncounterDungeon",
 
         "type" : "microdungeon",
         "microdungeons" : [ "rl_belterdungeons_encountersrare" ]
+      },
+      {
+        "mode" : "floor",
+        "priority" : 1,
+        "variants" : 1,
+        "distribution" : "/biomes/distributions.config:mainBiomeRareMicrodungeon",
+
+        "type" : "microdungeon",
+        "microdungeons" : [ "rl_belterdungeons_oregenerator" ]
       }
     ]
   }

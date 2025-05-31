@@ -18,7 +18,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAA8GY4QAAB",
+         "data":"eJztzgEJAAAMA6D1r\/sCjzEYmsAEAAAAAAAAAAAAAABg07UDAFD05TIA9A==",
          "encoding":"base64",
          "height":60,
          "id":2,
@@ -156,25 +156,13 @@
                 {
                  "gid":240,
                  "height":8,
-                 "id":713,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":272,
-                 "y":424
-                }, 
-                {
-                 "gid":240,
-                 "height":8,
                  "id":714,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":208,
+                 "x":240,
                  "y":424
                 }, 
                 {
@@ -464,30 +452,6 @@
                  "width":8,
                  "x":72,
                  "y":264
-                }, 
-                {
-                 "gid":240,
-                 "height":8,
-                 "id":746,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":224,
-                 "y":464
-                }, 
-                {
-                 "gid":240,
-                 "height":8,
-                 "id":747,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":8,
-                 "x":256,
-                 "y":464
                 }],
          "opacity":1,
          "type":"objectgroup",

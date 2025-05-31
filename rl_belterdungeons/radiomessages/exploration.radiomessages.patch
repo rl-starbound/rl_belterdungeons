@@ -1,0 +1,32 @@
+[
+  [
+    { "op" : "test",
+      "path" : "/biomeradiation/text",
+      "value" : "WARNING! RADIATION LEVELS ON THIS PLANET ARE EXTREMELY HAZARDOUS!\nYou should not attempt further exploration without proper protective equipment!"
+    },
+    { "op" : "replace",
+      "path" : "/biomeradiation/text",
+      "value" : "WARNING! RADIATION LEVELS AT THIS LOCATION ARE EXTREMELY HAZARDOUS!\nYou should not attempt further exploration without proper protective equipment!"
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/biomecold/text",
+      "value" : "WARNING! TEMPERATURE ON THIS PLANET IS DANGEROUSLY LOW!\nYou should not attempt further exploration without proper protective equipment!"
+    },
+    { "op" : "replace",
+      "path" : "/biomecold/text",
+      "value" : "WARNING! TEMPERATURE AT THIS LOCATION IS DANGEROUSLY LOW!\nYou should not attempt further exploration without proper protective equipment!"
+    }
+  ],
+  [
+    { "op" : "test",
+      "path" : "/biomeheat/text",
+      "value" : "WARNING! TEMPERATURE ON THIS PLANET IS DANGEROUSLY HIGH!\nYou should not attempt further exploration without proper protective equipment!"
+    },
+    { "op" : "replace",
+      "path" : "/biomeheat/text",
+      "value" : "WARNING! TEMPERATURE AT THIS LOCATION IS DANGEROUSLY HIGH!\nYou should not attempt further exploration without proper protective equipment!"
+    }
+  ]
+]

@@ -1,0 +1,105 @@
+{
+  "metadata" : {
+    "name" : "rl_belterdungeons_oregenerator",
+    "species" : "generic",
+    "rules" : [],
+    "anchor" : [
+      "ore1", "ore2", "ore3", "ore4", "ore5", "ore6", "ore7", "ore8", "ore9",
+      "ore10", "ore11", "ore12", "ore13", "ore14", "ore15", "ore16", "ore17"
+    ],
+    "gravity" : 0,
+    "breathable" : false,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : false
+  },
+
+  "parts" : [
+
+    {
+      "name" : "ore1",
+      "rules" : [],
+      "def" : [ "tmx", "ore1.json" ]
+    },
+    {
+      "name" : "ore2",
+      "rules" : [],
+      "def" : [ "tmx", "ore2.json" ]
+    },
+    {
+      "name" : "ore3",
+      "rules" : [],
+      "def" : [ "tmx", "ore3.json" ]
+    },
+    {
+      "name" : "ore4",
+      "rules" : [],
+      "def" : [ "tmx", "ore4.json" ]
+    },
+    {
+      "name" : "ore5",
+      "rules" : [],
+      "def" : [ "tmx", "ore5.json" ]
+    },
+    {
+      "name" : "ore6",
+      "rules" : [],
+      "def" : [ "tmx", "ore6.json" ]
+    },
+    {
+      "name" : "ore7",
+      "rules" : [],
+      "def" : [ "tmx", "ore7.json" ]
+    },
+    {
+      "name" : "ore8",
+      "rules" : [],
+      "def" : [ "tmx", "ore8.json" ]
+    },
+    {
+      "name" : "ore9",
+      "rules" : [],
+      "def" : [ "tmx", "ore9.json" ]
+    },
+    {
+      "name" : "ore10",
+      "rules" : [],
+      "def" : [ "tmx", "ore10.json" ]
+    },
+    {
+      "name" : "ore11",
+      "rules" : [],
+      "def" : [ "tmx", "ore11.json" ]
+    },
+    {
+      "name" : "ore12",
+      "rules" : [],
+      "def" : [ "tmx", "ore12.json" ]
+    },
+    {
+      "name" : "ore13",
+      "rules" : [],
+      "def" : [ "tmx", "ore13.json" ]
+    },
+    {
+      "name" : "ore14",
+      "rules" : [],
+      "def" : [ "tmx", "ore14.json" ]
+    },
+    {
+      "name" : "ore15",
+      "rules" : [],
+      "def" : [ "tmx", "ore15.json" ]
+    },
+    {
+      "name" : "ore16",
+      "rules" : [],
+      "def" : [ "tmx", "ore16.json" ]
+    },
+    {
+      "name" : "ore17",
+      "rules" : [],
+      "def" : [ "tmx", "ore17.json" ]
+    }
+  ]
+}

@@ -2199,7 +2199,7 @@
          "name":"stagehands",
          "objects":[
                 {
-                 "height":80,
+                 "height":120,
                  "id":1624,
                  "name":"",
                  "properties":[
@@ -2216,7 +2216,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
+                 "width":120,
                  "x":1240,
                  "y":864
                 }, 
@@ -2265,7 +2265,7 @@
                  "y":2144
                 }, 
                 {
-                 "height":80,
+                 "height":120,
                  "id":1627,
                  "name":"",
                  "properties":[
@@ -2282,12 +2282,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
+                 "width":120,
                  "x":2888,
                  "y":1128
                 }, 
                 {
-                 "height":80,
+                 "height":120,
                  "id":1628,
                  "name":"",
                  "properties":[
@@ -2304,12 +2304,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
+                 "width":120,
                  "x":3928,
                  "y":2552
                 }, 
                 {
-                 "height":80,
+                 "height":120,
                  "id":1629,
                  "name":"",
                  "properties":[
@@ -2326,12 +2326,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
+                 "width":120,
                  "x":712,
                  "y":1840
                 }, 
                 {
-                 "height":80,
+                 "height":120,
                  "id":1630,
                  "name":"",
                  "properties":[
@@ -2348,9 +2348,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
-                 "x":3264,
-                 "y":2128
+                 "width":120,
+                 "x":3240,
+                 "y":2120
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3455,6 +3455,18 @@
                  "width":40,
                  "x":1608,
                  "y":2504
+                }, 
+                {
+                 "gid":4404,
+                 "height":16,
+                 "id":1660,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":3816,
+                 "y":1992
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4333,7 +4345,7 @@
          "y":0
         }],
  "nextlayerid":19,
- "nextobjectid":1660,
+ "nextobjectid":1661,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.2",

@@ -3,7 +3,9 @@
     "name" : "rl_belterdungeons_encounters",
     "species" : "generic",
     "rules" : [],
-    "anchor" : [ "bottom1", "bottom2" ],
+    "anchor" : [
+      "bottom1", "bottom1", "bottom2", "bottom2", "bottom3", "bottom4"
+    ],
     "gravity" : 0,
     "breathable" : false,
     "maxRadius" : 1000000,
@@ -22,6 +24,16 @@
       "name" : "bottom2",
       "rules" : [],
       "def" : [ "tmx", "bottom2.json" ]
+    },
+    {
+      "name" : "bottom3",
+      "rules" : [],
+      "def" : [ "tmx", "bottom3.json" ]
+    },
+    {
+      "name" : "bottom4",
+      "rules" : [],
+      "def" : [ "tmx", "bottom4.json" ]
     }
   ]
 }

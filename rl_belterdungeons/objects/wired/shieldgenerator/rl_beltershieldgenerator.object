@@ -10,7 +10,7 @@
 
   "apexDescription" : "A switch. It activates the shield generator.",
   "avianDescription" : "This switch generates the shield.",
-  "floranDescription" : "Ssswitch!",
+  "floranDescription" : "Sshield ssswitch!",
   "glitchDescription" : "Surprised. This small switch doesn't look that powerful.",
   "humanDescription" : "If I flip this switch it will turn the shield generator on and off.",
   "hylotlDescription" : "A basic switch. It can be used to activate the shield generator.",
@@ -32,9 +32,10 @@
 
   "scripts" : [
     "shieldgenerator.lua",
-    "rl_shieldgenerator_dungeonid_race_fix.lua"
+    "rl_shieldgenerator_dungeonid_race_fix.lua",
+    "rl_beltershieldgenerator.lua"
   ],
-  "scriptDelta" : 5,
+  "scriptDelta" : 60,
 
   "animation" : "/objects/wired/switch/switchtoggle2.animation",
   "animationCustom" : {

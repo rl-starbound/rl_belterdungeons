@@ -24,10 +24,8 @@ function init()
     worldSeed .. util.tableToString(entity.position())
   )
 
-  -- Default to the minimum spaceThreatLevel in `/celestial.config`.
   self.level = math.max(
-    world.getProperty("rl_starSystemThreatLevel", 3),
-    world.threatLevel()
+    world.getProperty("rl_starSystemThreatLevel") or 2, world.threatLevel()
   )
 
   -- Add in gang parameters

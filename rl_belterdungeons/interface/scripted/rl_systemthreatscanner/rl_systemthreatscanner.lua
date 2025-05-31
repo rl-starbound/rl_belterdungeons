@@ -21,7 +21,7 @@ local statusCodes = {
 
 function init()
   self.playerId = player.id()
-  self.threatLevel = 3 -- minimum spaceThreatLevel in `/celestial.config`
+  self.threatLevel = 2
   self.ttl = 60
 
   self.serverUuid = player.serverUuid()
@@ -81,6 +81,9 @@ function update(dt)
     return
   end
   self.threatLevel = math.floor(starParameters.spaceThreatLevel)
+  if self.threatLevel == 3 and starParameters.typeName == "whitestar" then
+    self.threatLevel = 2
+  end
 
   self.status = statusCodes.success
   pane.dismiss()

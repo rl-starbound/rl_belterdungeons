@@ -1,0 +1,6 @@
+[
+  { "op" : "add",
+    "path" : "/modularmech/-",
+    "value" : "/vehicles/modularmech/rl_dynamicstatuseffects_modularmech.lua"
+  }
+]

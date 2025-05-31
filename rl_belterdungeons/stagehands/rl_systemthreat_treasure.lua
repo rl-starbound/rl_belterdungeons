@@ -30,10 +30,8 @@ function init()
   -- for the item seeds. In all other contexts, use a random seed.
   self.seed = util.hashString(worldSeed .. util.tableToString(self.region))
 
-  -- Default to the minimum spaceThreatLevel in `/celestial.config`.
   self.level = math.max(
-    world.getProperty("rl_starSystemThreatLevel", 3),
-    world.threatLevel()
+    world.getProperty("rl_starSystemThreatLevel") or 2, world.threatLevel()
   )
 end
 

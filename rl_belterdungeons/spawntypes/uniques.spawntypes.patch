@@ -2,6 +2,51 @@
   { "op" : "add",
     "path" : "/-",
     "value" : {
+      "name" : "rl_beltasteroids_minidrone",
+
+      "spawnParameters" : {
+        "area" : "air",
+        "region" : "all",
+        "time" : "all"
+      },
+      "groupSize" : [1, 1],
+      "spawnChance" : 0.01,
+      "monsterType" : "minidrone",
+      "monsterParameters" : {
+        "aggressive" : true,
+        "scripts" : [
+          "/monsters/rl_systemthreat_respawn_monster.lua"
+        ]
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/-",
+    "value" : {
+      "name" : "rl_beltasteroids_skimbus",
+
+      "spawnParameters" : {
+        "area" : "air",
+        "region" : "all",
+        "time" : "all"
+      },
+      "groupSize" : [1, 1],
+      "spawnChance" : 0.01,
+      "monsterType" : [
+        [0.99, "skimbus"],
+        [0.01, "electricskimbus"]
+      ],
+      "monsterParameters" : {
+        "aggressive" : true,
+        "scripts" : [
+          "/monsters/rl_systemthreat_respawn_monster.lua"
+        ]
+      }
+    }
+  },
+  { "op" : "add",
+    "path" : "/-",
+    "value" : {
       "name" : "rl_beltasteroids_scandroid",
 
       "spawnParameters" : {
@@ -16,7 +61,10 @@
         [0.01, "cultistscandroid"]
       ],
       "monsterParameters" : {
-        "aggressive" : true
+        "aggressive" : true,
+        "scripts" : [
+          "/monsters/rl_systemthreat_respawn_monster.lua"
+        ]
       }
     }
   }

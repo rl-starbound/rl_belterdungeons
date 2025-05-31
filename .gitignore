@@ -1,6 +1,7 @@
 *~
+*.pak
 README*.html
-modding-guide.html
-rl_belterdungeons*.pak
+modders-guide.html
 rl_belterdungeons/tilesets/packed
 tmp/
+users-guide.html

@@ -1,0 +1,15 @@
+[
+  { "op" : "add",
+    "path" : "/rl_belterdungeons",
+    "value" : 1
+  },
+  { "op" : "add",
+    "path" : "/rl_dynamicstatuseffects",
+    "value" : 1
+  },
+  {
+    "op" : "add",
+    "path" : "/rl_systemthreat",
+    "value" : 1
+  }
+]

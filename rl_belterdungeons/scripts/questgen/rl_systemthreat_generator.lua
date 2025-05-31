@@ -204,8 +204,7 @@ function SystemThreatQuestGenerator:createRewardBag(overallDifficulty)
   local bag = QuestGenerator.createRewardBag(self, overallDifficulty)
   if bag then
     bag.items[1].parameters.treasure.level = math.max(
-      world.getProperty("rl_starSystemThreatLevel", 3),
-      world.threatLevel()
+      world.getProperty("rl_starSystemThreatLevel") or 2, world.threatLevel()
     )
   end
   return bag

@@ -18,7 +18,7 @@
         }, 
         {
          "compression":"zlib",
-         "data":"eJztwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAA8GY4QAAB",
+         "data":"eJzt1KENAAAIwDD+f5cH8FgIgrR2fhEAAAAAAAAAAAAAAAA\/5LADXOtf8ik2FQWOA80=",
          "encoding":"base64",
          "height":60,
          "id":2,
@@ -95,7 +95,7 @@
          "name":"stagehands",
          "objects":[
                 {
-                 "height":88,
+                 "height":120,
                  "id":745,
                  "name":"",
                  "properties":[
@@ -112,9 +112,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":88,
-                 "x":200,
-                 "y":192
+                 "width":120,
+                 "x":184,
+                 "y":176
                 }],
          "opacity":1,
          "type":"objectgroup",

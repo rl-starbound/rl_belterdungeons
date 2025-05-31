@@ -6,6 +6,6 @@
 local previous_output = output
 
 function output(state)
-  self.dungeonId = world.dungeonId(object.position())
+  self.dungeonId = world.dungeonId(entity.position())
   previous_output(state)
 end

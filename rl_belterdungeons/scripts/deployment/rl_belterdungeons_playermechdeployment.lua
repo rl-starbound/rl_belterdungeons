@@ -15,6 +15,7 @@ function init()
     rl_asteroidbeltmanagerCompleted)
 
   message.setHandler("rl_belterdungeons_resetMechBeacons", function()
+      --sb.logInfo("rl_belterdungeons_playermechdeployment: received mech beacon reset")
       self.rl_belterdungeons_beaconPositions = nil
     end)
 
@@ -44,8 +45,9 @@ function update(dt)
         rl_belterdungeons_drawBeacons()
       else
         self.rl_belterdungeons_beaconPositions = world.getProperty(
-          "rl_belterdungeons_mechBeacons", {}
-        )
+          "rl_belterdungeons_mechBeacons"
+        ) or {}
+        --sb.logInfo("rl_belterdungeons_playermechdeployment: fetched mech beacons: %s", sb.printJson(self.rl_belterdungeons_beaconPositions))
       end
     end
   end
@@ -119,7 +121,9 @@ function rl_belterdungeons_drawBeacons()
 end
 
 function rl_asteroidbeltmanagerCompleted(_, _, dungeonsCount)
-  if dungeonsCount > 0 then
+  if dungeonsCount > 1 then
+    player.radioMessage("rl_belterdungeons-dungeonsFoundMulti", 1)
+  elseif dungeonsCount == 1 then
     player.radioMessage("rl_belterdungeons-dungeonsFound", 1)
   else
     player.radioMessage("rl_belterdungeons-dungeonsNotFound", 1)

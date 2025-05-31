@@ -18,10 +18,8 @@ function init()
   -- passive or aggressive at random.
   self.parameters = config.getParameter("parameters", {})
 
-  -- Default to the minimum spaceThreatLevel in `/celestial.config`.
   self.parameters.level = math.max(
-    world.getProperty("rl_starSystemThreatLevel", 3),
-    world.threatLevel()
+    world.getProperty("rl_starSystemThreatLevel") or 2, world.threatLevel()
   )
 
   if self.parameters.persistent == nil then

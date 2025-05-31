@@ -7,6 +7,11 @@
         "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
         "range" : 1600
       },
+      "encounter_trap" : {
+        "name" : "asteroid",
+        "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],
+        "range" : 1600
+      },
       "encounterrare_capsule" : {
         "name" : "asteroid",
         "tags" : [ "rl_zero_g", "rl_vacuum", "rl_space_largespace", "rl_space_generic" ],

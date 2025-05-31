@@ -1,0 +1,28 @@
+{
+  "type" : "rl_systemthreat_oregenerator",
+
+  "broadcastArea" : [0, 0, 1, 1],
+
+  "scripts" : [
+    "/stagehands/rl_systemthreat_oregenerator.lua"
+  ],
+  "scriptDelta" : 1,
+
+  // We want to shoot for a 0.2/4.65 = 4.3% chance of producing diamond
+  // at each tier. As some tiers have fewer or more tiered ores, we'll
+  // adjust the stats for diamond accordingly.
+  "oreDistributions" : [
+    [0.9, [ [ 1.00, "iron" ] ] ],
+    [1.9, [ [ 0.80, "iron" ], [ 1.00, "tungsten" ] ] ],
+    [2.9, [ [ 0.044944, "diamond" ], [ 1.00, "titanium" ] ] ],
+    [3.9, [ [ 0.080899, "diamond" ], [ 0.80, "titanium" ], [ 1.00, "durasteel" ] ] ],
+    [4.9, [ [ 0.170787, "diamond" ], [ 0.80, "durasteel" ], [ 1.00, "aegisalt" ], [ 1.00, "ferozium" ], [ 1.00, "violium" ] ] ],
+    [5.9, [ [ 0.152809, "diamond" ], [ 0.80, "aegisalt" ], [ 0.80, "ferozium" ], [ 0.80, "violium" ], [ 1.00, "solarium" ] ] ]
+  ],
+
+  "oreProbability" : 0.2,
+
+  "supportedWorldTypes" : {
+    "asteroids" : "/biomes/space/rl_beltasteroids.biome"
+  }
+}

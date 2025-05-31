@@ -20,10 +20,13 @@ function update(dt)
   local ur = world.xwrap(vec2.add(pos, {self.area[3], self.area[4]}))
   local region = {ll[1], ll[2], ur[1], ur[2]}
 
-  -- TODO: We are ignoring handling out-of-bounds Y-coordinates for now
-  -- because that cannot happen given how this stagehand is currently
-  -- used. If it achieves more widespread use, we may need to reconsider
-  -- checking for this.
+  if ll[2] < 0 or ur[2] > world.size()[2] then
+    sb.logError("rl_dynamic_dungeonid: update: " ..
+      "region out of bounds: %s", sb.printJson(region)
+    )
+    stagehand.die()
+    return
+  end
   local regions = {}
   if region[3] < region[1] then
     table.insert(regions, {region[1], region[2], world.size()[1], region[4]})
@@ -40,7 +43,10 @@ function update(dt)
       world.setDungeonId(v, dungeonId)
     end
   else
-    sb.logWarn("rl_dynamic_dungeonid: update: target dungeonId %d out of range at position %s; skipping", dungeonId, pos)
+    sb.logWarn("rl_dynamic_dungeonid: update: " ..
+      "target dungeonId %d out of range at position %s; skipping",
+      dungeonId, sb.printJson(pos)
+    )
   end
 
   stagehand.die()

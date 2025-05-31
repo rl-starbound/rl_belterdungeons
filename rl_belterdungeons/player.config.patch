@@ -1,5 +1,9 @@
 [
   { "op" : "add",
+    "path" : "/statusControllerSettings/primaryScriptSources/-",
+    "value" : "/stats/rl_dynamicstatuseffects_player_primary.lua"
+  },
+  { "op" : "add",
     "path" : "/deploymentConfig/scripts/-",
     "value" : "/scripts/deployment/rl_belterdungeons_playermechdeployment.lua"
   }

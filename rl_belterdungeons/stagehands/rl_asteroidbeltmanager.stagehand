@@ -11,22 +11,22 @@
   "dungeons" : {
     "rl_belterdungeons_asteroidencounter" : {},
     "rl_belterdungeons_astrofae_haven" : {},
-    "rl_belterdungeons_base_ruin" : { "weight" : 2.0 },
-    "rl_belterdungeons_base_ruin2" : {},
-    "rl_belterdungeons_encounter_1" : {},
+    "rl_belterdungeons_base_ruin" : { "minimumThreatLevel" : 2.9, "weight" : 2.0 },
+    "rl_belterdungeons_base_ruin2" : { "minimumThreatLevel" : 2.9 },
+    "rl_belterdungeons_encounter_1" : { "minimumThreatLevel" : 2.9 },
     "rl_belterdungeons_friendly_arcade" : {},
     "rl_belterdungeons_friendly_ark" : {},
     "rl_belterdungeons_friendly_lab" : { "weight" : 4.0 },
     "rl_belterdungeons_island_garden" : {},
     "rl_belterdungeons_letheia_1" : {},
     "rl_belterdungeons_merchant_island" : { "weight" : 2.0 },
-    "rl_belterdungeons_miniknogbase" : {},
-    "rl_belterdungeons_neutral_ancient_asteroid" : {},
+    "rl_belterdungeons_miniknogbase" : { "minimumThreatLevel" : 2.9 },
+    "rl_belterdungeons_neutral_ancient_asteroid" : { "minimumThreatLevel" : 2.9 },
     "rl_belterdungeons_neutral_mining_asteroids" : { "weight" : 8.0 },
     "rl_belterdungeons_novakid_asteroid_saloon" : {},
     "rl_belterdungeons_offices" : {},
     "rl_belterdungeons_peacekeeperstation" : {},
-    "rl_belterdungeons_pods" : {},
+    "rl_belterdungeons_pods" : { "minimumThreatLevel" : 2.9 },
     "rl_belterdungeons_poptop_farm" : {},
     "rl_belterdungeons_shelter" : { "weight" : 5.0 },
     "rl_belterdungeons_space_camp" : { "weight" : 4.0 },
@@ -34,8 +34,8 @@
     "rl_belterdungeons_space_hotel" : {},
     "rl_belterdungeons_space_lair" : { "minimumThreatLevel" : 4.9, "weight" : 0.25 },
     "rl_belterdungeons_space_penguins" : {},
-    "rl_belterdungeons_space_pirates" : { "weight" : 4.0 },
-    "rl_belterdungeons_space_safehouse" : { "weight" : 2.0 },
+    "rl_belterdungeons_space_pirates" : { "minimumThreatLevel" : 2.9, "weight" : 4.0 },
+    "rl_belterdungeons_space_safehouse" : { "minimumThreatLevel" : 2.9, "weight" : 2.0 },
     "rl_belterdungeons_storage" : { "weight" : 2.0 },
     "rl_belterdungeons_uscm_base_ruin" : { "minimumThreatLevel" : 4.9, "weight" : 0.25 },
     "rl_belterdungeons_uscmflagship" : { "minimumThreatLevel" : 3.9, "weight" : 0.25 },
@@ -46,5 +46,11 @@
       "dungeonCountRange" : [0, 2],
       "yRanges" : [[2500, 3000], [4000, 4500]]
     }
-  }
+  },
+
+  "environnmentStatusEffects" : [
+    [3.9, [ "biomeradiation" ]],
+    [4.9, [ "biomecold" ]],
+    [5.9, [ "biomeradiation", "biomecold" ]]
+  ]
 }

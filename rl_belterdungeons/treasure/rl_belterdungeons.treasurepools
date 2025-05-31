@@ -305,6 +305,16 @@
   // the pool must be set at object init time, and cannot rely on world
   // tiering, so the treasure pools must be broken out by tier.
 
+  "rlBelterDungeonsChestMoney2" : [
+    [0, {
+      "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
+      "pool" : [
+        {"weight" : 0.2, "item" : ["money", 22]},
+        {"weight" : 0.6, "item" : ["money", 45]},
+        {"weight" : 0.2, "item" : ["money", 75]}
+      ]
+    }]
+  ],
   "rlBelterDungeonsChestMoney3" : [
     [0, {
       "poolRounds" : [[0.65, 1], [0.3, 2], [0.05, 3]],
@@ -345,6 +355,11 @@
       ]
     }]
   ],
+  "rlBelterDungeonsMechPartBlueprint2" : [
+    [0, {
+      "pool" : []
+    }]
+  ],
   "rlBelterDungeonsMechPartBlueprint3" : [
     [0, {
       "pool" : [
@@ -371,6 +386,16 @@
       "pool" : [
         {"weight" : 0.7, "item" : "mechblueprint5"},
         {"weight" : 0.3, "item" : "mechblueprint6"}
+      ]
+    }]
+  ],
+  "rlBelterDungeonsSalvageComponent2" : [
+    [0, {
+      "pool" : [
+        {"weight" : 2, "item" : "salvagearm"},
+        {"weight" : 1, "item" : "salvagelegs"},
+        {"weight" : 2, "item" : "salvagebody"},
+        {"weight" : 1, "item" : "salvagebooster"}
       ]
     }]
   ],
@@ -418,6 +443,15 @@
       ]
     }]
   ],
+  "rlBelterDungeonsCommonSpaceItem2" : [
+    [0, {
+      "pool" : [
+        {"weight" : 0.75, "pool" : "rlBelterDungeonsSalvageComponent2"},
+        {"weight" : 0.20, "pool" : "nonTieredRichOre"},
+        {"weight" : 0.05, "pool" : "slopedMaterial"}
+      ]
+    }]
+  ],
   "rlBelterDungeonsCommonSpaceItem3" : [
     [0, {
       "pool" : [
@@ -452,6 +486,25 @@
         {"weight" : 0.20, "pool" : "nonTieredRichOre"},
         {"weight" : 0.05, "pool" : "slopedMaterial"}
       ]
+    }]
+  ],
+  "rlBelterDungeonsCapsuleSpace2" : [
+    [0, {
+      "fill" : [
+        {"pool" : "rlBelterDungeonsSalvageComponent2"},
+        {"pool" : "rlBelterDungeonsSalvageComponent2"}
+      ],
+      "poolRounds" : [
+        [0.3, 0],
+        [0.4, 1],
+        [0.3, 2]
+      ],
+      "pool" : [
+        {"weight" : 0.4, "pool" : "rlBelterDungeonsChestMoney2"},
+        {"weight" : 0.5, "pool" : "rlBelterDungeonsCommonSpaceItem2"},
+        {"weight" : 0.02, "pool" : "rlBelterDungeonsMechPartBlueprint2"}
+      ],
+      "allowDuplication" : true
     }]
   ],
   "rlBelterDungeonsCapsuleSpace3" : [

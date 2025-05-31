@@ -47,21 +47,14 @@ if [ "$(find . -empty | wc -l)" -gt 0 ]; then
   exit 1
 fi
 
-if [ -r tilesets ]; then
-  find tilesets -type l
-  if [ "$(find tilesets -type l | wc -l)" -gt 0 ]; then
-    printf 'Error: symlinked tilesets found in mod source.\n'
-    exit 1
-  fi
+find . -type l
+if [ "$(find . -type l | wc -l)" -gt 0 ]; then
+  printf 'Error: symlinked files found in mod source.\n'
+  exit 1
 fi
 
-if [ "$(find . -type d ! -perm 0755 | wc -l)" -gt 0 ]; then
-  find . -type d ! -perm 0755 -exec chmod 0755 {} \;
-fi
-
-if [ "$(find . -type f ! -perm 0644 | wc -l)" -gt 0 ]; then
-  find . -type f ! -perm 0644 -exec chmod 0644 {} \;
-fi
+find . -type d ! -perm 0755 -exec chmod 0755 {} \;
+find . -type f ! -perm 0644 -exec chmod 0644 {} \;
 
 "${STARBOUND_DIR}/linux/asset_packer" . ../rl_belterdungeons_nodungeons.pak
 chmod 0644 ../rl_belterdungeons_nodungeons.pak

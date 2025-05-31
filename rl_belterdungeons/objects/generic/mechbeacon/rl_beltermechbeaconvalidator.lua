@@ -29,7 +29,7 @@ function update(dt)
     return
   end
 
-  local mechBeacons = world.getProperty("rl_belterdungeons_mechBeacons", {})
+  local mechBeacons = world.getProperty("rl_belterdungeons_mechBeacons") or {}
   for k, _ in pairs(mechBeacons) do
     local pos = world.findUniqueEntity(k):result()
     mechBeacons[k] = pos

@@ -1,7 +1,11 @@
 {
   "rl_belterdungeons-dungeonsFound" : {
     "unique" : false,
-    "text" : "Scans of this asteroid field are inconclusive."
+    "text" : "Scans of this asteroid field indicate the presence of an anomaly."
+  },
+  "rl_belterdungeons-dungeonsFoundMulti" : {
+    "unique" : false,
+    "text" : "Scans of this asteroid field indicate the presence of anomalies."
   },
   "rl_belterdungeons-dungeonsNotFound" : {
     "unique" : false,

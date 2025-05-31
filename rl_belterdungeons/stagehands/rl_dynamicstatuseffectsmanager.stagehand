@@ -1,0 +1,10 @@
+{
+  "type" : "rl_dynamicstatuseffectsmanager",
+
+  "broadcastArea" : [0, 0, 1, 1],
+
+  "scripts" : [
+    "/stagehands/rl_dynamicstatuseffectsmanager.lua"
+  ],
+  "scriptDelta" : 0
+}

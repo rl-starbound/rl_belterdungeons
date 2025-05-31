@@ -6,5 +6,178 @@
   "scripts" : [
     "/stagehands/rl_systemthreat_monstergroup.lua"
   ],
-  "scriptDelta" : 1
+  "scriptDelta" : 1,
+
+  "monsterGroups" : {
+    "largegroup" : [
+      [1.9, [
+        [
+          [[-4, -3], "masteroidmid"],
+          [[-3, 4], "masteroid"],
+          [[4, 0], "masteroid"]
+        ],
+        [
+          [[0, -3], "masteroidmid"],
+          [[1, 3], "masteroidmid"]
+        ],
+        [
+          [[-3, 3], "trifangle"],
+          [[0, -4], "trifangle"],
+          [[3, 3], "trifangle"]
+        ],
+        [
+          [[-3, 0], "cosmostache"],
+          [[1, 3], "masteroidmid"],
+          [[2, -4], "masteroid"]
+        ],
+        [
+          [[-3, -1], "cosmostache"],
+          [[-2, 3], "cosmostache"],
+          [[2, -3], "cosmostache"],
+          [[3, 2], "cosmostache"]
+        ]
+      ]],
+      [3.9, [
+        [
+          [[-3, 3], "chiropterror"],
+          [[2, -4], "masteroidmid"],
+          [[3, 4], "masteroid"],
+          [[4, 0], "masteroid"]
+        ],
+        [
+          [[-3, 0], "trifangle"],
+          [[-1, 4], "chiropterror"],
+          [[1, -3], "chiropterror"],
+          [[3, 1], "trifangle"]
+        ],
+        [
+          [[-3, 1], "cosmostache"],
+          [[-1, -4], "cosmostache"],
+          [[0, 3], "cosmostache"],
+          [[3, -1], "chiropterror"]
+        ],
+        [
+          [[-3, -2], "trifangle"],
+          [[-2, 4], "masteroidmid"],
+          [[2, -3], "masteroidmid"]
+        ],
+        [
+          [[-4, -2], "cosmostache"],
+          [[-3, 4], "trifangle"],
+          [[1, -4], "trifangle"],
+          [[2, 3], "trifangle"],
+          [[5, 0], "cosmostache"]
+        ]
+      ]],
+      [4.9, [
+        [
+          [[-3, 3], "chiropterror"],
+          [[-2, -3], "masteroidmid"],
+          [[3, 0], "masteroidmid"],
+          [[3, 4], "trifangle"]
+        ],
+        [
+          [[-4, 4], "chiropterror"],
+          [[-2, -2], "heavydrone"],
+          [[2, 2], "cosmostache"],
+          [[4, -4], "chiropterror"]
+        ],
+        [
+          [[-3, 4], "trifangle"],
+          [[-2, -1], "heavydrone"],
+          [[3, -4], "chiropterror"],
+          [[4, 3], "trifangle"]
+        ],
+        [
+          [[-2, -2], "masteroidlarge"],
+          [[-2, 4], "trifangle"],
+          [[3, -3], "trifangle"]
+        ],
+        [
+          [[-3, -1], "masteroidlarge"],
+          [[-2, 4], "chiropterror"],
+          [[3, -4], "chiropterror"]
+        ]
+      ]]
+    ],
+    "smallgroup" : [
+      [1.9, [
+        [
+          [[-3, 4], "masteroid"],
+          [[0, -4], "masteroid"],
+          [[4, 3], "masteroid"]
+        ],
+        [
+          [[-3, 3], "cosmostache"],
+          [[2, -4], "cosmostache"]
+        ],
+        [
+          [[-1, 3], "cosmostache"],
+          [[0, -4], "trifangle"]
+        ],
+        [
+          [[-3, 3], "trifangle"],
+          [[0, -4], "trifangle"],
+          [[3, 3], "trifangle"]
+        ],
+        [
+          [[-1, -3], "masteroid"],
+          [[0, 2], "masteroidmid"]
+        ]
+      ]],
+      [3.9, [
+        [
+          [[-4, 4], "trifangle"],
+          [[2, 3], "cosmostache"],
+          [[3, -4], "cosmostache"]
+        ],
+        [
+          [[-3, -2], "cosmostache"],
+          [[2, -3], "chiropterror"],
+          [[2, 3], "cosmostache"]
+        ],
+        [
+          [[-2, -2], "chiropterror"],
+          [[0, 4], "trifangle"],
+          [[3, -4], "trifangle"]
+        ],
+        [
+          [[-1, -3], "masteroidmid"],
+          [[0, 3], "chiropterror"]
+        ],
+        [
+          [[-3, 3], "trifangle"],
+          [[-1, -3], "masteroidmid"],
+          [[2, 3], "trifangle"]
+        ]
+      ]],
+      [4.9, [
+        [
+          [[-4, 0], "chiropterror"],
+          [[2, 4], "trifangle"],
+          [[4, -4], "cosmostache"]
+        ],
+        [
+          [[-4, -3], "masteroidmid"],
+          [[-1, 3], "chiropterror"],
+          [[4, -1], "trifangle"]
+        ],
+        [
+          [[-3, -3], "masteroidmid"],
+          [[-1, 3], "chiropterror"],
+          [[3, -2], "cosmostache"]
+        ],
+        [
+          [[-3, -1], "cosmostache"],
+          [[-2, 3], "trifangle"],
+          [[0, -4], "trifangle"],
+          [[3, 1], "cosmostache"]
+        ],
+        [
+          [[-1, -1], "heavydrone"],
+          [[2, 3], "chiropterror"]
+        ]
+      ]]
+    ]
+  }
 }

@@ -16,7 +16,7 @@ if update then
 end
 function update(dt)
   if xor(storage.state, storage.rl_belterdungeons_registered) then
-    local mechBeacons = world.getProperty("rl_belterdungeons_mechBeacons", {})
+    local mechBeacons = world.getProperty("rl_belterdungeons_mechBeacons") or {}
     mechBeacons[entity.uniqueId()] = storage.state and entity.position() or nil
     world.setProperty("rl_belterdungeons_mechBeacons", mechBeacons)
     storage.rl_belterdungeons_registered = storage.state
@@ -28,7 +28,7 @@ if die then
   sb.logWarn("rl_beltermechbeacon: replaced unexpected light 'die' function")
 end
 function die(smash)
-  local mechBeacons = world.getProperty("rl_belterdungeons_mechBeacons", {})
+  local mechBeacons = world.getProperty("rl_belterdungeons_mechBeacons") or {}
   mechBeacons[entity.uniqueId()] = nil
   world.setProperty("rl_belterdungeons_mechBeacons", mechBeacons)
   broadcastMechBeaconsReset()
@@ -36,6 +36,7 @@ end
 
 function broadcastMechBeaconsReset()
   for _, v in ipairs(world.players()) do
+    --sb.logInfo("rl_beltermechbeacon: sending reset to player %s", v)
     world.sendEntityMessage(v, "rl_belterdungeons_resetMechBeacons")
   end
 end

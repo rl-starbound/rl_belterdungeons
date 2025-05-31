@@ -1,0 +1,10 @@
+[
+  { "op" : "add",
+    "path" : "/hazardProtection",
+    "value" : {
+      "biomecoldImmunity" : "biomecold",
+      "biomeheatImmunity" : "biomeheat",
+      "biomeradiationImmunity" : "biomeradiation"
+    }
+  }
+]

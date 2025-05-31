@@ -254,7 +254,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":24,
+                 "width":48,
                  "x":824,
                  "y":288
                 }, 
@@ -299,7 +299,7 @@
                  "type":"",
                  "visible":true,
                  "width":8,
-                 "x":864,
+                 "x":888,
                  "y":288
                 }, 
                 {
@@ -320,7 +320,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":48,
+                 "width":72,
                  "x":816,
                  "y":296
                 }, 
@@ -386,7 +386,7 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":32,
+                 "width":56,
                  "x":800,
                  "y":312
                 }, 
@@ -408,9 +408,317 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":72,
+                 "width":96,
                  "x":776,
                  "y":304
+                }, 
+                {
+                 "height":8,
+                 "id":953,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"diamond"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":392,
+                 "y":104
+                }, 
+                {
+                 "height":8,
+                 "id":954,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"diamond"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":400,
+                 "y":96
+                }, 
+                {
+                 "height":8,
+                 "id":955,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"diamond"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":592,
+                 "y":272
+                }, 
+                {
+                 "height":8,
+                 "id":956,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"diamond"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":568,
+                 "y":288
+                }, 
+                {
+                 "height":8,
+                 "id":957,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"diamond"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1008,
+                 "y":264
+                }, 
+                {
+                 "height":8,
+                 "id":958,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"gold"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":72,
+                 "x":864,
+                 "y":520
+                }, 
+                {
+                 "height":8,
+                 "id":959,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"gold"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":912,
+                 "y":528
+                }, 
+                {
+                 "height":8,
+                 "id":960,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"gold"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":856,
+                 "y":528
+                }, 
+                {
+                 "height":8,
+                 "id":961,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"gold"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":848,
+                 "y":536
+                }, 
+                {
+                 "height":8,
+                 "id":962,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"gold"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":24,
+                 "x":944,
+                 "y":544
+                }, 
+                {
+                 "height":8,
+                 "id":963,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"diamond"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":416,
+                 "y":96
+                }, 
+                {
+                 "height":8,
+                 "id":964,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"diamond"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":632,
+                 "y":536
+                }, 
+                {
+                 "height":8,
+                 "id":965,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"gold"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":928,
+                 "y":536
+                }, 
+                {
+                 "height":8,
+                 "id":966,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"meteoriterock"
+                        }, 
+                        {
+                         "name":"mod",
+                         "type":"string",
+                         "value":"gold"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8,
+                 "x":840,
+                 "y":528
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -704,7 +1012,7 @@
          "y":0
         }],
  "nextlayerid":21,
- "nextobjectid":953,
+ "nextobjectid":967,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.2",

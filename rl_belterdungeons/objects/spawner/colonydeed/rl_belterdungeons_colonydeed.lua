@@ -32,7 +32,7 @@ end
 
 function getRentLevel()
   if self.rlBelterWorldTypes[world.type()] then
-    return math.max(world.getProperty("rl_starSystemThreatLevel", 3), previous_getRentLevel())
+    return math.max(world.getProperty("rl_starSystemThreatLevel") or 2, previous_getRentLevel())
   end
   return previous_getRentLevel()
 end
@@ -70,7 +70,7 @@ function rl_spawnBelterTenant(tenant)
     overrides.items = nil
   end
 
-  local level = math.max(world.getProperty("rl_starSystemThreatLevel", 3), previous_getRentLevel())
+  local level = math.max(world.getProperty("rl_starSystemThreatLevel") or 2, previous_getRentLevel())
   if tenant.level then
     -- In the base game, if a tenant's level is set explicitly, it's a
     -- guard tenant and the level is 1 through 4. Belter tenant guards

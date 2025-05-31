@@ -149,7 +149,7 @@
          "name":"stagehands",
          "objects":[
                 {
-                 "height":80,
+                 "height":120,
                  "id":1122,
                  "name":"",
                  "properties":[
@@ -166,9 +166,185 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
-                 "x":400,
-                 "y":200
+                 "width":120,
+                 "x":304,
+                 "y":136
+                }, 
+                {
+                 "height":32,
+                 "id":1123,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"identifier\":\"asteroid7\",\"oreProbability\":0.25,\"seedPositionOffset\":[-33,-26]}"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"rl_systemthreat_oregenerator"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":56,
+                 "x":1008,
+                 "y":240
+                }, 
+                {
+                 "height":48,
+                 "id":1124,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"identifier\":\"asteroid7\",\"layer\":\"background\",\"oreProbability\":0.25}"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"rl_systemthreat_oregenerator"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":56,
+                 "x":744,
+                 "y":440
+                }, 
+                {
+                 "height":32,
+                 "id":1125,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"identifier\":\"asteroid7\",\"oreProbability\":0.25,\"seedPositionOffset\":[-2,15]}"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"rl_systemthreat_oregenerator"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":56,
+                 "x":760,
+                 "y":568
+                }, 
+                {
+                 "height":40,
+                 "id":1126,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"identifier\":\"asteroid7\",\"oreProbability\":0.25,\"seedPositionOffset\":[25,7]}"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"rl_systemthreat_oregenerator"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":88,
+                 "x":528,
+                 "y":496
+                }, 
+                {
+                 "height":40,
+                 "id":1127,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"identifier\":\"asteroid7\",\"oreProbability\":0.25,\"seedPositionOffset\":[3,-19]}"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"rl_systemthreat_oregenerator"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":72,
+                 "x":712,
+                 "y":288
+                }, 
+                {
+                 "height":48,
+                 "id":1128,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"identifier\":\"asteroid7\",\"oreProbability\":0.25,\"seedPositionOffset\":[-29,-9]}"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"rl_systemthreat_oregenerator"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":984,
+                 "y":368
+                }, 
+                {
+                 "height":56,
+                 "id":1129,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"identifier\":\"asteroid7\",\"oreProbability\":0.25,\"seedPositionOffset\":[-22,-24]}"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"rl_systemthreat_oregenerator"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":920,
+                 "y":240
+                }, 
+                {
+                 "height":48,
+                 "id":1130,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"parameters",
+                         "type":"string",
+                         "value":"{\"identifier\":\"asteroid7\",\"oreProbability\":0.25,\"seedPositionOffset\":[-17,-13]}"
+                        }, 
+                        {
+                         "name":"stagehand",
+                         "type":"string",
+                         "value":"rl_systemthreat_oregenerator"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":40,
+                 "x":888,
+                 "y":336
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -324,7 +500,7 @@
          "y":0
         }],
  "nextlayerid":15,
- "nextobjectid":1123,
+ "nextobjectid":1131,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.2.2",

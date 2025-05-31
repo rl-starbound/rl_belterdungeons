@@ -31,7 +31,11 @@ function onUpdate(dt)
     end
   elseif self.triggerSpawnCoroutine then
     local status, result = coroutine.resume(self.triggerSpawnCoroutine)
-    if not status then error(result) end
+    if not status then
+      sb.logError("rl_belterdungeons_protect: triggerSpawn failed: %s", result)
+      self.questClient:abort()
+      return
+    end
     if result then self.triggerSpawnCoroutine = nil end
   end
 end

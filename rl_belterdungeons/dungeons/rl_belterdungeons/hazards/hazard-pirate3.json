@@ -95,7 +95,7 @@
          "name":"stagehands",
          "objects":[
                 {
-                 "height":80,
+                 "height":120,
                  "id":1330,
                  "name":"",
                  "properties":[
@@ -112,12 +112,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
-                 "x":2352,
-                 "y":672
+                 "width":120,
+                 "x":2344,
+                 "y":680
                 }, 
                 {
-                 "height":80,
+                 "height":120,
                  "id":1331,
                  "name":"",
                  "properties":[
@@ -134,12 +134,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
-                 "x":3096,
-                 "y":544
+                 "width":120,
+                 "x":3032,
+                 "y":488
                 }, 
                 {
-                 "height":80,
+                 "height":120,
                  "id":1332,
                  "name":"",
                  "properties":[
@@ -156,9 +156,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
-                 "x":1576,
-                 "y":872
+                 "width":120,
+                 "x":1656,
+                 "y":840
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -250,16 +250,11 @@
                  "y":808
                 }, 
                 {
-                 "height":8,
+                 "height":88,
                  "id":1326,
                  "name":"Small Group (hazard)",
                  "properties":[
                         {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{\"monsterGroup\":\"rl_belterdungeons_spacegroup_small\"}"
-                        }, 
-                        {
                          "name":"stagehand",
                          "type":"string",
                          "value":"rl_systemthreat_monstergroup"
@@ -267,21 +262,16 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":8,
-                 "x":1280,
-                 "y":784
+                 "width":88,
+                 "x":1288,
+                 "y":792
                 }, 
                 {
-                 "height":8,
+                 "height":88,
                  "id":1327,
                  "name":"Small Group (hazard)",
                  "properties":[
                         {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{\"monsterGroup\":\"rl_belterdungeons_spacegroup_small\"}"
-                        }, 
-                        {
                          "name":"stagehand",
                          "type":"string",
                          "value":"rl_systemthreat_monstergroup"
@@ -289,21 +279,16 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":8,
-                 "x":2368,
-                 "y":968
+                 "width":88,
+                 "x":2376,
+                 "y":976
                 }, 
                 {
-                 "height":8,
+                 "height":88,
                  "id":1328,
                  "name":"Small Group (hazard)",
                  "properties":[
                         {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{\"monsterGroup\":\"rl_belterdungeons_spacegroup_small\"}"
-                        }, 
-                        {
                          "name":"stagehand",
                          "type":"string",
                          "value":"rl_systemthreat_monstergroup"
@@ -311,21 +296,16 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":8,
-                 "x":2048,
-                 "y":416
+                 "width":88,
+                 "x":2064,
+                 "y":424
                 }, 
                 {
-                 "height":8,
+                 "height":88,
                  "id":1329,
                  "name":"Small Group (hazard)",
                  "properties":[
                         {
-                         "name":"parameters",
-                         "type":"string",
-                         "value":"{\"monsterGroup\":\"rl_belterdungeons_spacegroup_small\"}"
-                        }, 
-                        {
                          "name":"stagehand",
                          "type":"string",
                          "value":"rl_systemthreat_monstergroup"
@@ -333,9 +313,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":8,
-                 "x":3344,
-                 "y":744
+                 "width":88,
+                 "x":3352,
+                 "y":752
                 }],
          "opacity":1,
          "type":"objectgroup",

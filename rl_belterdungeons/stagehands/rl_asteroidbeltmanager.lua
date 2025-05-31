@@ -1,4 +1,5 @@
 require "/interface/cockpit/cockpitutil.lua"
+require "/scripts/rl_dynamicstatuseffects.lua"
 require "/scripts/util.lua"
 
 function init()
@@ -7,6 +8,7 @@ function init()
     if world.findUniqueEntity(tryUniqueId):result() == nil then
       stagehand.setUniqueId(tryUniqueId)
     else
+      script.setUpdateDelta(0)
       stagehand.die()
       return
     end
@@ -14,62 +16,62 @@ function init()
 
   local worldId = config.getParameter("worldId")
   if not worldIdCoordinate(worldId) then
-    sb.logWarn("rl_asteroidbeltmanager: init: non-celestial world; terminating")
+    sb.logWarn("rl_asteroidbeltmanager: non-celestial world; terminating")
+    script.setUpdateDelta(0)
     stagehand.die()
     return
   end
 
   if world.type() ~= "asteroids" then
-    sb.logWarn("rl_asteroidbeltmanager: init: non-asteroids world; terminating")
+    sb.logWarn("rl_asteroidbeltmanager: non-asteroids world; terminating")
+    script.setUpdateDelta(0)
     stagehand.die()
     return
   end
 
-  -- Default to the minimum spaceThreatLevel in `/celestial.config`.
   local threatLevel = math.max(
-    world.getProperty("rl_starSystemThreatLevel", 3),
-    world.threatLevel()
+    world.getProperty("rl_starSystemThreatLevel") or 2, world.threatLevel()
   )
 
   self.state = world.getProperty("rl_asteroidbeltmanager_state")
   if self.state then
-    if self.state.dungeonsGenerated >= self.state.dungeonCount then
-      script.setUpdateDelta(0)
-    end
+    if isCompleted() then script.setUpdateDelta(0) end
   else
     local worldSize = world.size()
     local worldSizeStr = string.format("%sx%s", worldSize[1], worldSize[2])
     local worldConfig = config.getParameter("worldConfigs")[worldSizeStr]
     if not worldConfig or
-       not worldConfig["dungeonCountRange"] or not worldConfig["yRanges"]
+       type(worldConfig.dungeonCountRange) ~= "table" or
+       type(worldConfig.yRanges) ~= "table"
     then
-      sb.logWarn("rl_asteroidbeltmanager: init: " ..
+      sb.logWarn("rl_asteroidbeltmanager: " ..
         "missing or invalid world config for asteroid belt size: %s",
         worldSizeStr
       )
+      script.setUpdateDelta(0)
+      stagehand.die()
+      return
     end
 
     local dungeonCoords = {}
-    local dungeonCountRange = worldConfig["dungeonCountRange"] or {0, 0}
+    local dungeonCountRange = worldConfig.dungeonCountRange
     local dungeonTypes = {}
     local seed = util.hashString(worldId)
-    local yRanges = worldConfig["yRanges"]
+    local yRanges = worldConfig.yRanges
 
     math.randomseed(seed)
 
     local dungeonCount = math.random(
       dungeonCountRange[1], dungeonCountRange[2]
     )
-    local dungeons = buildDungeonsPool(
-      config.getParameter("dungeons"), threatLevel
-    )
+    local origDungeonsPool = config.getParameter("dungeons", {})
+    local origDungeonsPoolSize = util.tableSize(origDungeonsPool)
+    local dungeons = buildDungeonsPool(origDungeonsPool, threatLevel)
 
-    if not yRanges then
-      dungeonCount = 0
-    end
+    if #yRanges < 1 then dungeonCount = 0 end
 
     for i = 0, dungeonCount - 1 do
-      if #(dungeons.pool) == 0 then
+      if #dungeons.pool == 0 then
         dungeonCount = i
         break
       end
@@ -82,20 +84,64 @@ function init()
 
     math.randomseed(util.seedTime())
 
+    -- Do not add dynamic status effects if No Belter Dungeons is installed.
+    local useDynamicStatusEffects = origDungeonsPoolSize > 0
+
+    local effects = {}
+    if useDynamicStatusEffects then
+      effects = getEnvironmentStatusEffects(threatLevel)
+    end
+
     self.state = {
       dungeonCount = dungeonCount,
       dungeonCoords = dungeonCoords,
       dungeonTypes = dungeonTypes,
       dungeonsGenerated = 0,
+      dynamicStatusEffects = {
+        global = effects,
+        globalPending = #effects > 0
+      },
       nextDungeonId = 100,
       parentEntityId = config.getParameter("parentEntityId"),
       seed = seed
     }
     world.setProperty("rl_asteroidbeltmanager_state", self.state)
   end
+
+  -- Given the scenario that a player character was in a world, and the
+  -- player quit the game and deleted the world's file, and then started
+  -- the game and loaded their character, causing the core engine to
+  -- rebuild the world as the player loads, a race condition exists in
+  -- which the core engine might erroneously report the player as not
+  -- existing in the world for the first update. In this case, setting
+  -- the environment status effects immediately would result in the
+  -- player's Lua context not being notified of the update, and the
+  -- player would not be affected by the status effects. Therefore, wait
+  -- at least 0.25 seconds before setting the status effects.
+  self.dynamicStatusEffectsTimer = 0.25
 end
 
 function update(dt)
+  local dynamicStatusEffects = self.state.dynamicStatusEffects or {}
+  if dynamicStatusEffects.globalPending then
+    self.dynamicStatusEffectsTimer = self.dynamicStatusEffectsTimer - dt
+    if self.dynamicStatusEffectsTimer <= 0 then
+      local manager = getDynamicStatusEffectsManager()
+      if manager then
+        world.sendEntityMessage(manager, "setEffects",
+          nil, "rl_asteroidbeltmanager", dynamicStatusEffects.global
+        )
+      else
+        sb.logError("rl_asteroidbeltmanager: " ..
+          "failed to set global status effects"
+        )
+      end
+
+      dynamicStatusEffects.globalPending = false
+      world.setProperty("rl_asteroidbeltmanager_state", self.state)
+    end
+  end
+
   math.randomseed(self.state.seed)
   while self.state.dungeonsGenerated < self.state.dungeonCount do
     local baseDungeonId = self.state.nextDungeonId
@@ -123,18 +169,19 @@ function update(dt)
   end
   math.randomseed(util.seedTime())
 
-  if self.state.dungeonsGenerated >= self.state.dungeonCount then
-    if self.state.parentEntityId and
-       world.entityExists(self.state.parentEntityId)
-    then
+  if self.state.dungeonsGenerated >= self.state.dungeonCount and
+     self.state.parentEntityId
+  then
+    if world.entityExists(self.state.parentEntityId) then
       world.sendEntityMessage(self.state.parentEntityId,
         "rl_asteroidbeltmanager_completed", self.state.dungeonsGenerated
       )
-      self.state.parentEntityId = nil
-      world.setProperty("rl_asteroidbeltmanager_state", self.state)
     end
-    script.setUpdateDelta(0)
+    self.state.parentEntityId = nil
+    world.setProperty("rl_asteroidbeltmanager_state", self.state)
   end
+
+  if isCompleted() then script.setUpdateDelta(0) end
 end
 
 function buildDungeonsPool(dungeons, threatLevel)
@@ -182,6 +229,13 @@ function getRandomYCoord(ranges)
   return math.random(ranges[i][1], ranges[i][2])
 end
 
+function isCompleted()
+  return (
+    self.state.dungeonsGenerated >= self.state.dungeonCount and
+    not (self.state.dynamicStatusEffects or {}).globalPending
+  )
+end
+
 function weightedRandomPop(dungeons, seed)
   local choice = dungeons.totalWeight * sb.staticRandomDouble(seed)
   for index, pair in ipairs(dungeons.pool) do
@@ -193,4 +247,17 @@ function weightedRandomPop(dungeons, seed)
     end
   end
   return nil
+end
+
+function getEnvironmentStatusEffects(threatLevel)
+  local effects = config.getParameter("environnmentStatusEffects", {})
+  local effectList = {}
+  local highestTier = -1
+  for i,v in ipairs(effects) do
+    if v[1] <= threatLevel and v[1] > highestTier then
+      highestTier = v[1]
+      effectList = v[2]
+    end
+  end
+  return effectList
 end
