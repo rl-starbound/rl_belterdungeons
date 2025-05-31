@@ -8,7 +8,7 @@ The [Belter Dungeons](https://community.playstarbound.com/resources/belter-dunge
 * randomly generated space quests with quest locations in and around the new dungeons;
 * quest location objects to allow players to enable quest generation in their own bases.
 
-For the initial releases, the dungeons included will be enhanced versions of most of the space encounters in the base game. I plan to extend this with packs of original asteroid belt dungeons, but also hope that other modders will be inspired to do likewise. Modders wishing to build on top of Belter Dungeons should consult the [modder's guide](modders-guide.html).
+For the initial releases, the dungeons included will be enhanced versions of most of the space encounters in the base game. I plan to extend this with packs of original asteroid belt dungeons, but also hope that other modders will be inspired to do likewise. Modders wishing to build on top of Belter Dungeons should consult the [modder's guide](modders-guide.md).
 
 ## IMPORTANT: Read This Before Installing
 
@@ -51,7 +51,7 @@ In addition, many of these dungeons have a chance to spawn with a friendly or ho
 
 Friendly NPCs that spawn within asteroid belt dungeons will offer some space-exclusive quests, further increasing the liveliness of the belts.
 
-Future versions of this mod will include additional original asteroid belt dungeons as they are developed. My intention is to build out a set of species-specific (as well as some inter-species) friendly and hostile dungeons, of similar scope to the set found on terrestrial worlds. Other mod authors may also add their own asteroid belt dungeons using the [modder's guide](modders-guide.html).
+Future versions of this mod will include additional original asteroid belt dungeons as they are developed. My intention is to build out a set of species-specific (as well as some inter-species) friendly and hostile dungeons, of similar scope to the set found on terrestrial worlds. Other mod authors may also add their own asteroid belt dungeons using the [modder's guide](modders-guide.md).
 
 ### Space Encounters?
 

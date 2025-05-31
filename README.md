@@ -8,9 +8,9 @@ The **Belter Dungeons** mod allows space-themed dungeons to spawn into [asteroid
 * randomly generated space quests with quest locations in and around the asteroid belt dungeons;
 * quest location objects to allow players to enable quest generation in their own bases.
 
-For the initial releases, the dungeons included will be enhanced versions of most of the space encounters in the base game. I plan to extend this with packs of original asteroid belt dungeons, but also hope that other modders will be inspired to do likewise. Modders wishing to build on top of Belter Dungeons should consult the [modder's guide](modders-guide.html).
+For the initial releases, the dungeons included will be enhanced versions of most of the space encounters in the base game. I plan to extend this with packs of original asteroid belt dungeons, but also hope that other modders will be inspired to do likewise. Modders wishing to build on top of Belter Dungeons should consult the [modder's guide](modders-guide.md).
 
-Players should read the [user's guide](users-guide.html) for a detailed guide to the gameplay features added or enhanced by this mod, which are too numerous to list here.
+Players should read the [user's guide](users-guide.md) for a detailed guide to the gameplay features added or enhanced by this mod, which are too numerous to list here.
 
 ## IMPORTANT: Read This Before Installing
 
